@@ -15,5 +15,8 @@ public class Equipo {
     private ArrayList<Integer> lstJugadores = new ArrayList<>();
     private ArrayList<Integer> lstPartidos = new ArrayList<>();
 
+    
+    
+
 }
 

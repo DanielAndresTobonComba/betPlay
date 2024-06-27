@@ -11,7 +11,8 @@ public class Gol {
 
     public Gol() {
     }
-    
+
+
     public Gol(int id, int idJugador, int idEquipo, int minuto, int idPartido) {
         this.id = id;
         this.idJugador = idJugador;
@@ -20,45 +21,59 @@ public class Gol {
         this.idPartido = idPartido;
     }
 
+
     public int getId() {
         return id;
     }
+
 
     public void setId(int id) {
         this.id = id;
     }
 
+
     public int getIdJugador() {
         return idJugador;
     }
+
 
     public void setIdJugador(int idJugador) {
         this.idJugador = idJugador;
     }
 
+
     public int getIdEquipo() {
         return idEquipo;
     }
+
 
     public void setIdEquipo(int idEquipo) {
         this.idEquipo = idEquipo;
     }
 
+
     public int getMinuto() {
         return minuto;
     }
+
 
     public void setMinuto(int minuto) {
         this.minuto = minuto;
     }
 
+
     public int getIdPartido() {
         return idPartido;
     }
 
+
     public void setIdPartido(int idPartido) {
         this.idPartido = idPartido;
     }
+
+    
+    
+    
 
     
 
