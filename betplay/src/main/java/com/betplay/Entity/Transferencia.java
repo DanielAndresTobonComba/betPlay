@@ -8,9 +8,10 @@ public class Transferencia {
     // LTS OBJETOS?
     private int idJugador;
 
-    private int equipoOrigen;
-    private int equipoDestino;
+    private int idEquipoOrigen;
+    private int idEquipoDestino;
     private float monto;
+    public String tipoTransferencia;
     private Date fechaTransferencia;
 
 }

@@ -9,6 +9,7 @@ public class Jugador {
     private String nacionalidad;
     private int numCamiseta;
     private int idEquipo;
+    public String estado;
 
      // Podria ser una lista de objetos ?
     private int lesiones; 

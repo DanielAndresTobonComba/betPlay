@@ -7,20 +7,22 @@ import java.util.Date;
 public class Partidos {
 
     private int id;
-    private int equipoLocal;
-    private int equipoVisitante;
+    private int idEquipoLocal;
+    private int idEquipoVisitante;
+    public int golesVisitante;
+    public int golesLocal;
     private Date fecha;
     private Time hora;
-    private int Estadio;
+    private int idEstadio;
 
     // Puede ser goles del local y otra lista goles del visitante? a su vez listas de objetos?
-    private ArrayList<Integer> lstGoles = new ArrayList<>();
+    private ArrayList<Gol> lstGoles = new ArrayList<>();
 
     // Puede ser una lista de objetos?
     private ArrayList<Integer> lstTarjetas = new ArrayList<>();
 
     // Lst objetos?
-    private ArrayList<Integer> lstAccidentes = new ArrayList<>();
+    private ArrayList<Integer> lstIncidentes = new ArrayList<>();
 
     private String resultado;
 
