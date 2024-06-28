@@ -4,7 +4,7 @@ import org.w3c.dom.Text;
 
 public class Actividad {
 
-    public int id;
+    //public int id;
     public Text descripcion;
     public int duracion;
     
@@ -13,21 +13,15 @@ public class Actividad {
 
     
 
-    public Actividad(int id, Text descripcion, int duracion) {
-        this.id = id;
+    public Actividad( Text descripcion, int duracion) {
+        //this.id = id;
         this.descripcion = descripcion;
         this.duracion = duracion;
     }
 
 
 
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
+    
 
     public Text getDescripcion() {
         return descripcion;

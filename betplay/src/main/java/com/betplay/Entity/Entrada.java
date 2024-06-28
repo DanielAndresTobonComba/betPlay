@@ -4,37 +4,37 @@ import java.util.Date;
 
 public class Entrada {
 
-    private int id; 
-    private int idPartido;
-    private int idComprador;
-    private Date fechaCompra;
-    private int cantidadEntrada;
-    private float precioTotal;
+    //private int id; 
+    public int idPartido;
+    public int Comprador;
+    public Date fechaCompra;
+    public int cantidadEntrada;
+    public float precioTotal;
 
     //Misma ubicacion para todas las entradas?
-    private String ubicacion;
+    public String ubicacion;
 
     public Entrada() {
     }
 
-    public Entrada(int id, int idPartido, int idComprador, Date fechaCompra, int cantidadEntrada, float precioTotal,
+    public Entrada(/*int id,*/ int idPartido, int Comprador, Date fechaCompra, int cantidadEntrada, float precioTotal,
             String ubicacion) {
-        this.id = id;
+        //this.id = id;
         this.idPartido = idPartido;
-        this.idComprador = idComprador;
+        this.Comprador = Comprador; //Vamos a poner el número de cédula del comprador
         this.fechaCompra = fechaCompra;
         this.cantidadEntrada = cantidadEntrada;
         this.precioTotal = precioTotal;
         this.ubicacion = ubicacion;
     }
 
-    public int getId() {
+    /*public int getId() {
         return id;
     }
 
     public void setId(int id) {
         this.id = id;
-    }
+    }*/
 
     public int getIdPartido() {
         return idPartido;
@@ -45,11 +45,11 @@ public class Entrada {
     }
 
     public int getIdComprador() {
-        return idComprador;
+        return Comprador;
     }
 
     public void setIdComprador(int idComprador) {
-        this.idComprador = idComprador;
+        this.Comprador = idComprador;
     }
 
     public Date getFechaCompra() {
