@@ -4,26 +4,29 @@ import org.w3c.dom.Text;
 
 public class Incidente {
 
-    private int id;
-    private int idPartido;
-    private Text descripcion;
-    private int minuto;
+    //Los incidentes se guardarán dentro de una lista del controlador    
+    //private int id;
+    public int idPartido, minuto;
+    public Text descripcion;
+    
 
     
-    public Incidente() {
-    }
-    public Incidente(int id, int idPartido, Text descripcion, int minuto) {
-        this.id = id;
+    public Incidente() {}
+
+    public Incidente(/*int id, */int idPartido, Text descripcion, int minuto) {
+        //this.id = id;
         this.idPartido = idPartido;
         this.descripcion = descripcion;
         this.minuto = minuto;
     }
-    public int getId() {
+
+    /*public int getId() {
         return id;
     }
     public void setId(int id) {
         this.id = id;
-    }
+    }*/
+    
     public int getIdPartido() {
         return idPartido;
     }
