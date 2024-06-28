@@ -1,10 +1,10 @@
-package com.betplay.View.VistasAdmin;
+package com.betplay.View.ViewRoles;
 
 import java.util.Scanner;
 
 public class Administrador {
 
-    public static void star(){
+    public static void startAdmin(){
 
         int desicion ;
 
@@ -31,3 +31,5 @@ public class Administrador {
 
 
 }
+
+
