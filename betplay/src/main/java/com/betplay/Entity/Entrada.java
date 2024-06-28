@@ -10,8 +10,6 @@ public class Entrada {
     public Date fechaCompra;
     public int cantidadEntrada;
     public float precioTotal;
-
-    //Misma ubicacion para todas las entradas?
     public String ubicacion;
 
     public Entrada() {}
