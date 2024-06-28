@@ -1,4 +1,4 @@
-package com.betplay.view;
+package com.betplay.View;
 
 import java.util.Scanner;
 

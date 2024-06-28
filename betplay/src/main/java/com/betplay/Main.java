@@ -1,6 +1,6 @@
 package com.betplay;
 
-import com.betplay.view.Intro;
+import com.betplay.View.Intro;
 
 public class Main {
     public static void main(String[] args) {

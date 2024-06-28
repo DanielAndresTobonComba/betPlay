@@ -1,4 +1,4 @@
-package com.betplay.view.ViewRoles;
+package com.betplay.View.ViewRoles;
 
 import java.util.Scanner;
 
