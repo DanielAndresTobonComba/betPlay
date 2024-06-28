@@ -1,24 +1,24 @@
-package com.betplay.View.ViewRoles;
+package com.betplay.View.viewSecundarias;
 
 import java.util.Scanner;
 
-public class Aficionado {
+public class gestionInformes {
 
-    public static void startAficionado(){
-
+    public static void startGestionInformes (){
 
         int decision ;
 
         Scanner scanner = new Scanner(System.in);
 
-
         do {
 
-
-            System.out.println("1. Visualizar estadisticas");
-            System.out.println("2. Compra de entradas");
-            System.out.println("3. Calendario de partidos");
-            System.out.println("4. Cerrar sesion");
+            System.out.println("Menu informes");
+            System.out.println("1. Agregar");
+            System.out.println("2. Editar");
+            System.out.println("3. Eliminar");
+            System.out.println("4. Regresar al menu");
+            
+            System.out.println("5. Regresar al menu");
 
             System.out.print("Opcion: ");
             decision = scanner.nextInt();
@@ -28,7 +28,6 @@ public class Aficionado {
         } while (decision != 3);
 
         switch (decision) {
-
             case 1:
                 
                 break;
@@ -44,8 +43,8 @@ public class Aficionado {
             case 4:
                 
                 break;
+
         }
     }
 
-    
 }

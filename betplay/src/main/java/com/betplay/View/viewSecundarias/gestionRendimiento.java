@@ -1,12 +1,13 @@
-package com.betplay.View.ViewRoles;
+package com.betplay.View.viewSecundarias;
 
 import java.util.Scanner;
 
-public class Medico {
+public class gestionRendimiento {
 
-    public static void startMedico (){
 
-         int decision ;
+    public static void startGestionRendimiento (){
+
+        int decision ;
 
         Scanner scanner = new Scanner(System.in);
 
@@ -14,8 +15,9 @@ public class Medico {
         do {
 
 
-            System.out.println("1. Gestion de lesiones.");
-            System.out.println("2. Cerrar sesion");
+            System.out.println("1. Ingresar");
+            System.out.println("2. Consultar");
+            System.out.println("3. Regresar al menu");
 
             System.out.print("Opcion: ");
             decision = scanner.nextInt();
@@ -24,7 +26,6 @@ public class Medico {
             
         } while (decision != 3);
 
-                
         switch (decision) {
             case 1:
                 
@@ -34,8 +35,16 @@ public class Medico {
                 
                 break;
 
+            case 3:
+                
+                break;
+
+            case 4:
+                
+                break;
+
         }
-        
     }
+    
 
 }

@@ -20,7 +20,7 @@ public class Tecnico {
             System.out.println("5. Gestion de estadisticas");
             System.out.println("6. Gestion de informes");
             System.out.println("7. Gestion de entrenamientos");
-            System.out.println("8. Gestion de Rendimiento");
+            System.out.println("8. Gestion de rendimiento");
             System.out.println("9. Gestio de convocatorias");
 
             System.out.println("10.Cerrar sesion");
@@ -32,6 +32,7 @@ public class Tecnico {
             
         } while (decision != 3);
 
+ 
         switch (decision) {
             case 1:
                 
@@ -44,13 +45,35 @@ public class Tecnico {
             case 3:
                 
                 break;
-        
-            default:
-            System.out.println("Opcion invalida");
+
+            case 4:
+                
+                break;
+
+            case 5:
+                
+                break;
+
+            case 6:
+                
+                break;
+
+            case 7:
+                
+                break;
+
+            case 8:
+                
+                break;
+
+            case 9:
+                
+                break;
+            
+            case 10:
+                
                 break;
         }
-
-        System.out.println("\nPrograma finalizado");
 
     }
 

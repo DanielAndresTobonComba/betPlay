@@ -1,10 +1,10 @@
-package com.betplay.View;
-
+package com.betplay.View.viewSecundarias;
 import java.util.Scanner;
 
-public class Intro {
+public class gestionEquipos {
 
-    public static void startIntro (){
+
+    public static void startGestioEquipos (){
 
         int decision ;
 
@@ -12,15 +12,18 @@ public class Intro {
 
         do {
 
-            System.out.println("\n\tMENU\n");
-            System.out.println("1. Ingresar");
-            System.out.println("2. Iniciar sesion");
-            System.out.println("3. Salir");
+            System.out.println("Menu equipos");
+            System.out.println("1. Agregar");
+            System.out.println("2. Editar");
+            System.out.println("3. Eliminar");
+            System.out.println("4. Tranferencia de jugadores");
+            System.out.println("5. Equipamiento");
+            System.out.println("6. Regresar al menu");
 
             System.out.print("Opcion: ");
             decision = scanner.nextInt();
             scanner.nextLine();
-     
+    
             
         } while (decision != 3);
 
@@ -40,7 +43,8 @@ public class Intro {
             case 4:
                 
                 break;
-
+            
+            
             case 5:
                 
                 break;
@@ -48,15 +52,8 @@ public class Intro {
             case 6:
                 
                 break;
-        
-            default:
-            System.out.println("Opcion invalida");
-                break;
+
         }
-
-        System.out.println("\nPrograma finalizado");
-
-
     }
 
 }
