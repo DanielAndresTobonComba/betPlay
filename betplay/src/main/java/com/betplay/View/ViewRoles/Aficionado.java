@@ -1,4 +1,4 @@
-package com.betplay.View.ViewRoles;
+package com.betplay.view.ViewRoles;
 
 import java.util.Scanner;
 
@@ -26,6 +26,25 @@ public class Aficionado {
     
             
         } while (decision != 3);
+
+        switch (decision) {
+
+            case 1:
+                
+                break;
+
+            case 2:
+                
+                break;
+
+            case 3:
+                
+                break;
+
+            case 4:
+                
+                break;
+        }
     }
 
     

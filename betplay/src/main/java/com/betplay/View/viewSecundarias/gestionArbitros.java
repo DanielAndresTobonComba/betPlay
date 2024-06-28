@@ -1,25 +1,21 @@
-package com.betplay.view.ViewRoles;
+package com.betplay.view.viewSecundarias;
 
 import java.util.Scanner;
 
-public class Periodista {
+public class gestionArbitros {
 
-
-    public static void startPeriodista(){
-
+    public static void startGestionArbitros (){
         int decision ;
 
         Scanner scanner = new Scanner(System.in);
 
-
         do {
 
-
-            System.out.println("1. Visualizar estadisticas");
-            System.out.println("2. Noticias y comunicados");
-            System.out.println("3. Calendario de partidos");
-            System.out.println("4. Medios de comunicacion");
-            System.out.println("5. Cerrar sesion");
+            System.out.println("Menu arbitros");
+            System.out.println("1. Agregar");
+            System.out.println("2. Editar");
+            System.out.println("3. Eliminar");
+            System.out.println("4. Regresar al menu");
 
             System.out.print("Opcion: ");
             decision = scanner.nextInt();
@@ -45,9 +41,6 @@ public class Periodista {
                 
                 break;
 
-            case 5:
-                
-                break;
         }
     }
 

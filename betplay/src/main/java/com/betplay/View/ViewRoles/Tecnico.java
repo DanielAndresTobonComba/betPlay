@@ -1,4 +1,4 @@
-package com.betplay.View.ViewRoles;
+package com.betplay.view.ViewRoles;
 
 import java.util.Scanner;
 
@@ -32,6 +32,7 @@ public class Tecnico {
             
         } while (decision != 3);
 
+ 
         switch (decision) {
             case 1:
                 
@@ -44,13 +45,35 @@ public class Tecnico {
             case 3:
                 
                 break;
-        
-            default:
-            System.out.println("Opcion invalida");
+
+            case 4:
+                
+                break;
+
+            case 5:
+                
+                break;
+
+            case 6:
+                
+                break;
+
+            case 7:
+                
+                break;
+
+            case 8:
+                
+                break;
+
+            case 9:
+                
+                break;
+            
+            case 10:
+                
                 break;
         }
-
-        System.out.println("\nPrograma finalizado");
 
     }
 

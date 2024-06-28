@@ -1,4 +1,4 @@
-package com.betplay.View;
+package com.betplay.view;
 
 import java.util.Scanner;
 
@@ -34,6 +34,18 @@ public class Intro {
                 break;
 
             case 3:
+                
+                break;
+
+            case 4:
+                
+                break;
+
+            case 5:
+                
+                break;
+
+            case 6:
                 
                 break;
         
