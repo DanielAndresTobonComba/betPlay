@@ -8,8 +8,7 @@ public class Actividad {
     public Text descripcion;
     public int duracion;
     
-    public Actividad() {
-    }
+    public Actividad() {}
 
     
 

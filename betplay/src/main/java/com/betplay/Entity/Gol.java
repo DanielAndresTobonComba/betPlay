@@ -6,11 +6,7 @@ public class Gol {
     public int idJugador, idEquipo, minuto, idPartido;
     
 
-    public Gol() {
-
-    }
-
-
+    public Gol() {}
 
     public Gol(int idJugador, int idEquipo, int minuto, int idPartido) {
 
@@ -19,9 +15,6 @@ public class Gol {
         this.minuto = minuto;
         this.idPartido = idPartido;
     }
-
-
-
 
 
     public int getIdJugador() {

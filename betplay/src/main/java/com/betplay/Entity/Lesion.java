@@ -8,7 +8,7 @@ public class Lesion {
     public String tipoLesion, gravedad;
     public Date fechaInicio, fechaFin;
 
-    public Lesion () {};
+    public Lesion () {}
 
     public Lesion(int id, int idJugador, String tipoLesion, String gravedad, Date fechaInicio, Date fechaFin) {
         this.id = id;

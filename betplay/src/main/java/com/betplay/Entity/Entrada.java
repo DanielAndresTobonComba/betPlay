@@ -14,8 +14,7 @@ public class Entrada {
     //Misma ubicacion para todas las entradas?
     public String ubicacion;
 
-    public Entrada() {
-    }
+    public Entrada() {}
 
     public Entrada(/*int id,*/ int idPartido, int Comprador, Date fechaCompra, int cantidadEntrada, float precioTotal,
             String ubicacion) {
