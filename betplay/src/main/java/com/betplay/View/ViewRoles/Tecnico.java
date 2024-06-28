@@ -20,7 +20,7 @@ public class Tecnico {
             System.out.println("5. Gestion de estadisticas");
             System.out.println("6. Gestion de informes");
             System.out.println("7. Gestion de entrenamientos");
-            System.out.println("8. Gestion de Rendimiento");
+            System.out.println("8. Gestion de rendimiento");
             System.out.println("9. Gestio de convocatorias");
 
             System.out.println("10.Cerrar sesion");
