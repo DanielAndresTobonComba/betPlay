@@ -4,9 +4,9 @@ import org.w3c.dom.Text;
 
 public class Actividad {
 
-    private int id;
-    private Text descripcion;
-    private int duracion;
+    public int id;
+    public Text descripcion;
+    public int duracion;
     
     public Actividad() {
     }
