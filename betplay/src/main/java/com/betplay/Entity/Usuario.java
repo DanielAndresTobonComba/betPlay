@@ -2,30 +2,28 @@ package com.betplay.Entity;
 
 public class Usuario {
 
-    private int id;
-    private String nombre;
-    private String email;
-    private String contraseña;
-    private int rol;
+    //private int id;
+    private String nombre, email, contraseña;
+    private int idRol;
 
     public Usuario() {
     }
     
-    public Usuario(int id, String nombre, String email, String contraseña, int rol) {
-        this.id = id;
+    public Usuario(/*int id,*/ String nombre, String email, String contraseña, int idRol) {
+        //this.id = id;
         this.nombre = nombre;
         this.email = email;
         this.contraseña = contraseña;
-        this.rol = rol;
+        this.idRol = idRol;
     }
 
-    public int getId() {
+    /*public int getId() {
         return id;
     }
 
     public void setId(int id) {
         this.id = id;
-    }
+    }*/
 
     public String getNombre() {
         return nombre;
@@ -52,11 +50,11 @@ public class Usuario {
     }
 
     public int getRol() {
-        return rol;
+        return idRol;
     }
 
-    public void setRol(int rol) {
-        this.rol = rol;
+    public void setRol(int idRol) {
+        this.idRol = idRol;
     }
 
     

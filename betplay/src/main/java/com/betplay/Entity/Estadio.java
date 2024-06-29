@@ -2,24 +2,26 @@ package com.betplay.Entity;
 
 public class Estadio {
 
-    private int id;
-    private String nombre;
-    private String ubicacion;
+    //private int id;
+    private String nombre, ubicacion;
     private int capacidad;
-    public Estadio() {
-    }
-    public Estadio(int id, String nombre, String ubicacion, int capacidad) {
-        this.id = id;
+
+    public Estadio() {}
+    
+    public Estadio(/*int id,*/ String nombre, String ubicacion, int capacidad) {
+        //this.id = id;
         this.nombre = nombre;
         this.ubicacion = ubicacion;
         this.capacidad = capacidad;
     }
-    public int getId() {
+
+    
+    /*public int getId() {
         return id;
     }
     public void setId(int id) {
         this.id = id;
-    }
+    }*/
     public String getNombre() {
         return nombre;
     }

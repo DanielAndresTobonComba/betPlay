@@ -2,20 +2,14 @@ package com.betplay.Entity;
 
 public class Rendimiento {
 
-    private int id;
-    private int idJugador;
-    private int idPartido;
-    private int minutosJugados;
-    private int goles;
-    private int asistencias;
-    private int tarjetasAmarillas;
-    private int tarjetasRojas;
+    // Podríamos contemplar la posibilidad de almacenar los rendimientos en una lista
+    public int id;
+    public int idJugador, idPartido, minutosJugados, goles, asistencias, tarjetasAmarillas, tarjetasRojas;
 
     public Rendimiento() {
 
     }
 
-    
     public Rendimiento(int id, int idJugador, int idPartido, int minutosJugados, int goles, int asistencias,
             int tarjetasAmarillas, int tarjetasRojas) {
         this.id = id;
@@ -27,12 +21,14 @@ public class Rendimiento {
         this.tarjetasAmarillas = tarjetasAmarillas;
         this.tarjetasRojas = tarjetasRojas;
     }
+    
     public int getId() {
         return id;
     }
     public void setId(int id) {
         this.id = id;
     }
+
     public int getIdJugador() {
         return idJugador;
     }
