@@ -1,23 +1,35 @@
-package com.betplay.View;
+package com.betplay.View.ViewRoles;
 
 import java.util.Scanner;
 
-import com.betplay.View.ViewRoles.seleccionRol;
+public class seleccionRol {
 
-public class Intro {
-
-    public static void startIntro (){
-
-        int decision ;
+    public static void startSeleccionRol (){
 
         Scanner scanner = new Scanner(System.in);
 
+        String usuario = "";
+        String contraseña = "";
+
+        int decision ;
+        int rol 
+
+        
+        System.out.print("Usuario: ");
+        scanner.nextLine();
+
+        System.out.print("Contraseña: ");
+        scanner.nextLine();
+
         do {
 
-            System.out.println("\n\tMENU\n");
-            System.out.println("1. Ingresar");
-            System.out.println("2. Iniciar sesion");
-            System.out.println("3. Salir");
+            System.out.println("\n\tSelecciona tu rol\n");
+            System.out.println("1. Administrador");
+            System.out.println("2. Arbitro");
+            System.out.println("3. Medico");
+            System.out.println("4. Periodista");
+            System.out.println("5. Tecnico");
+            System.out.println("6. Regresar al menu principal");
 
             System.out.print("Opcion: ");
             decision = scanner.nextInt();
@@ -60,10 +72,6 @@ public class Intro {
             System.out.println("Opcion invalida");
                 break;
         }
-
-        System.out.println("\nPrograma finalizado");
-
-
     }
 
 }
