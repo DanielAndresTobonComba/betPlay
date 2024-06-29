@@ -15,7 +15,7 @@ public class Intro {
         do {
 
             System.out.println("\n\tMENU\n");
-            System.out.println("1. Ingresar");
+            System.out.println("1. Registrarse");
             System.out.println("2. Iniciar sesion");
             System.out.println("3. Salir");
 
@@ -33,7 +33,7 @@ public class Intro {
 
             case 2:
 
-                seleccionRol
+                seleccionRol.startSeleccionRol();
                 
                 break;
 

@@ -11,8 +11,7 @@ public class seleccionRol {
         String usuario = "";
         String contraseña = "";
 
-        int decision ;
-        int rol 
+        int decision = 0 ;
 
         
         System.out.print("Usuario: ");
@@ -40,28 +39,33 @@ public class seleccionRol {
 
         switch (decision) {
             case 1:
+
+                decision = 1;
                 
                 break;
 
             case 2:
 
-                seleccionRol
+                decision = 2;
                 
                 break;
 
             case 3:
 
-                System.out.println("Programa finalizado");
-                scanner.close();
-                
+                decision = 3;
+            
                 break;
 
             case 4:
-                
+            
+                decision = 4;
+
                 break;
 
             case 5:
-                
+
+                decision = 5;
+
                 break;
 
             case 6:
