@@ -2,6 +2,8 @@ package com.betplay.View;
 
 import java.util.Scanner;
 
+import com.betplay.View.ViewRoles.seleccionRol;
+
 public class Intro {
 
     public static void startIntro (){
@@ -37,6 +39,8 @@ public class Intro {
                 break;
 
             case 2:
+
+                seleccionRol
                 
                 break;
 
