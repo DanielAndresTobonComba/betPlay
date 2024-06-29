@@ -12,7 +12,7 @@ public class seleccionRol {
         String contraseña = "";
 
         int decision ;
-        int rol 
+        int rol = 0;
 
         
         System.out.print("Usuario: ");
@@ -45,7 +45,6 @@ public class seleccionRol {
 
             case 2:
 
-                seleccionRol
                 
                 break;
 
