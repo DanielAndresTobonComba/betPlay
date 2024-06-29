@@ -2,6 +2,21 @@ package com.betplay.View.ViewRoles;
 
 import java.util.Scanner;
 
+import com.betplay.View.Intro;
+import com.betplay.View.viewSecundarias.gestionArbitros;
+import com.betplay.View.viewSecundarias.gestionComunicadosNoticias;
+import com.betplay.View.viewSecundarias.gestionEquipos;
+import com.betplay.View.viewSecundarias.gestionEstadios;
+import com.betplay.View.viewSecundarias.gestionInformes;
+import com.betplay.View.viewSecundarias.gestionJugadores;
+import com.betplay.View.viewSecundarias.gestionMedios;
+import com.betplay.View.viewSecundarias.gestionPartidos;
+import com.betplay.View.viewSecundarias.gestionPatrocinios;
+import com.betplay.View.viewSecundarias.gestionReconocimientos;
+
+
+ 
+
 public class Administrador {
 
     public static void startAdmin(){
@@ -33,46 +48,59 @@ public class Administrador {
         
         switch (desicion) {
             case 1:
-                
+
+                gestionEquipos.startGestioEquipos(); 
+                    
                 break;
 
             case 2:
+
+                gestionJugadores.startGestionJugadores();
                 
                 break;
 
             case 3:
+
+                gestionPartidos.startGestionEquipos();
                 
                 break;
 
             case 4:
+
+                gestionArbitros.startGestionArbitros();
                 
                 break;
 
             case 5:
+                gestionEstadios.startGestionEstadios();
                 
                 break;
 
             case 6:
+                gestionPatrocinios.startGestionPatrocinios();
                 
                 break;
 
             case 7:
+                gestionComunicadosNoticias.startGestionComunicadosNoticias();
                 
                 break;
 
             case 8:
+                gestionInformes.startGestionInformes();
                 
                 break;
 
             case 9:
-                
+                gestionMedios.startGestionMedios();
                 break;
 
             case 10:
-                
+                gestionReconocimientos.startGestionReconocimiento();
                 break;
 
             case 11:
+                Intro.startIntro();
                 
                 break;
         
