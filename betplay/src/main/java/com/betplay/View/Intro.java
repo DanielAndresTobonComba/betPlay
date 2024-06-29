@@ -11,13 +11,20 @@ public class Intro {
         Scanner scanner = new Scanner(System.in);
 
         do {
-
-            System.out.println("\n\tMENU\n");
-            System.out.println("1. Ingresar");
-            System.out.println("2. Iniciar sesion");
+            System.out.println("\n-------------------");
+            System.out.println("   B E T P L A Y");
+            System.out.println("===================");
+            System.out.println("       Menú");
+            System.out.println("===================");
+            System.out.println("1. Registrar\n");
+            System.out.println("2. Iniciar sesión\n");
             System.out.println("3. Salir");
+            System.out.println("-------------------");
 
-            System.out.print("Opcion: ");
+            System.out.println("\n\n. . . . . . . . . .");
+            System.out.println(" Digite la opción");
+            System.out.println(". . . . . . . . . . ");
+            System.out.print(">>> ");
             decision = scanner.nextInt();
             scanner.nextLine();
      
