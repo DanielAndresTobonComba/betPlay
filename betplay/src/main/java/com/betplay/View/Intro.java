@@ -40,21 +40,6 @@ public class Intro {
                 
                 break;
 
-            case 3:
-                
-                break;
-
-            case 4:
-                
-                break;
-
-            case 5:
-                
-                break;
-
-            case 6:
-                
-                break;
         
             default:
             System.out.println("Opcion invalida");
