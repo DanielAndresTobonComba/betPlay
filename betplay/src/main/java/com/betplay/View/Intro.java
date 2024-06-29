@@ -45,8 +45,6 @@ public class Intro {
 
             case 2:
 
-         
-                
             System.out.println("Iniciar sesión");
                 break;
 
