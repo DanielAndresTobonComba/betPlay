@@ -5,6 +5,7 @@ import java.util.Scanner;
 import com.betplay.View.ViewRoles.GuiaRoles;
 import com.betplay.View.viewSecundarias.iniciarSesion;
 import com.betplay.Entity.CheckInt;
+import com.betplay.Entity.CheckString;
 import com.betplay.Entity.ChekUser;
 
 public class Intro {
@@ -17,7 +18,9 @@ public class Intro {
         String nombreusuario;
         String contraseña;
         boolean validacionUsuario;
+        String nuevoUsuario;
         Scanner scanner = new Scanner(System.in);
+
 
 
         //do {
@@ -45,7 +48,9 @@ public class Intro {
 
         switch (decision) {
             case 1:
-                System.out.println("Registrar");
+                System.out.println();
+                
+                
                 break;
 
             case 2:

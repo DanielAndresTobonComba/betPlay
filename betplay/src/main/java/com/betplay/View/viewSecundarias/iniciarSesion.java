@@ -76,10 +76,10 @@ public class iniciarSesion {
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("\n. . . . . . . . . . . . . . . .");
-                System.out.println(" Ingrese su nombre de usuario");
-                System.out.println(". . . . . . . . . . . . . . . .");
-                System.out.print(">>> ");
-                nombreUsuario = CheckString.check("Ingrese su nombre de usuario");
+        System.out.println(" Ingrese su nombre de usuario");
+        System.out.println(". . . . . . . . . . . . . . . .");
+        System.out.print(">>> ");
+        nombreUsuario = CheckString.check("Ingrese su nombre de usuario");
         return nombreUsuario;
     }
 
