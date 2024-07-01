@@ -1,10 +1,8 @@
 package com.betplay.View;
 
-import java.util.InputMismatchException;
 import java.util.Scanner;
 
 import com.betplay.View.ViewRoles.GuiaRoles;
-import com.betplay.View.ViewRoles.seleccionRol;
 import com.betplay.View.viewSecundarias.iniciarSesion;
 import com.betplay.Entity.CheckInt;
 import com.betplay.Entity.ChekUser;
@@ -52,7 +50,7 @@ public class Intro {
 
             case 2:
 
-                rol = iniciarSesion.getRol(decision);
+                rol = iniciarSesion.getRol();
                 if ("".equals(rol)) {
 
                 }
@@ -79,6 +77,7 @@ public class Intro {
         
             default:
             System.out.println("CHAO");
+            scanner.close();
                 break;
         }
 

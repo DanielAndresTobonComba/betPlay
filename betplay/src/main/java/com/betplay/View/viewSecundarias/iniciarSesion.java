@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 import com.betplay.Controller;
 import com.betplay.Entity.CheckInt;
+import com.betplay.Entity.CheckString;
 import com.betplay.View.Intro;
 
 public class iniciarSesion {
@@ -13,7 +14,7 @@ public class iniciarSesion {
 
     }
 
-    public static String getRol (int opc) {
+    public static String getRol () {
         int opcion = 0;
         String rol = "";
         boolean introPermise = true;
@@ -78,7 +79,7 @@ public class iniciarSesion {
                 System.out.println(" Ingrese su nombre de usuario");
                 System.out.println(". . . . . . . . . . . . . . . .");
                 System.out.print(">>> ");
-                nombreUsuario = scanner.nextLine();
+                nombreUsuario = CheckString.check("Ingrese su nombre de usuario");
         return nombreUsuario;
     }
 
@@ -90,7 +91,7 @@ public class iniciarSesion {
                 System.out.println(" Ingrese su  contraseña");
                 System.out.println(". . . . . . . . . . . . . ");
                 System.out.print(">>> ");
-                password = scanner.nextLine();
+                password = CheckString.check("Ingrese su  contraseña");
         return password;
     }
 

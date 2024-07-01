@@ -5,10 +5,12 @@ import java.util.Scanner;
 
 public class CheckInt {
     boolean introPermise = true;
-    private static int opcion = 0;
-    private static Scanner scanner = new Scanner(System.in);
-
+    
+    private CheckInt() {}
+    
     public static int check(boolean introPermise) {
+        int opcion = 0;
+        Scanner scanner = new Scanner(System.in);
 
         while (introPermise == true) {
             try {
