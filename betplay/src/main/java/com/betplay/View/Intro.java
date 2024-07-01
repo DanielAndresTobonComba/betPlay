@@ -4,8 +4,9 @@ import java.util.InputMismatchException;
 import java.util.Scanner;
 
 import com.betplay.View.ViewRoles.seleccionRol;
-
+import com.betplay.View.viewSecundarias.iniciarSesion;
 import com.betplay.Entity.CheckInt;
+import com.betplay.Entity.ChekUser;
 
 public class Intro {
 
@@ -13,6 +14,10 @@ public class Intro {
 
         int decision;
         boolean introPermise = true;
+        String rol;
+        String nombreusuario;
+        String contraseña;
+        Scanner scanner = new Scanner(System.in);
 
 
         //do {
@@ -45,7 +50,10 @@ public class Intro {
 
             case 2:
 
-            System.out.println("Iniciar sesión");
+                rol = iniciarSesion.getRol(decision);
+                nombreusuario = iniciarSesion.getNombreUsuario();
+                contraseña = iniciarSesion.getPassword();
+                ChekUser.verificarUsuario(nombreusuario, rol, contraseña);
                 break;
 
         

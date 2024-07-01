@@ -1,6 +1,7 @@
 package com.betplay;
 
 import java.lang.annotation.Target;
+import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.Hashtable;
 import java.util.List;
@@ -45,7 +46,8 @@ public class Controller {
     public static List<Tarjeta> controladorTarjetas;
     public static Hashtable<Integer, Transferencia> controladorTransferencias;
     public static Hashtable<String, Usuario> controladorUsuarios; // La clave va a ser el nombre de usuario
-    public List<String> roles = new ArrayList<>();
+    public static List<String> roles = new ArrayList<>();
+    
 
     
     
@@ -53,7 +55,7 @@ public class Controller {
 
     private static Controller INSTANCE = new Controller();
 
-    private Controller () {
+    private Controller (){
 
         //Inicialización de los controladores
         controladorEquipos = new Hashtable<>();
@@ -75,17 +77,19 @@ public class Controller {
         controladorTarjetas = new ArrayList<>();
         controladorTransferencias = new Hashtable<>();
         controladorUsuarios = new Hashtable<>();
+        
 
         // Definición de los roles
-        roles.add("Admin");
-        roles.add("Aficionado");
-        roles.add("Arbitro");
-        roles.add("Medico");
-        roles.add("Periodista");
-        roles.add("Tecnico");
+        roles.add("Admin"); // index = 0
+        roles.add("Aficionado");// index = 1
+        roles.add("Arbitro"); // index = 2
+        roles.add("Medico"); // index = 3
+        roles.add("Periodista"); // index = 4
+        roles.add("Tecnico"); // index = 5
     }
 
-    public static Controller getController() {
+    public static Controller getController()   {
+        
         return INSTANCE;
     }
 
