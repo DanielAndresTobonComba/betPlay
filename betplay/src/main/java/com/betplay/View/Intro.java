@@ -47,7 +47,6 @@ public class Intro {
 
             System.out.println("Iniciar sesión");
                 break;
-
         
             default:
             System.out.println("CHAO");
