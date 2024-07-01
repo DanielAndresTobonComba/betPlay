@@ -11,6 +11,9 @@ public class Main {
         
         // Intro menu = new Intro();
         // menu.startIntro();
+        //Registro del Admin
+        String usuarioAdmin = "admin";
+
         Intro.startIntro();
 
 

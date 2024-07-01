@@ -44,11 +44,18 @@ public class Controller {
     public static Hashtable<Integer, Rol> controladorRoles;
     public static List<Tarjeta> controladorTarjetas;
     public static Hashtable<Integer, Transferencia> controladorTransferencias;
-    public static Hashtable<Integer, Usuario> controladorUsuarios;
+    public static Hashtable<String, Usuario> controladorUsuarios; // La clave va a ser el nombre de usuario
+    public List<String> roles = new ArrayList<>();
+
+    
+    
+    
 
     private static Controller INSTANCE = new Controller();
 
     private Controller () {
+
+        //Inicialización de los controladores
         controladorEquipos = new Hashtable<>();
         controladorActividades = new Hashtable<>();
         controladorComunicaciones = new Hashtable<>();
@@ -68,6 +75,14 @@ public class Controller {
         controladorTarjetas = new ArrayList<>();
         controladorTransferencias = new Hashtable<>();
         controladorUsuarios = new Hashtable<>();
+
+        // Definición de los roles
+        roles.add("Admin");
+        roles.add("Aficionado");
+        roles.add("Arbitro");
+        roles.add("Medico");
+        roles.add("Periodista");
+        roles.add("Tecnico");
     }
 
     public static Controller getController() {
