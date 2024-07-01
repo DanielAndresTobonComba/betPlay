@@ -3,7 +3,7 @@ import java.util.Scanner;
 
 public class gestionPartidos {
 
-    public static void startGestionEquipos (){
+    public static void startGestionPartidos (){
 
         int decision ;
 
@@ -15,7 +15,7 @@ public class gestionPartidos {
             System.out.println("1. Programar");
             System.out.println("2. Modificar");
             System.out.println("3. Eliminar");
-            System.out.println("4. Registrar resultados"); // Revizar que datos va a tener como goles tarjetas etc.
+            // System.out.println("4. Registrar resultados"); // Revizar que datos va a tener como goles tarjetas etc.
             System.out.println("4. Regresar al menu");
 
             System.out.print("Opcion: ");
