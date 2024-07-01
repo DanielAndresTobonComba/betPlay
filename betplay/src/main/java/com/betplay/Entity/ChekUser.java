@@ -7,20 +7,21 @@ public class ChekUser {
 
     private ChekUser() {}
 
-    public static void verificarUsuario(String usuario, String rol, String password) {
+    public static boolean verificarUsuario(String usuario, String rol, String password) {
 
-        boolean validacion;
+        boolean validacion = false;
         boolean containsKey = Controller.getController().controladorUsuarios.containsKey(usuario);
 
 
         if (containsKey == true &&  Controller.getController().controladorUsuarios.get(usuario).getRol().equals(rol) && Controller.getController().controladorUsuarios.get(usuario).getContraseña().equals(password)) {
-            System.out.println("El usuario es válido");
+
+            validacion = true;
         }
         else {
-            System.out.println("Datos incorrectos");
-            Intro.startIntro();
+            
         }
 
+        return validacion;
         
 
     }

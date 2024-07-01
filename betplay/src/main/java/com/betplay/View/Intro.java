@@ -3,6 +3,7 @@ package com.betplay.View;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
+import com.betplay.View.ViewRoles.GuiaRoles;
 import com.betplay.View.ViewRoles.seleccionRol;
 import com.betplay.View.viewSecundarias.iniciarSesion;
 import com.betplay.Entity.CheckInt;
@@ -17,6 +18,7 @@ public class Intro {
         String rol;
         String nombreusuario;
         String contraseña;
+        boolean validacionUsuario;
         Scanner scanner = new Scanner(System.in);
 
 
@@ -51,9 +53,28 @@ public class Intro {
             case 2:
 
                 rol = iniciarSesion.getRol(decision);
-                nombreusuario = iniciarSesion.getNombreUsuario();
-                contraseña = iniciarSesion.getPassword();
-                ChekUser.verificarUsuario(nombreusuario, rol, contraseña);
+                if ("".equals(rol)) {
+
+                }
+                else {
+                    nombreusuario = iniciarSesion.getNombreUsuario();
+                    contraseña = iniciarSesion.getPassword();
+                    validacionUsuario = ChekUser.verificarUsuario(nombreusuario, rol, contraseña);
+                    if (validacionUsuario == true) {
+
+                        System.out.println("\n_________________________");
+                        System.out.println("\n   B I E N V E N I D O  ");
+                        System.out.println("_________________________\n");
+                        GuiaRoles.entrarVista(rol);
+
+                    } else {
+                        System.out.println("\n: : : : : : : : : : : :");
+                        System.out.println(":  Usuario Incorrecto  :");
+                        System.out.println(": : : : : : : : : : : :");
+                        Intro.startIntro();
+                    }
+                }
+                
                 break;
         
             default:
@@ -61,7 +82,7 @@ public class Intro {
                 break;
         }
 
-        System.out.println("\nPrograma finalizado");
+        
 
 
     }

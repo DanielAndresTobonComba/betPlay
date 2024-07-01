@@ -19,7 +19,7 @@ public class iniciarSesion {
         boolean introPermise = true;
 
         System.out.println("\n-------------------");
-        System.out.println("      R O L E S");
+        System.out.println("     R O L E S");
         System.out.println("===================");
         System.out.println("       Menú");
         System.out.println("===================");
