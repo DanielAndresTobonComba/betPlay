@@ -55,7 +55,6 @@ public class Intro {
                 contraseña = iniciarSesion.getPassword();
                 ChekUser.verificarUsuario(nombreusuario, rol, contraseña);
                 break;
-
         
             default:
             System.out.println("CHAO");

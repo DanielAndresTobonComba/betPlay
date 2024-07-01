@@ -17,7 +17,7 @@ public class gestionUsuarios {
             System.out.println("1. Ingresar");
             System.out.println("2. Modificar");
             System.out.println("3. Eliminar");
-            System.out.println("4. Salir");
+            System.out.println("4. Regresar al menu princiàl");
 
             System.out.print("Opcion: ");
             decision = scanner.nextInt();
@@ -42,8 +42,6 @@ public class gestionUsuarios {
 
             case 4:
 
-                System.out.println("Programa finalizado");
-                scanner.close();
                 
                 break;
 

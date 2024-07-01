@@ -2,6 +2,11 @@ package com.betplay.View.ViewRoles;
 
 import java.util.Scanner;
 
+import com.betplay.View.viewSecundarias.gestionCalendarios;
+import com.betplay.View.viewSecundarias.gestionComunicadosNoticias;
+import com.betplay.View.viewSecundarias.gestionMedios;
+import com.betplay.View.viewSecundarias.visualizarEstadisticas;
+
 public class Periodista {
 
 
@@ -30,19 +35,19 @@ public class Periodista {
 
         switch (decision) {
             case 1:
-                
+                visualizarEstadisticas.startVisualizarEstadisticas();
                 break;
 
             case 2:
-                
+                gestionComunicadosNoticias.startGestionComunicadosNoticias();
                 break;
 
             case 3:
-                
+                gestionCalendarios.startconsultarCalendario();                
                 break;
 
             case 4:
-                
+                gestionMedios.startGestionMedios();
                 break;
 
             case 5:

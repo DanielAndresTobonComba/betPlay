@@ -61,7 +61,7 @@ public class Administrador {
 
             case 3:
 
-                gestionPartidos.startGestionEquipos();
+                gestionPartidos.startGestionPartidos();
                 
                 break;
 
