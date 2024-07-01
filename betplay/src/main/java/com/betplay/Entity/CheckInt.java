@@ -12,6 +12,7 @@ public class CheckInt {
 
         while (introPermise == true) {
             try {
+
                 opcion = scanner.nextInt();
                 scanner.nextLine();
                 introPermise = false;

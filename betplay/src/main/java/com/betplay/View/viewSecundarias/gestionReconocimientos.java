@@ -2,6 +2,8 @@ package com.betplay.View.viewSecundarias;
 
 import java.util.Scanner;
 
+import com.betplay.Entity.CheckInt;
+
 
 public class gestionReconocimientos {
 
@@ -11,7 +13,11 @@ public class gestionReconocimientos {
         Scanner scanner = new Scanner(System.in);
 
         do {
-
+            System.out.println("\n-------------------");
+            System.out.println("   R E C O N O C I M I E N T O ");
+            System.out.println("===================");
+            System.out.println("       Menú");
+            System.out.println("===================");
             System.out.println("Menu premios y reconocimiento");
             System.out.println("1. Agregar reconocimiento a equipos");
             System.out.println("2. Agregar reconocimiento a jugadores");
@@ -19,33 +25,53 @@ public class gestionReconocimientos {
             System.out.println("4. Editar reconocimiento a jugadores");
             System.out.println("5. Eliminar reconocimiento a equipo");
             System.out.println("6. Eliminar reconocimiento a jugadores");
+            System.out.println("7. Regresar al menu");
             
 
-            System.out.print("Opcion: ");
-            decision = scanner.nextInt();
-            scanner.nextLine();
+            System.out.println("\n\n. . . . . . . . . .");
+            System.out.println(" Digite la opción");
+            System.out.println(". . . . . . . . . . ");
+            System.out.print(">>> ");
+            
+            decision = CheckInt.check(true);
     
             
-        } while (decision != 3);
-
-        switch (decision) {
-            case 1:
+            switch (decision) {
+                case 1:
+                    
+                    break;
+    
+                case 2:
+                    
+                    break;
+    
+                case 3:
+                    
+                    break;
+    
+                case 4:
+                    
+                    break;
+    
+                case 5:
+                    
+                    break;
+    
+                case 6:
+                    
+                    break;
                 
-                break;
+                case 7:
+                    System.out.print("Presiona entrer para volver al menu pricipal: ");
+                    scanner.nextLine();
+                    return;
+                    
+    
+            }
 
-            case 2:
-                
-                break;
+        } while (decision != 7);
 
-            case 3:
-                
-                break;
-
-            case 4:
-                
-                break;
-
-        }
+       
     }
 
 }

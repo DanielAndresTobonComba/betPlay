@@ -2,6 +2,8 @@ package com.betplay.View.ViewRoles;
 
 import java.util.Scanner;
 
+import com.betplay.Entity.CheckInt;
+import com.betplay.View.Intro;
 import com.betplay.View.viewSecundarias.gestionConvocatoria;
 import com.betplay.View.viewSecundarias.gestionEntrenadores;
 import com.betplay.View.viewSecundarias.gestionEntrenamiento;
@@ -21,9 +23,13 @@ public class Tecnico {
         Scanner scanner = new Scanner(System.in);
 
         do {
+            System.out.println("\n-------------------");
+            System.out.println("   T É C N I C O");
+            System.out.println("===================");
+            System.out.println("       Menú");
+            System.out.println("===================");
 
-            System.out.println("\n\tMENU\n");
-            System.out.println("1.Gestion del equipo");
+            System.out.println("1. Gestion del equipo");
             System.out.println("2. Gestion de jugadores");
             System.out.println("3. Gestion de partidos");
             System.out.println("4. Gestion de entrenadores");
@@ -35,55 +41,65 @@ public class Tecnico {
 
             System.out.println("10.Cerrar sesion");
 
-            System.out.print("Opcion: ");
-            decision = scanner.nextInt();
-            scanner.nextLine();
+            System.out.println("\n\n. . . . . . . . . .");
+            System.out.println(" Digite la opción");
+            System.out.println(". . . . . . . . . . ");
+            System.out.print(">>> ");
+
+            decision = CheckInt.check(true);
+
+
+            switch (decision) {
+                case 1:
+                    gestionEquipos.startGestioEquipos();
+                    break;
+    
+                case 2:
+                    gestionJugadores.startGestionJugadores();
+                    break;
+    
+                case 3:
+                    gestionPartidos.startGestionPartidos();
+                    break;
+    
+                case 4:
+                    gestionEntrenadores.startGestionEntrenadores();
+                    break;
+    
+                case 5:
+                    visualizarEstadisticas.startVisualizarEstadisticas();
+                    break;
+    
+                case 6:
+                    gestionInformes.startGestionInformes();
+                    break;
+    
+                case 7:
+                    gestionEntrenamiento.startGestionEntrenamiento();
+                    break;
+    
+                case 8:
+                    gestionRendimiento.startGestionRendimiento();
+                    break;
+    
+                case 9:
+                    gestionConvocatoria.startGestionConvocatoria();
+                    break;
+                
+                case 10:
+                    System.out.println("Sesion Cerrada");
+                    System.out.print("Presiona entrer para salir: ");
+                    scanner.nextLine();
+                    Intro.startIntro();
+                    
+                    break;
+            }
      
             
-        } while (decision != 3);
+        } while (decision != 10);
 
  
-        switch (decision) {
-            case 1:
-                gestionEquipos.startGestioEquipos();
-                break;
-
-            case 2:
-                gestionJugadores.startGestionJugadores();
-                break;
-
-            case 3:
-                gestionPartidos.startGestionPartidos();
-                break;
-
-            case 4:
-                gestionEntrenadores.startGestionEntrenadores();
-                break;
-
-            case 5:
-                visualizarEstadisticas.startVisualizarEstadisticas();
-                break;
-
-            case 6:
-                gestionInformes.startGestionInformes();
-                break;
-
-            case 7:
-                gestionEntrenamiento.startGestionEntrenamiento();
-                break;
-
-            case 8:
-                gestionRendimiento.startGestionRendimiento();
-                break;
-
-            case 9:
-                gestionConvocatoria.startGestionConvocatoria();
-                break;
-            
-            case 10:
-                
-                break;
-        }
+        
 
     }
 

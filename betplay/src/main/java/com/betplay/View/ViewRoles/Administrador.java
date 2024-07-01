@@ -2,6 +2,7 @@ package com.betplay.View.ViewRoles;
 
 import java.util.Scanner;
 
+import com.betplay.Entity.CheckInt;
 import com.betplay.View.Intro;
 import com.betplay.View.viewSecundarias.gestionArbitros;
 import com.betplay.View.viewSecundarias.gestionComunicadosNoticias;
@@ -13,6 +14,7 @@ import com.betplay.View.viewSecundarias.gestionMedios;
 import com.betplay.View.viewSecundarias.gestionPartidos;
 import com.betplay.View.viewSecundarias.gestionPatrocinios;
 import com.betplay.View.viewSecundarias.gestionReconocimientos;
+import com.betplay.View.viewSecundarias.gestionUsuarios;
 
 
  
@@ -21,12 +23,16 @@ public class Administrador {
 
     public static void startAdmin(){
 
-        int desicion ;
+        int decision = 0 ;
 
         Scanner scanner = new Scanner(System.in);
 
         do {
-            
+            System.out.println("\n-------------------");
+            System.out.println("   A D M I N I S T R A D O R");
+            System.out.println("===================");
+            System.out.println("       Menú");
+            System.out.println("===================");
             System.out.println("1. Registro de usuarios");
             System.out.println("2. Gestion de equipos");
             System.out.println("3. Gestion de jugadores");
@@ -37,77 +43,94 @@ public class Administrador {
             System.out.println("8. Gestion de comunicados y noticias");
             System.out.println("9. Gestion de informes.");
             System.out.println("10. Gestion de medios");
-            System.out.println("11.Gestion de premios y reconocimientos");
+            System.out.println("11. Gestion de premios y reconocimientos");
             System.out.println("12. Regresar al menu principal");   
             
-            System.out.print("Opcion: ");
-            desicion = scanner.nextInt();
+            System.out.println("\n\n. . . . . . . . . .");
+            System.out.println(" Digite la opción");
+            System.out.println(". . . . . . . . . . ");
+            System.out.print(">>> ");
+            
+            
+            decision = CheckInt.check(true);
 
-        } while (desicion != 11);
+            switch (decision) {
 
-        
-        switch (desicion) {
-            case 1:
-
-                gestionEquipos.startGestioEquipos(); 
+                case 1:
+                    gestionUsuarios.startGestionUsuarios();
+                    break;
+    
+                case 2:
+    
+                    gestionEquipos.startGestioEquipos(); 
+                        
+                    break;
+    
+                case 3:
+    
+                    gestionJugadores.startGestionJugadores();
+                    
+                    break;
+    
+                case 4:
+    
+                    gestionPartidos.startGestionPartidos();
+                    
+                    break;
+    
+                case 5:
+    
+                    gestionArbitros.startGestionArbitros();
+                    
+                    break;
+    
+                case 6:
+                    gestionEstadios.startGestionEstadios();
+                    
+                    break;
+    
+                case 7:
+                    gestionPatrocinios.startGestionPatrocinios();
+                    
+                    break;
+    
+                case 8:
+                    gestionComunicadosNoticias.startGestionComunicadosNoticias();
+                    
+                    break;
+    
+                case 9:
+                    gestionInformes.startGestionInformes();
+                    
+                    break;
+    
+                case 10:
+                    gestionMedios.startGestionMedios();
+                    break;
+    
+                case 11:
+                    gestionReconocimientos.startGestionReconocimiento();
+                    break;
+                
+                    
+                case 12:
+                    System.out.println("Sesion Cerrada");
+                    System.out.print("Presiona entrer para salir: ");
+                    scanner.nextLine();
+                    Intro.startIntro();
                     
                 break;
+    
+    
+                default:
+                System.out.println("Opcion invalida");
+                    break;
+            }
 
-            case 2:
+        } while (decision != 12);
 
-                gestionJugadores.startGestionJugadores();
-                
-                break;
-
-            case 3:
-
-                gestionPartidos.startGestionPartidos();
-                
-                break;
-
-            case 4:
-
-                gestionArbitros.startGestionArbitros();
-                
-                break;
-
-            case 5:
-                gestionEstadios.startGestionEstadios();
-                
-                break;
-
-            case 6:
-                gestionPatrocinios.startGestionPatrocinios();
-                
-                break;
-
-            case 7:
-                gestionComunicadosNoticias.startGestionComunicadosNoticias();
-                
-                break;
-
-            case 8:
-                gestionInformes.startGestionInformes();
-                
-                break;
-
-            case 9:
-                gestionMedios.startGestionMedios();
-                break;
-
-            case 10:
-                gestionReconocimientos.startGestionReconocimiento();
-                break;
-
-            case 11:
-                Intro.startIntro();
-                
-                break;
         
-            default:
-            System.out.println("Opcion invalida");
-                break;
-        }
+        
 
     }
 

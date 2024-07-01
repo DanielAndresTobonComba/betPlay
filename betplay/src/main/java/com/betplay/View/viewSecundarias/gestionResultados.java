@@ -9,7 +9,7 @@ public class gestionResultados {
         Scanner scanner = new Scanner(System.in);
 
         // Faltan los datos para buscarlos en los hastables
-        
+        // ESTO ESTA PENDIENTE HABLARLO CON CARLOS
     }
 
 }

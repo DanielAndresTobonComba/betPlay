@@ -1,11 +1,7 @@
 package com.betplay.View;
 
-import java.util.InputMismatchException;
-import java.util.Scanner;
-
-import com.betplay.View.ViewRoles.seleccionRol;
-
 import com.betplay.Entity.CheckInt;
+import com.betplay.View.ViewRoles.Administrador;
 
 public class Intro {
 
@@ -40,7 +36,14 @@ public class Intro {
 
         switch (decision) {
             case 1:
-                System.out.println("Registrar");
+            System.out.println("Registrar");
+               Administrador.startAdmin();
+               // Aficionado.startAficionado();
+               // Arbitro.startArbitro(); falta
+               // Medico.startMedico();
+               // Periodista.startPeriodista();
+               // Tecnico.startTecnico();
+
                 break;
 
             case 2:

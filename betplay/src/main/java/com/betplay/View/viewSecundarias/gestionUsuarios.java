@@ -2,6 +2,8 @@ package com.betplay.View.viewSecundarias;
 
 import java.util.Scanner;
 
+import com.betplay.Entity.CheckInt;
+
 public class gestionUsuarios {
 
     public static void startGestionUsuarios (){
@@ -12,40 +14,48 @@ public class gestionUsuarios {
 
 
         do {
-
-            System.out.println("\n\tMENU GESTION USUARIOS\n");
+            System.out.println("\n-------------------");
+            System.out.println("   U S U A R I O S");
+            System.out.println("===================");
+            System.out.println("       Menú");
+            System.out.println("===================");
+            System.out.println("\n\t\n");
             System.out.println("1. Ingresar");
             System.out.println("2. Modificar");
             System.out.println("3. Eliminar");
-            System.out.println("4. Regresar al menu princiàl");
+            System.out.println("4. Regresar al menu principál");
 
-            System.out.print("Opcion: ");
-            decision = scanner.nextInt();
-            scanner.nextLine();
-     
+            System.out.println("\n\n. . . . . . . . . .");
+            System.out.println(" Digite la opción");
+            System.out.println(". . . . . . . . . . ");
+            System.out.print(">>> ");
             
-        } while (decision != 3);
-
-        switch (decision) {
-            case 1:
-                
-                break;
-
-            case 2:
-                
-                break;
+            decision = CheckInt.check(true);
             
-            case 3:
+            
+            switch (decision) {
+                case 1:
+                    
+                    break;
+
+                case 2:
+                    
+                    break;
                 
-                break;
+                case 3:
+                    
+                    break;
 
 
-            case 4:
+                case 4:
+                    System.out.print("Presiona entrer para volver al menu pricipal: ");
+                    scanner.nextLine();
+                    return;
 
-                
-                break;
+            }
+            
+        } while (decision != 4);
 
-        }
     }
 
 }
