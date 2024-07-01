@@ -2,6 +2,8 @@ package com.betplay.View.ViewRoles;
 
 import java.util.Scanner;
 
+import com.betplay.View.viewSecundarias.gestionLesiones;
+
 public class Medico {
 
     public static void startMedico (){
@@ -27,7 +29,7 @@ public class Medico {
                 
         switch (decision) {
             case 1:
-                
+                gestionLesiones.startGestionLesiones();
                 break;
 
             case 2:

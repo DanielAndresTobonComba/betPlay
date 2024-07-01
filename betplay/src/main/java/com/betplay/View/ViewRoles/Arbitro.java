@@ -2,6 +2,10 @@ package com.betplay.View.ViewRoles;
 
 import java.util.Scanner;
 
+import com.betplay.View.viewSecundarias.gestionComunicadosNoticias;
+import com.betplay.View.viewSecundarias.gestionPartidos;
+import com.betplay.View.viewSecundarias.gestionResultados;
+
 public class Arbitro {
 
     
@@ -30,11 +34,11 @@ public class Arbitro {
 
         switch (decision) {
             case 1:
-                
+                gestionResultados.startGestionResultados();
                 break;
 
             case 2:
-                
+                gestionComunicadosNoticias.startGestionComunicadosNoticias();
                 break;
 
             case 3:

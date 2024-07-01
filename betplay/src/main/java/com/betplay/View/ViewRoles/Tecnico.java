@@ -2,6 +2,16 @@ package com.betplay.View.ViewRoles;
 
 import java.util.Scanner;
 
+import com.betplay.View.viewSecundarias.gestionConvocatoria;
+import com.betplay.View.viewSecundarias.gestionEntrenadores;
+import com.betplay.View.viewSecundarias.gestionEntrenamiento;
+import com.betplay.View.viewSecundarias.gestionEquipos;
+import com.betplay.View.viewSecundarias.gestionInformes;
+import com.betplay.View.viewSecundarias.gestionJugadores;
+import com.betplay.View.viewSecundarias.gestionPartidos;
+import com.betplay.View.viewSecundarias.gestionRendimiento;
+import com.betplay.View.viewSecundarias.visualizarEstadisticas;
+
 public class Tecnico {
 
     public static void startTecnico (){
@@ -35,39 +45,39 @@ public class Tecnico {
  
         switch (decision) {
             case 1:
-                
+                gestionEquipos.startGestioEquipos();
                 break;
 
             case 2:
-                
+                gestionJugadores.startGestionJugadores();
                 break;
 
             case 3:
-                
+                gestionPartidos.startGestionPartidos();
                 break;
 
             case 4:
-                
+                gestionEntrenadores.startGestionEntrenadores();
                 break;
 
             case 5:
-                
+                visualizarEstadisticas.startVisualizarEstadisticas();
                 break;
 
             case 6:
-                
+                gestionInformes.startGestionInformes();
                 break;
 
             case 7:
-                
+                gestionEntrenamiento.startGestionEntrenamiento();
                 break;
 
             case 8:
-                
+                gestionRendimiento.startGestionRendimiento();
                 break;
 
             case 9:
-                
+                gestionConvocatoria.startGestionConvocatoria();
                 break;
             
             case 10:
