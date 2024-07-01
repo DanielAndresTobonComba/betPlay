@@ -26,7 +26,6 @@ public class Intro {
         System.out.println("3. Salir");
         System.out.println("-------------------");
 
-
         System.out.println("\n\n. . . . . . . . . .");
         System.out.println(" Digite la opción");
         System.out.println(". . . . . . . . . . ");
@@ -35,7 +34,6 @@ public class Intro {
         // Validación de la opción ingresada por el usuario
         decision = CheckInt.check(introPermise);
         
-
      
             
         //} while (decision != 3);
