@@ -1,6 +1,7 @@
 package com.betplay.Entity;
 
 import com.betplay.Controller;
+import com.betplay.View.Intro;
 
 public class ChekUser {
 
@@ -16,7 +17,8 @@ public class ChekUser {
             System.out.println("El usuario es válido");
         }
         else {
-            System.out.println("Pailas");
+            System.out.println("Datos incorrectos");
+            Intro.startIntro();
         }
 
         

@@ -23,8 +23,8 @@ public class Main {
         Usuario admin = new Usuario(nombreAdmin, email, contra, rol);
         Controller.getController().controladorUsuarios.put(usuarioAdmin, admin);
 
-        System.out.println(Controller.getController().controladorUsuarios.get("admin123").getRol());
-        System.out.println(Controller.getController().controladorUsuarios.get("admin123").getContraseña());
+        /*System.out.println(Controller.getController().controladorUsuarios.get("admin123").getRol());
+        System.out.println(Controller.getController().controladorUsuarios.get("admin123").getContraseña());*/
 
 
 
