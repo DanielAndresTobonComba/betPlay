@@ -38,6 +38,13 @@ public class Actividad {
         this.duracion = duracion;
     }
 
+
+
+    @Override
+    public String toString() {
+        return "Actividad [descripcion=" + descripcion + ", duracion=" + duracion + "]";
+    }
+
     
 
 }

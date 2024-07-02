@@ -132,8 +132,8 @@ public class gestionEntrenamiento {
 
                     System.out.println("Actividades del entrenamiento");
                     System.out.println("1. Ingresar");
-                    System.out.println("2. Editar");
-                    System.out.println("3. Eliminar");
+                    System.out.println("2. Editar"); 
+                    System.out.println("3. Eliminar"); 
                     System.out.println("4. Regresar al menu");
 
                     decision2 = CheckInt.check(true);

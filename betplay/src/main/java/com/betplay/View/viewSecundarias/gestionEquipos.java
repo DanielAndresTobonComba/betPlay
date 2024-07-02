@@ -65,7 +65,7 @@ public class gestionEquipos {
 
                     System.out.print("Codigo del equipo: ");
                     codigoEquipo = CheckInt.check(true);
-                    scanner.nextLine();
+
 
                     System.out.print("Nombre del equipo ");
                     nombreEquipo = scanner.nextLine();
@@ -198,7 +198,7 @@ public class gestionEquipos {
                          System.out.println("-------------------------------------------------------------");
 
                          for (Jugador j : equipo.getLstJugadores()) {
-                        System.out.printf("%-20s %-10d %-15s %-10s\n", 
+                        System.out.printf("%-20s %-10d %-15s %-10s\n",                   
                                 j.getNombre(), 
                                 j.getEdad(), 
                                 j.getNacionalidad(), 

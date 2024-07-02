@@ -31,6 +31,7 @@ public class Controller {
     public static Hashtable <Integer, Equipo> controladorEquipos;
 
     public static Hashtable<Integer, Actividad> controladorActividades;
+    
     public static Hashtable<Integer, Comunicacion> controladorComunicaciones;
     public static Hashtable<Integer, Entrada> controladorEntradas;
     public static Hashtable<Integer, Entrenamiento> controladorEntrenamientos;
