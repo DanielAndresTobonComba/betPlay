@@ -2,29 +2,36 @@ package com.betplay.View.ViewRoles;
 
 import java.util.Scanner;
 
+import com.betplay.Entity.CheckInt;
+import com.betplay.View.Intro;
 import com.betplay.View.viewSecundarias.gestionLesiones;
 
 public class Medico {
 
     public static void startMedico (){
 
-         int decision ;
-
+        int decision ;
         Scanner scanner = new Scanner(System.in);
 
+        System.out.println("\n----------------------");
+        System.out.println("    M É D I C O");
+        System.out.println("======================");
+        System.out.println("        Menú");
+        System.out.println("======================");
+        System.out.println("1. Gestion de lesiones\n");
+        System.out.println("2. Cerrar sesion");
+        System.out.println("----------------------");
 
-        do {
+        System.out.println("\n\n. . . . . . . . . .");
+        System.out.println(" Digite la opción");
+        System.out.println(". . . . . . . . . . ");
+        System.out.print(">>> ");
+        
+        // Validación de la opción ingresada por el usuario
+        decision = CheckInt.check();
 
 
-            System.out.println("1. Gestion de lesiones.");
-            System.out.println("2. Cerrar sesion");
-
-            System.out.print("Opcion: ");
-            decision = scanner.nextInt();
-            scanner.nextLine();
-    
-            
-        } while (decision != 3);
+        
 
                 
         switch (decision) {
@@ -32,8 +39,9 @@ public class Medico {
                 gestionLesiones.startGestionLesiones();
                 break;
 
-            case 2:
-                
+            
+            default:
+                Intro.startIntro();
                 break;
 
         }

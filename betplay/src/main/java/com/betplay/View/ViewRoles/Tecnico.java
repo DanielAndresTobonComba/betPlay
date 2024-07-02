@@ -2,6 +2,8 @@ package com.betplay.View.ViewRoles;
 
 import java.util.Scanner;
 
+import com.betplay.Entity.CheckInt;
+import com.betplay.View.Intro;
 import com.betplay.View.viewSecundarias.gestionConvocatoria;
 import com.betplay.View.viewSecundarias.gestionEntrenadores;
 import com.betplay.View.viewSecundarias.gestionEntrenamiento;
@@ -20,27 +22,30 @@ public class Tecnico {
 
         Scanner scanner = new Scanner(System.in);
 
-        do {
+        System.out.println("\n----------------------------");
+        System.out.println("       T É C N I C O");
+        System.out.println("============================");
+        System.out.println("           Menú");
+        System.out.println("============================");
+        System.out.println("1. Gestión del equipo\n");
+        System.out.println("2. Gestión de jugadores\n");
+        System.out.println("3. Gestión de partidos\n");
+        System.out.println("4. Gestión de entrenadores\n");
+        System.out.println("5. Gestión de estadisticas\n");
+        System.out.println("6. Gestión de informes\n");
+        System.out.println("7. Gestión de entrenamientos\n");
+        System.out.println("8. Gestión de rendimiento\n");
+        System.out.println("9. Gestión de convocatorias\n");
+        System.out.println("0. Cerrar sesión");
+        System.out.println("-----------------------------");
 
-            System.out.println("\n\tMENU\n");
-            System.out.println("1.Gestion del equipo");
-            System.out.println("2. Gestion de jugadores");
-            System.out.println("3. Gestion de partidos");
-            System.out.println("4. Gestion de entrenadores");
-            System.out.println("5. Gestion de estadisticas");
-            System.out.println("6. Gestion de informes");
-            System.out.println("7. Gestion de entrenamientos");
-            System.out.println("8. Gestion de rendimiento");
-            System.out.println("9. Gestio de convocatorias");
-
-            System.out.println("10.Cerrar sesion");
-
-            System.out.print("Opcion: ");
-            decision = scanner.nextInt();
-            scanner.nextLine();
-     
-            
-        } while (decision != 3);
+        System.out.println("\n\n. . . . . . . . . .");
+        System.out.println(" Digite la opción");
+        System.out.println(". . . . . . . . . . ");
+        System.out.print(">>> ");
+        
+        // Validación de la opción ingresada por el usuario
+        decision = CheckInt.check();
 
  
         switch (decision) {
@@ -80,8 +85,8 @@ public class Tecnico {
                 gestionConvocatoria.startGestionConvocatoria();
                 break;
             
-            case 10:
-                
+            default:
+                Intro.startIntro();
                 break;
         }
 
