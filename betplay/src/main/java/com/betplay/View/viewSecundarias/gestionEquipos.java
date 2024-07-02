@@ -191,9 +191,9 @@ public class gestionEquipos {
                         System.out.println("------------------------------------------------");
 
                        
-                       Set<Integer> keys = Controller.getController().controladorEquipos.keySet();
+/*                        Set<Integer> keys = Controller.getController().controladorEquipos.keySet();
 
-                        ArrayList<Integer> lstKeyArrayList = new ArrayList<>(keys); 
+                        ArrayList<Integer> lstKeyArrayList = new ArrayList<>(keys);  */
 
                         System.out.printf("%-20s %-10s %-15s %-10s\n", "Nombre", "Edad", "Nacionalidad", "Estado");
                          System.out.println("-------------------------------------------------------------");
@@ -209,25 +209,58 @@ public class gestionEquipos {
                         
 
 
-                        equipo.getLstPartidos();
+                       // equipo.getLstPartidos();
 
                         scanner.nextLine();
-                        return;
+                        break;
                     } 
 
 
-                    break;
+                    
     
                 case 4:
-                    
+                    // Como sera la tranferencia? 
                     break;
                 
                 
                 case 5:
-                    
+                    // No hay atributo para el equipamiento
                     break;
 
                 case 6:
+
+                    System.out.println("=============================\n");
+                    System.out.println("\tBuscar Equipo");
+                    System.out.println("=============================\n");
+
+                    System.out.print("Codigo del equipo: ");
+                    codigoEquipo = scanner.nextInt();
+                    scanner.nextLine();
+
+                    if(Controller.getController().controladorEquipos.get(codigoEquipo) != null) {
+                        System.out.println("Nombre: " + equipo.getNombre() ); 
+                        System.out.println("Ciudad: " +  equipo.getCiudad()); 
+                        System.out.println("Entrenador: " + equipo.getNombreEntrenador() ); 
+                        System.out.println("Estadio: " + equipo.getNombreEstadio() ); 
+
+                        System.out.println("------------------------------------------------");
+                        System.out.println("\tLISTA DE JUGADORES:");
+                       System.out.println("------------------------------------------------");
+
+
+                       System.out.printf("%-20s %-10s %-15s %-10s\n", "Nombre", "Edad", "Nacionalidad", "Estado");
+                        System.out.println("-------------------------------------------------------------");
+
+                        for (Jugador j : equipo.getLstJugadores()) {
+                       System.out.printf("%-20s %-10d %-15s %-10s\n", 
+                               j.getNombre(), 
+                               j.getEdad(), 
+                               j.getNacionalidad(), 
+                               j.getEstado());
+                       
+                       }
+                        
+                    }
                     
                     break;
     
