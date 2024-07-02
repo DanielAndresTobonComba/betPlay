@@ -14,6 +14,7 @@ import com.betplay.View.viewSecundarias.gestionMedios;
 import com.betplay.View.viewSecundarias.gestionPartidos;
 import com.betplay.View.viewSecundarias.gestionPatrocinios;
 import com.betplay.View.viewSecundarias.gestionReconocimientos;
+import com.betplay.View.viewSecundarias.gestionUsuarios;
 
 
  
@@ -32,7 +33,7 @@ public class Administrador {
         System.out.println("====================================");
         System.out.println("               Menú");
         System.out.println("====================================");
-        System.out.println("1. Registrar usuario\n");
+        System.out.println("1. Gestión de usuarios\n");
         System.out.println("2. Gestión de equipos\n");
         System.out.println("3. Gestión de jugadores\n");
         System.out.println("4. Gestión de partidos\n");
@@ -60,7 +61,7 @@ public class Administrador {
         switch (decision) {
             case 1:
 
-                gestionEquipos.startGestioEquipos(); 
+                gestionUsuarios.startGestionUsuarios();
                     
                 break;
 

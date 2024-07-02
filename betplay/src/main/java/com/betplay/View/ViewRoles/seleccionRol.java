@@ -8,8 +8,6 @@ public class seleccionRol {
 
         Scanner scanner = new Scanner(System.in);
 
-        String usuario = "";
-        String contraseña = "";
 
         int decision ;
         int rol = 0;
