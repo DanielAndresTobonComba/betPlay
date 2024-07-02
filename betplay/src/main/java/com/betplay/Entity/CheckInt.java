@@ -4,14 +4,14 @@ import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class CheckInt {
-    boolean introPermise = true;
+    
     
     private CheckInt() {}
     
-    public static int check(boolean introPermise) {
+    public static int check() {
         int opcion = 0;
         Scanner scanner = new Scanner(System.in);
-
+        boolean introPermise = true;
         while (introPermise == true) {
             try {
                 opcion = scanner.nextInt();

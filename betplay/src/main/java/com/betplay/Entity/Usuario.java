@@ -1,9 +1,13 @@
 package com.betplay.Entity;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Usuario {
 
     //private int id;
-    private String nombre, email, contraseña, idRol;
+    public String nombre, email, contraseña, idRol;
+    private List<Integer> permisosDenegados;
 
     public Usuario() {
     }
@@ -14,6 +18,7 @@ public class Usuario {
         this.email = email;
         this.contraseña = contraseña;
         this.idRol = idRol;
+        permisosDenegados = new ArrayList<>();
     }
 
     /*public int getId() {

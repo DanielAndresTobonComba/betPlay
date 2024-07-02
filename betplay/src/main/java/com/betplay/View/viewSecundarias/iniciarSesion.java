@@ -39,7 +39,7 @@ public class iniciarSesion {
         System.out.println(". . . . . . . . . . ");
         System.out.print(">>> ");
 
-        opcion = CheckInt.check(introPermise);
+        opcion = CheckInt.check();
 
         switch (opcion) {
             case 1:

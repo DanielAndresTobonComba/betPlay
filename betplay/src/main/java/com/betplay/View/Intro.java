@@ -17,7 +17,6 @@ public class Intro {
     public static void startIntro (){
 
         int decision;
-        boolean introPermise = true;
         String rol;
         String nombreusuario;
         String contraseña;
@@ -48,7 +47,7 @@ public class Intro {
         System.out.print(">>> ");
         
         // Validación de la opción ingresada por el usuario
-        decision = CheckInt.check(introPermise);
+        decision = CheckInt.check();
         
      
             
