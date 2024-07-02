@@ -3,10 +3,13 @@ package com.betplay.View;
 import java.util.Scanner;
 
 import com.betplay.View.ViewRoles.GuiaRoles;
+import com.betplay.View.viewSecundarias.RegistrarUsuario;
 import com.betplay.View.viewSecundarias.iniciarSesion;
+import com.betplay.Controller;
 import com.betplay.Entity.CheckInt;
 import com.betplay.Entity.CheckString;
 import com.betplay.Entity.ChekUser;
+import com.betplay.Entity.Usuario;
 
 public class Intro {
 
@@ -18,7 +21,11 @@ public class Intro {
         String nombreusuario;
         String contraseña;
         boolean validacionUsuario;
-        String nuevoUsuario;
+        String nuevoNombreUsuario;
+        String nuevoNombre;
+        String nuevoEmail;
+        String nuevaContraseña;
+        boolean validacionRegistro = false;
         Scanner scanner = new Scanner(System.in);
 
 
@@ -48,7 +55,36 @@ public class Intro {
 
         switch (decision) {
             case 1:
-                System.out.println();
+                nuevoNombreUsuario = RegistrarUsuario.setNombreUsuario();
+                    if ("".equals(nuevoNombreUsuario)) {
+                        Intro.startIntro();
+                    } else {
+                        
+                        nuevoNombre = RegistrarUsuario.setNombre();
+                        nuevoEmail = RegistrarUsuario.setEmail();
+                        nuevaContraseña =RegistrarUsuario.setPassword();
+                        Usuario newUsuario = new Usuario(nuevoNombre, nuevoEmail, nuevaContraseña, "Aficionado");
+                        
+                        validacionRegistro = RegistrarUsuario.Registrar(nuevoNombreUsuario, newUsuario);
+
+                        if (validacionRegistro == true) {
+                            System.out.println("\n: : : : : : : : : : : :");
+                            System.out.println(":  Registro exitoso  :");
+                            System.out.println(": : : : : : : : : : : :");
+
+                            Intro.startIntro();
+
+                        } else {
+                            System.out.println("\n: : : : : : : : : : : :");
+                            System.out.println(":  FALLÓ al registrar!  :");
+                            System.out.println(": : : : : : : : : : : :");
+
+                            Intro.startIntro();
+
+                        }
+                        
+                        
+                    }
                 
                 
                 break;
