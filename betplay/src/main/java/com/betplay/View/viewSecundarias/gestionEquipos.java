@@ -1,5 +1,9 @@
 package com.betplay.View.viewSecundarias;
+import java.util.Hashtable;
+import java.util.List;
+import java.util.Map;
 import java.util.Scanner;
+import java.util.Set;
 
 import com.betplay.Controller;
 import com.betplay.Entity.CheckInt;
@@ -193,6 +197,8 @@ public class gestionEquipos {
 /*                        Set<Integer> keys = Controller.getController().controladorEquipos.keySet();
 
                         ArrayList<Integer> lstKeyArrayList = new ArrayList<>(keys);  */
+
+/*                         Set <String> setKey = Controller.getController().controladorEquipos.get(codigoEquipo).lstJugadores.forEach((j) -> System.out.println(j.keySet())); */
 
                         System.out.printf("%-20s %-10s %-15s %-10s\n", "Nombre", "Edad", "Nacionalidad", "Estado");
                          System.out.println("-------------------------------------------------------------");

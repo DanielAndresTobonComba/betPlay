@@ -1,7 +1,10 @@
 package com.betplay;
 
+import java.util.Set;
+
 import com.betplay.Entity.Usuario;
 import com.betplay.View.Intro;
+import com.betplay.View.viewSecundarias.gestionEntrenamiento;
 
 
 
@@ -9,7 +12,7 @@ import com.betplay.View.Intro;
 public class Main {
     public static void main(String[] args) {
 
-
+        /* 
         //Registro del Admin
         String usuarioAdmin = "admin123";
         String nombreAdmin = "Administrador";
@@ -19,8 +22,18 @@ public class Main {
         Usuario admin = new Usuario(nombreAdmin, email, contra, rol);
         Controller.getController().controladorUsuarios.put(usuarioAdmin, admin);
 
+        Set <String> setKey = Controller.getController().controladorUsuarios.keySet();
+
+        for (String key : setKey){
+            System.out.println(key);
+        }
+        */
+        
+
         // Iniciazalización del sistema
-        Intro.startIntro();
+        // Intro.startIntro();
+
+        gestionEntrenamiento.startGestionEntrenamiento();
 
 
 

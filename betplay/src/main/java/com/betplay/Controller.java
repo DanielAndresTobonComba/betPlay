@@ -39,7 +39,9 @@ public class Controller {
     public static Hashtable<Integer, Estadio> controladorEstadios;
     public static Hashtable<Integer, Gol> controladorGoles;
     public static List<Incidente> controladorIncidentes; 
+    
     public static Hashtable<Integer, Jugador> controladorJugadores;
+
     public static List<Lesion> controladorLesiones;
     public static Hashtable<Integer, Partidos> controladorPartidos;
     public static Hashtable<Integer, Patrocinador> controladorPatrocinadores;

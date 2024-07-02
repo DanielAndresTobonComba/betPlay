@@ -10,6 +10,7 @@ public class CheckPassword {
         String pwdString = "";
         Console newConsole = System.console();
         boolean verificacion = true;
+        
         while (verificacion == true) {
             char [] pwd = newConsole.readPassword("\n. . . . . . . . . . . . . . . .\nEscriba su contraseña\n. . . . . . . . . . . . . . . .\n>>> ");
             for (char letter : pwd) {
