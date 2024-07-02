@@ -35,39 +35,120 @@ public class PermisosTecnico {
 
         switch (opcion) {
             case 1:
+            if (listaPermisos.contains(opcion)) {
+                System.out.println("\n-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-");
+                System.out.println("   Este permiso ya se encuentra denegado");
+                System.out.println("-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-");
+            } else {
+                System.out.println("\n-=-=-=-=-=-=-=-=-=-=-=");
+                System.out.println("   Permiso denegado");
+                System.out.println("-=-=-=-=-=-=-=-=-=-=-=");
                 listaPermisos.add(opcion);
+            }
                 break;
 
             case 2:
+            if (listaPermisos.contains(opcion)) {
+                System.out.println("\n-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-");
+                System.out.println("   Este permiso ya se encuentra denegado");
+                System.out.println("-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-");
+            } else {
+                System.out.println("\n-=-=-=-=-=-=-=-=-=-=-=");
+                System.out.println("   Permiso denegado");
+                System.out.println("-=-=-=-=-=-=-=-=-=-=-=");
                 listaPermisos.add(opcion);
+            }
                 break;
 
             case 3:
+            if (listaPermisos.contains(opcion)) {
+                System.out.println("\n-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-");
+                System.out.println("   Este permiso ya se encuentra denegado");
+                System.out.println("-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-");
+            } else {
+                System.out.println("\n-=-=-=-=-=-=-=-=-=-=-=");
+                System.out.println("   Permiso denegado");
+                System.out.println("-=-=-=-=-=-=-=-=-=-=-=");
                 listaPermisos.add(opcion);
+            }
                 break;
             
             case 4:
+            if (listaPermisos.contains(opcion)) {
+                System.out.println("\n-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-");
+                System.out.println("   Este permiso ya se encuentra denegado");
+                System.out.println("-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-");
+            } else {
+                System.out.println("\n-=-=-=-=-=-=-=-=-=-=-=");
+                System.out.println("   Permiso denegado");
+                System.out.println("-=-=-=-=-=-=-=-=-=-=-=");
                 listaPermisos.add(opcion);
+            }
                 break;
             
             case 5:
+            if (listaPermisos.contains(opcion)) {
+                System.out.println("\n-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-");
+                System.out.println("   Este permiso ya se encuentra denegado");
+                System.out.println("-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-");
+            } else {
+                System.out.println("\n-=-=-=-=-=-=-=-=-=-=-=");
+                System.out.println("   Permiso denegado");
+                System.out.println("-=-=-=-=-=-=-=-=-=-=-=");
                 listaPermisos.add(opcion);
+            }
                 break;
 
             case 6:
+            if (listaPermisos.contains(opcion)) {
+                System.out.println("\n-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-");
+                System.out.println("   Este permiso ya se encuentra denegado");
+                System.out.println("-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-");
+            } else {
+                System.out.println("\n-=-=-=-=-=-=-=-=-=-=-=");
+                System.out.println("   Permiso denegado");
+                System.out.println("-=-=-=-=-=-=-=-=-=-=-=");
                 listaPermisos.add(opcion);
+            }
                 break;
             
             case 7:
+            if (listaPermisos.contains(opcion)) {
+                System.out.println("\n-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-");
+                System.out.println("   Este permiso ya se encuentra denegado");
+                System.out.println("-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-");
+            } else {
+                System.out.println("\n-=-=-=-=-=-=-=-=-=-=-=");
+                System.out.println("   Permiso denegado");
+                System.out.println("-=-=-=-=-=-=-=-=-=-=-=");
                 listaPermisos.add(opcion);
+            }
                 break;
             
             case 8:
+            if (listaPermisos.contains(opcion)) {
+                System.out.println("\n-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-");
+                System.out.println("   Este permiso ya se encuentra denegado");
+                System.out.println("-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-");
+            } else {
+                System.out.println("\n-=-=-=-=-=-=-=-=-=-=-=");
+                System.out.println("   Permiso denegado");
+                System.out.println("-=-=-=-=-=-=-=-=-=-=-=");
                 listaPermisos.add(opcion);
+            }
                 break;
             
             case 9:
+            if (listaPermisos.contains(opcion)) {
+                System.out.println("\n-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-");
+                System.out.println("   Este permiso ya se encuentra denegado");
+                System.out.println("-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-");
+            } else {
+                System.out.println("\n-=-=-=-=-=-=-=-=-=-=-=");
+                System.out.println("   Permiso denegado");
+                System.out.println("-=-=-=-=-=-=-=-=-=-=-=");
                 listaPermisos.add(opcion);
+            }
                 break;
         
             default:

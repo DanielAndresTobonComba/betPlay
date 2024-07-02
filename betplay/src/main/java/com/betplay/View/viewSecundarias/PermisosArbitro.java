@@ -30,7 +30,17 @@ public class PermisosArbitro {
 
         switch (opcion) {
             case 1:
-                listaPermisos.add(opcion);
+                if (listaPermisos.contains(opcion)) {
+                    System.out.println("\n-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-");
+                    System.out.println("   Este permiso ya se encuentra denegado");
+                    System.out.println("-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-");
+                } else {
+                    System.out.println("\n-=-=-=-=-=-=-=-=-=-=-=");
+                    System.out.println("   Permiso denegado");
+                    System.out.println("-=-=-=-=-=-=-=-=-=-=-=");
+                    listaPermisos.add(opcion);
+                }
+                
                 break;
 
             case 2:
@@ -44,6 +54,7 @@ public class PermisosArbitro {
                 System.out.println("=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=");
                 System.out.println("1. Sí, denegar permisos.");
                 System.out.println("0. No, salir sin denegar.");
+                System.out.println("-------------------------------");
                 System.out.print(">>> ");
                 confirmacion = CheckInt.check();
                 switch (confirmacion) {

@@ -10,6 +10,7 @@ public class Usuario {
     public List<Integer> permisosDenegados;
 
     public Usuario() {
+        permisosDenegados = new ArrayList<>();
     }
     
     public Usuario(/*int id,*/ String nombre, String email, String contraseña, String idRol) {
@@ -18,7 +19,7 @@ public class Usuario {
         this.email = email;
         this.contraseña = contraseña;
         this.idRol = idRol;
-        permisosDenegados = new ArrayList<>();
+        
     }
 
     /*public int getId() {
