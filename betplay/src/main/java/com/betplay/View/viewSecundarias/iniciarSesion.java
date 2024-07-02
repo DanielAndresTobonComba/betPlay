@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 import com.betplay.Controller;
 import com.betplay.Entity.CheckInt;
+import com.betplay.Entity.CheckPassword;
 import com.betplay.Entity.CheckString;
 import com.betplay.View.Intro;
 
@@ -84,14 +85,7 @@ public class iniciarSesion {
     }
 
     public static String getPassword() {
-        String password = "";
-        Scanner scanner = new Scanner(System.in);
-
-        System.out.println("\n. . . . . . . . . . . . .");
-                System.out.println(" Ingrese su  contraseña");
-                System.out.println(". . . . . . . . . . . . . ");
-                System.out.print(">>> ");
-                password = CheckString.check("Ingrese su  contraseña");
+        String password = CheckPassword.check();
         return password;
     }
 

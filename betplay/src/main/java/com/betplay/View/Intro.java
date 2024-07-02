@@ -7,6 +7,7 @@ import com.betplay.View.viewSecundarias.RegistrarUsuario;
 import com.betplay.View.viewSecundarias.iniciarSesion;
 import com.betplay.Controller;
 import com.betplay.Entity.CheckInt;
+import com.betplay.Entity.CheckPassword;
 import com.betplay.Entity.CheckString;
 import com.betplay.Entity.ChekUser;
 import com.betplay.Entity.Usuario;
@@ -62,12 +63,18 @@ public class Intro {
                         
                         nuevoNombre = RegistrarUsuario.setNombre();
                         nuevoEmail = RegistrarUsuario.setEmail();
-                        nuevaContraseña =RegistrarUsuario.setPassword();
+                        nuevaContraseña =CheckPassword.check();
                         Usuario newUsuario = new Usuario(nuevoNombre, nuevoEmail, nuevaContraseña, "Aficionado");
                         
                         validacionRegistro = RegistrarUsuario.Registrar(nuevoNombreUsuario, newUsuario);
 
                         if (validacionRegistro == true) {
+                            System.out.println("\n____________________________________");
+                            System.out.println("\nRol:\t" + Controller.getController().controladorUsuarios.get(nuevoNombreUsuario).getRol());
+                            System.out.println("User:\t" + nuevoNombreUsuario);
+                            System.out.println("Nombre:\t"+ nuevoNombre);
+                            System.out.println("Email:\t" + nuevoEmail);
+                            System.out.println("____________________________________\n");
                             System.out.println("\n: : : : : : : : : : : :");
                             System.out.println(":  Registro exitoso  :");
                             System.out.println(": : : : : : : : : : : :");

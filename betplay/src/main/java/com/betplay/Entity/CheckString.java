@@ -15,7 +15,6 @@ public class CheckString {
 
         while (introPermise == true) {
             usuarioEntrada = scanner.nextLine();
-            System.out.println(usuarioEntrada);
             if ("".equals(usuarioEntrada.trim())) {
                 System.out.println("\n********************************");
                 System.out.println("No se permiten entradas vacías ");

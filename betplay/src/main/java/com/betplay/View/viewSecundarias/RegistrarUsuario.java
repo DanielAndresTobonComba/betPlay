@@ -48,14 +48,14 @@ public class RegistrarUsuario {
         return email;
     }
 
-    public static String setPassword() {
+    /*public static String setPassword() {
         System.out.println("\n. . . . . . . . . . . . . . . .");
         System.out.println(" Registre su contraseña");
         System.out.println(". . . . . . . . . . . . . . . .");
         System.out.print(">>> ");
         String password = CheckString.check("Ingrese la contraseña nuevamente");
         return password;
-    }
+    }*/
 
     public static boolean Registrar(String nombreUsuario, Usuario nuevoUsuario) {
         boolean verificacionRegistro = false;
