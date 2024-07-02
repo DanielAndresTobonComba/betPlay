@@ -81,13 +81,13 @@ public class gestionUsuarios {
                 
                 break;
 
-            case 2:
+                case 2:
+                    
+                    break;
                 
-                break;
-            
-            case 3:
-                
-                break;
+                case 3:
+                    
+                    break;
 
 
             default:

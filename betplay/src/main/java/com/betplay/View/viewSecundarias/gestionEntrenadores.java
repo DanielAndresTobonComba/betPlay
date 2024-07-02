@@ -2,6 +2,8 @@ package com.betplay.View.viewSecundarias;
 
 import java.util.Scanner;
 
+import com.betplay.Entity.CheckInt;
+
 public class gestionEntrenadores {
 
     public static void startGestionEntrenadores () {
@@ -11,20 +13,24 @@ public class gestionEntrenadores {
         Scanner scanner = new Scanner(System.in);
 
         do {
+            System.out.println("\n-------------------");
+            System.out.println("   E N T R E N A D O R E S");
+            System.out.println("===================");
+            System.out.println("       Menú");
+            System.out.println("===================");
 
-            System.out.println("Menu entrenadores");
             System.out.println("1. Agregar");
             System.out.println("2. Editar");
             System.out.println("3. Eliminar");
             System.out.println("4. Regresar al menu");
 
-            System.out.print("Opcion: ");
-            decision = scanner.nextInt();
-            scanner.nextLine();
-    
-            
-        } while (decision != 3);
+            System.out.println("\n\n. . . . . . . . . .");
+            System.out.println(" Digite la opción");
+            System.out.println(". . . . . . . . . . ");
+            System.out.print(">>> ");
+            decision = CheckInt.check();
 
+            
         switch (decision) {
             case 1:
                 
@@ -39,10 +45,16 @@ public class gestionEntrenadores {
                 break;
 
             case 4:
-                
-                break;
+            
+            System.out.print("Presiona entrer para volver al menu pricipal: ");
+            scanner.nextLine();
+            return ;
 
         }
+    
+            
+        } while (decision != 4);
+
     }
 
 }

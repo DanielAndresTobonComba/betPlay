@@ -13,7 +13,7 @@ public class Aficionado {
     public static void startAficionado(){
 
 
-        int decision ;
+        int decision = 0;
 
         Scanner scanner = new Scanner(System.in);
 
@@ -37,7 +37,7 @@ public class Aficionado {
         decision = CheckInt.check();
 
 
-        switch (decision) {
+            switch (decision) {
 
             case 1:
                 visualizarEstadisticas.startVisualizarEstadisticas();

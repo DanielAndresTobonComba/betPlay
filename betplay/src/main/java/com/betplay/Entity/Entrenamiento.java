@@ -67,8 +67,14 @@ public class Entrenamiento {
         this.listJugadoresConvocados = listJugadoresConvocados;
     }
 
-    
+    @Override
+    public String toString() {
+        return "Entrenamiento [idEquipo=" + idEquipo + ", fecha=" + fecha + ", hora=" + hora + ", lugar=" + lugar
+                + ", getListActividades()=" + getListActividades() + ", getListJugadoresConvocados()="
+                + getListJugadoresConvocados() + "]";
+    }
 
+    
     
 
 }

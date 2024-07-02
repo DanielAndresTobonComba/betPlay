@@ -14,7 +14,7 @@ public class Arbitro {
     public static void startArbitro(){
 
 
-        int decision ;
+        int decision = 0 ;
 
         Scanner scanner = new Scanner(System.in);
 
