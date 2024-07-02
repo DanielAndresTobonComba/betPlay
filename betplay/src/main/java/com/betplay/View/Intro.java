@@ -2,6 +2,7 @@ package com.betplay.View;
 
 import com.betplay.Entity.CheckInt;
 import com.betplay.View.ViewRoles.Administrador;
+import com.betplay.View.ViewRoles.Tecnico;
 
 public class Intro {
 
@@ -37,12 +38,12 @@ public class Intro {
         switch (decision) {
             case 1:
             System.out.println("Registrar");
-               Administrador.startAdmin();
+               // Administrador.startAdmin();
                // Aficionado.startAficionado();
                // Arbitro.startArbitro(); falta
                // Medico.startMedico();
                // Periodista.startPeriodista();
-               // Tecnico.startTecnico();
+               Tecnico.startTecnico();
 
                 break;
 

@@ -1,8 +1,5 @@
 package com.betplay.View.viewSecundarias;
-import java.util.ArrayList;
-import java.util.Hashtable;
 import java.util.Scanner;
-import java.util.Set;
 
 import com.betplay.Controller;
 import com.betplay.Entity.CheckInt;
@@ -67,7 +64,7 @@ public class gestionEquipos {
                     System.out.println("=============================\n");
 
                     System.out.print("Codigo del equipo: ");
-                    codigoEquipo = scanner.nextInt();
+                    codigoEquipo = CheckInt.check(true);
                     scanner.nextLine();
 
                     System.out.print("Nombre del equipo ");
@@ -112,7 +109,7 @@ public class gestionEquipos {
                     System.out.println("=============================\n");
 
                     System.out.print("Ingrese el codigo del equipo: ");
-                    codigoEquipo = scanner.nextInt();
+                    codigoEquipo = CheckInt.check(true);
 
             
                     if (Controller.getController().controladorEquipos.get(codigoEquipo) == null) {
@@ -131,7 +128,8 @@ public class gestionEquipos {
                         System.out.println("4. Estadio");
                         System.out.println("5. Salir");
                         System.out.print("\nOpcion: ");
-                        choice2 = scanner.nextInt();
+
+                        choice2 = CheckInt.check(true);
                         scanner.nextLine(); // Para manejar el salto de línea después de nextInt()
 
                         switch (choice2) {
@@ -168,13 +166,14 @@ public class gestionEquipos {
                     System.out.println("=============================\n");
 
                     System.out.print("Ingrese el codigo del equipo: ");
-                    codigoEquipo = scanner.nextInt();
+                    codigoEquipo = CheckInt.check(true);
 
                     equipo = Controller.getController().controladorEquipos.remove(codigoEquipo) ;
 
-                    equipo.getLstJugadores().add(jugador);
+                    
 
                     if (equipo != null) {
+                        equipo.getLstJugadores().add(jugador);
                         
                         System.out.println("=============================");
                         System.out.println("El equipo ha sido eliminado.");
@@ -212,9 +211,18 @@ public class gestionEquipos {
                        // equipo.getLstPartidos();
 
                         scanner.nextLine();
-                        break;
-                    } 
+                        
 
+                    } else {
+                        System.out.println("No exite equipo con el codigo ingresado");
+                        System.out.println("Oprime entrer para salir");
+                        scanner.nextLine();
+                        scanner.nextLine();
+                       
+                    }
+
+                    
+                    break;
 
                     
     
@@ -261,6 +269,9 @@ public class gestionEquipos {
                        }
                         
                     }
+
+                    System.out.println("Presiona entrer para salir");
+                    scanner.nextLine();
                     
                     break;
     

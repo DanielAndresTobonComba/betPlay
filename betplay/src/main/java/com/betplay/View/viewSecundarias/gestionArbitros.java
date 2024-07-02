@@ -1,7 +1,9 @@
 package com.betplay.View.viewSecundarias;
 
 import java.util.Scanner;
+import java.util.ResourceBundle.Control;
 
+import com.betplay.Controller;
 import com.betplay.Entity.CheckInt;
 import com.betplay.View.Intro;
 import com.betplay.View.ViewRoles.Arbitro;
@@ -11,7 +13,7 @@ public class gestionArbitros {
     public static void startGestionArbitros (){
         int decision ;
 
-        
+        // Falta la clase arbitro
 
         Scanner scanner = new Scanner(System.in);
 
