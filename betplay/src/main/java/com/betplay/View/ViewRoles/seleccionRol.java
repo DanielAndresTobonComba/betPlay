@@ -11,8 +11,6 @@ public class seleccionRol {
 
         Scanner scanner = new Scanner(System.in);
 
-        String usuario = "";
-        String contraseña = "";
 
         int decision ;
         int rol = 0;
@@ -42,7 +40,7 @@ public class seleccionRol {
             System.out.println(". . . . . . . . . . ");
             System.out.print(">>> ");
 
-            decision = CheckInt.check(true);
+            decision = CheckInt.check();
 
             switch (decision) {
                 case 1:

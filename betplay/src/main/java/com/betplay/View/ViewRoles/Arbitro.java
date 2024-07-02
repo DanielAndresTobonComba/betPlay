@@ -18,51 +18,41 @@ public class Arbitro {
 
         Scanner scanner = new Scanner(System.in);
 
+        System.out.println("\n------------------------------------");
+        System.out.println("          A R B I T R O");
+        System.out.println("====================================");
+        System.out.println("              Menú");
+        System.out.println("====================================");
+        System.out.println("1. Gestion de resultados\n");
+        System.out.println("2. Gestion de incidentes y sanciones\n");
+        System.out.println("3. Cerrar sesion");
+        System.out.println("------------------------------------");
 
-        do {
-
-            System.out.println("\n-------------------");
-            System.out.println("   Á R B I T R O");
-            System.out.println("===================");
-            System.out.println("       Menú");
-            System.out.println("===================");
-            System.out.println("1. Gestion de resultados");
-            System.out.println("2. Gestion de incidentes y sanciones"); // toca crear otr clase aparte para las sanciones
-            System.out.println("3. Cerrar sesion");
-
-            System.out.println("\n\n. . . . . . . . . .");
-            System.out.println(" Digite la opción");
-            System.out.println(". . . . . . . . . . ");
-            System.out.print(">>> ");
-            
-            decision = CheckInt.check(true);
-
+        System.out.println("\n\n. . . . . . . . . .");
+        System.out.println(" Digite la opción");
+        System.out.println(". . . . . . . . . . ");
+        System.out.print(">>> ");
+        
+        // Validación de la opción ingresada por el usuario
+        decision = CheckInt.check();
 
 
-            switch (decision) {
-                case 1:
-                    gestionResultados.startGestionResultados();
-                    break;
-    
-                case 2:
-                    gestionComunicadosNoticias.startGestionComunicadosNoticias();
-                    break;
-    
-                case 3:
-                    System.out.println("Sesion Cerrada");
-                    System.out.print("Presiona entrer para salir: ");
-                    scanner.nextLine();
-                    Intro.startIntro();
-                
-                    break;
-    
-            }
-    
-            
-        } while (decision != 3);
 
 
-       
+        switch (decision) {
+            case 1:
+                gestionResultados.startGestionResultados();
+                break;
+
+            case 2:
+                gestionComunicadosNoticias.startGestionComunicadosNoticias();
+                break;
+
+            default:
+                Intro.startIntro();
+                break;
+
+        }
 
 
     }

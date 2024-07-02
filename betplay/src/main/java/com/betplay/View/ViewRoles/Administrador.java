@@ -23,114 +23,104 @@ public class Administrador {
 
     public static void startAdmin(){
 
-        int decision = 0 ;
+        int decision ;
 
         Scanner scanner = new Scanner(System.in);
 
-        do {
-            System.out.println("\n-------------------");
-            System.out.println("   A D M I N I S T R A D O R");
-            System.out.println("===================");
-            System.out.println("       Menú");
-            System.out.println("===================");
-            System.out.println("1. Registro de usuarios");
-            System.out.println("2. Gestion de equipos");
-            System.out.println("3. Gestion de jugadores");
-            System.out.println("4. Gestion de partidos");
-            System.out.println("5. Gestion de arbitros");
-            System.out.println("6. Gestion de estadios");
-            System.out.println("7. Gestion de patrocinios de la liga");
-            System.out.println("8. Gestion de comunicados y noticias");
-            System.out.println("9. Gestion de informes.");
-            System.out.println("10. Gestion de medios");
-            System.out.println("11. Gestion de premios y reconocimientos");
-            System.out.println("12. Regresar al menu principal");   
-            
-            System.out.println("\n\n. . . . . . . . . .");
-            System.out.println(" Digite la opción");
-            System.out.println(". . . . . . . . . . ");
-            System.out.print(">>> ");
-            
-            
-            decision = CheckInt.check(true);
 
-            switch (decision) {
+        System.out.println("\n------------------------------------");
+        System.out.println("      A D M I N I S T R A D O R");
+        System.out.println("====================================");
+        System.out.println("               Menú");
+        System.out.println("====================================");
+        System.out.println("1. Gestión de usuarios\n");
+        System.out.println("2. Gestión de equipos\n");
+        System.out.println("3. Gestión de jugadores\n");
+        System.out.println("4. Gestión de partidos\n");
+        System.out.println("5. Gestión de árbitros\n");
+        System.out.println("6. Gestión de estadios\n");
+        System.out.println("7. Gestión de patrocinios de la liga\n");
+        System.out.println("8. Gestión de comunicados y noticias\n");
+        System.out.println("9. Gestión de informes.\n");
+        System.out.println("10. Gestión de medios\n");
+        System.out.println("11. Premios y reconocimientos\n");
+        System.out.println("0. Volver al menú principal");  
+        System.out.println("------------------------------------");
 
-                case 1:
-                    gestionUsuarios.startGestionUsuarios();
-                    break;
-    
-                case 2:
-    
-                    gestionEquipos.startGestioEquipos(); 
-                        
-                    break;
-    
-                case 3:
-    
-                    gestionJugadores.startGestionJugadores();
-                    
-                    break;
-    
-                case 4:
-    
-                    gestionPartidos.startGestionPartidos();
-                    
-                    break;
-    
-                case 5:
-    
-                    gestionArbitros.startGestionArbitros();
-                    
-                    break;
-    
-                case 6:
-                    gestionEstadios.startGestionEstadios();
-                    
-                    break;
-    
-                case 7:
-                    gestionPatrocinios.startGestionPatrocinios();
-                    
-                    break;
-    
-                case 8:
-                    gestionComunicadosNoticias.startGestionComunicadosNoticias();
-                    
-                    break;
-    
-                case 9:
-                    gestionInformes.startGestionInformes();
-                    
-                    break;
-    
-                case 10:
-                    gestionMedios.startGestionMedios();
-                    break;
-    
-                case 11:
-                    gestionReconocimientos.startGestionReconocimiento();
-                    break;
-                
-                    
-                case 12:
-                    System.out.println("Sesion Cerrada");
-                    System.out.print("Presiona entrer para salir: ");
-                    scanner.nextLine();
-                    Intro.startIntro();
+        System.out.println("\n\n. . . . . . . . . .");
+        System.out.println(" Digite la opción");
+        System.out.println(". . . . . . . . . . ");
+        System.out.print(">>> ");
+        
+        // Validación de la opción ingresada por el usuario
+        decision = CheckInt.check();
+
+        
+
+        
+        switch (decision) {
+            case 1:
+
+                gestionUsuarios.startGestionUsuarios();
                     
                 break;
-    
-    
-                default:
-                System.out.println("Opcion invalida");
-                    break;
-            }
 
-        } while (decision != 12);
+            case 2:
 
+                gestionJugadores.startGestionJugadores();
+                
+                break;
+
+            case 3:
+
+                gestionPartidos.startGestionPartidos();
+                
+                break;
+
+            case 4:
+
+                gestionArbitros.startGestionArbitros();
+                
+                break;
+
+            case 5:
+                gestionEstadios.startGestionEstadios();
+                
+                break;
+
+            case 6:
+                gestionPatrocinios.startGestionPatrocinios();
+                
+                break;
+
+            case 7:
+                gestionComunicadosNoticias.startGestionComunicadosNoticias();
+                
+                break;
+
+            case 8:
+                gestionInformes.startGestionInformes();
+                
+                break;
+
+            case 9:
+                gestionMedios.startGestionMedios();
+                break;
+
+            case 10:
+                gestionReconocimientos.startGestionReconocimiento();
+                break;
+
+            case 11:
+                
+                
+                break;
         
-        
+            default:
+                Intro.startIntro();
+                break;
+        }
+
 
     }
 

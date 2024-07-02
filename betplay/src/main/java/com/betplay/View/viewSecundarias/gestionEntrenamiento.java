@@ -82,7 +82,7 @@ public class gestionEntrenamiento {
             System.out.println(" Digite la opción");
             System.out.println(". . . . . . . . . . ");
             System.out.print(">>> ");
-            decision = CheckInt.check(true);
+            decision = CheckInt.check();
     
             switch (decision) {
 
@@ -94,7 +94,7 @@ public class gestionEntrenamiento {
 
                 
                 System.out.print("Codigo del equipo: ");
-                codigoEquipo = CheckInt.check(true);
+                codigoEquipo = CheckInt.check();
                 scanner.nextLine();
 
 
@@ -136,7 +136,7 @@ public class gestionEntrenamiento {
                     System.out.println("3. Eliminar"); 
                     System.out.println("4. Regresar al menu");
 
-                    decision2 = CheckInt.check(true);
+                    decision2 = CheckInt.check();
 
 
                     switch (decision2) {

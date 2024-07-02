@@ -54,7 +54,7 @@ public class gestionEquipos {
             System.out.println(" Digite la opción");
             System.out.println(". . . . . . . . . . ");
             System.out.print(">>> ");
-            decision = CheckInt.check(true);
+            decision = CheckInt.check();
             
             switch (decision) {
                 case 1:
@@ -64,7 +64,7 @@ public class gestionEquipos {
                     System.out.println("=============================\n");
 
                     System.out.print("Codigo del equipo: ");
-                    codigoEquipo = CheckInt.check(true);
+                    codigoEquipo = CheckInt.check();
 
 
                     System.out.print("Nombre del equipo ");
@@ -109,7 +109,7 @@ public class gestionEquipos {
                     System.out.println("=============================\n");
 
                     System.out.print("Ingrese el codigo del equipo: ");
-                    codigoEquipo = CheckInt.check(true);
+                    codigoEquipo = CheckInt.check();
 
             
                     if (Controller.getController().controladorEquipos.get(codigoEquipo) == null) {
@@ -129,7 +129,7 @@ public class gestionEquipos {
                         System.out.println("5. Salir");
                         System.out.print("\nOpcion: ");
 
-                        choice2 = CheckInt.check(true);
+                        choice2 = CheckInt.check();
                         scanner.nextLine(); // Para manejar el salto de línea después de nextInt()
 
                         switch (choice2) {
@@ -166,7 +166,7 @@ public class gestionEquipos {
                     System.out.println("=============================\n");
 
                     System.out.print("Ingrese el codigo del equipo: ");
-                    codigoEquipo = CheckInt.check(true);
+                    codigoEquipo = CheckInt.check();
 
                     equipo = Controller.getController().controladorEquipos.remove(codigoEquipo) ;
 

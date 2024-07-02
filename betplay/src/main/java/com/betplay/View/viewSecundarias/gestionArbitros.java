@@ -33,7 +33,7 @@ public class gestionArbitros {
             System.out.println(" Digite la opción");
             System.out.println(". . . . . . . . . . ");
             System.out.print(">>> ");
-            decision = CheckInt.check(true);
+            decision = CheckInt.check();
 
 
             switch (decision) {
