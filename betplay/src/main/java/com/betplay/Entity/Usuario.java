@@ -7,7 +7,7 @@ public class Usuario {
 
     //private int id;
     public String nombre, email, contraseña, idRol;
-    private List<Integer> permisosDenegados;
+    public List<Integer> permisosDenegados;
 
     public Usuario() {
     }

@@ -27,7 +27,7 @@ public class Tecnico {
         System.out.println("============================");
         System.out.println("           Menú");
         System.out.println("============================");
-        System.out.println("1.Gestioón del equipo\n");
+        System.out.println("1. Gestión del equipo\n");
         System.out.println("2. Gestión de jugadores\n");
         System.out.println("3. Gestión de partidos\n");
         System.out.println("4. Gestión de entrenadores\n");
@@ -36,7 +36,7 @@ public class Tecnico {
         System.out.println("7. Gestión de entrenamientos\n");
         System.out.println("8. Gestión de rendimiento\n");
         System.out.println("9. Gestión de convocatorias\n");
-        System.out.println("0.Cerrar sesión");
+        System.out.println("0. Cerrar sesión");
         System.out.println("-----------------------------");
 
         System.out.println("\n\n. . . . . . . . . .");

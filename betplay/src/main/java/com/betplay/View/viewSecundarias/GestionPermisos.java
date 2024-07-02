@@ -1,5 +1,9 @@
 package com.betplay.View.viewSecundarias;
 
+import java.util.ArrayList;
+import java.util.List;
+
+import com.betplay.Controller;
 import com.betplay.Entity.CheckInt;
 import com.betplay.Entity.Usuario;
 
@@ -32,10 +36,17 @@ public class GestionPermisos {
 
         switch (opcion) {
             case 1:
-                
+                boolean salida = false;
+                List<Integer> permisosDenegados = new ArrayList<>();
+
+                /*while (salida) {
+                    
+                }*/
+
                 break;
 
             case 2:
+                Controller.getController().controladorUsuarios.get(usuario).permisosDenegados.clear();
                 System.out.println("\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.");
                 System.out.println("  Todos los permisos delegados");
                 System.out.println("-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.");
