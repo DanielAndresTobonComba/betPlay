@@ -21,8 +21,12 @@ public class gestionEntrenamiento {
 
         Scanner scanner = new Scanner(System.in);
 
-        int decision ;
+        int decision = 0 ;
+        int decision2 = 0;
+        int codigoEquipo ;
 
+        // Crear un entrenamiento con una actividad
+        
         actividad.setDescripcion("Trote intensivo perras");
         actividad.setDuracion(45);
 
@@ -57,7 +61,9 @@ public class gestionEntrenamiento {
 
         System.out.println(entrenamiento.toString());
 
+
         
+
 
 
         do {
@@ -79,11 +85,93 @@ public class gestionEntrenamiento {
             decision = CheckInt.check(true);
     
             switch (decision) {
+
                 case 1:
+
                 System.out.println("=============================");
                 System.out.println("\tCrear Entrenamiento");
                 System.out.println("=============================\n");
 
+                
+                System.out.print("Codigo del equipo: ");
+                codigoEquipo = CheckInt.check(true);
+                scanner.nextLine();
+
+
+                // Convertir la cadena de fecha a java.util.Date
+                System.out.println("Digita la fecha en este formato yyyy-MM-dd ");
+                
+                fechaString = "2000-08-04";
+                fecha = null;
+
+                try {
+                    SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
+                    java.util.Date utilDate = dateFormat.parse(fechaString);
+                    fecha = new java.sql.Date(utilDate.getTime());
+                } catch (Exception e) {
+                    e.printStackTrace();
+                    System.out.println("Error al insertar la fecha");
+                    break;
+                }
+
+                // Convertir la cadena de hora a java.sql.Time
+                System.out.println("Digita la hora en este formato hora:minutos:seg");
+                horaString = scanner.nextLine();
+                hora = Time.valueOf(horaString);
+
+                System.out.println("Digita el lugar del entrenamiento");
+                lugar = scanner.nextLine();
+
+                
+
+                do {    
+
+                    
+                    String descripcion = "";
+                    int duracion = 0;
+
+                    System.out.println("Actividades del entrenamiento");
+                    System.out.println("1. Ingresar");
+                    System.out.println("2. Editar");
+                    System.out.println("3. Eliminar");
+                    System.out.println("4. Regresar al menu");
+
+                    decision2 = CheckInt.check(true);
+
+
+                    switch (decision2) {
+                        case 1:
+
+                        try {
+
+                            System.out.println("Ingresa la descripcion de la actividad");
+                            descripcion = scanner.nextLine();
+    
+                            System.out.println("Digite la duracion en minutos");
+                            duracion = scanner.nextInt();
+    
+                            actividad.setDescripcion(descripcion);
+                            actividad.setDuracion(duracion);
+    
+                            entrenamiento.getListActividades().add(actividad); 
+    
+                            System.out.println("Actividad registrada exitosamente");
+                            
+                        } catch (Exception e) {
+                            System.out.println("ERROR: " + e );
+                        }
+                        
+                       
+                            
+                            break;
+                    
+                        default:
+                            break;
+                    }
+                    
+                } while (decision2 != 4);
+
+                
 
                     break;
     
