@@ -86,13 +86,13 @@ public class gestionUsuarios {
                 
                 break;
 
-                case 2:
+                /*case 2:
                     
                     break;
                 
                 case 3:
                     
-                    break;
+                    break;*/
 
 
             default:

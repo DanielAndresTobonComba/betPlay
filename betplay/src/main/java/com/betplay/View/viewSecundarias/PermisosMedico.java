@@ -1,14 +1,16 @@
 package com.betplay.View.viewSecundarias;
 
+import java.util.ArrayList;
 import java.util.List;
 
+import com.betplay.Controller;
 import com.betplay.Entity.CheckInt;
 
 public class PermisosMedico {
 
     private PermisosMedico() {}
 
-    public static boolean Permisos(List<Integer> listaPermisos) {
+    public static boolean Permisos(List<Integer> listaPermisos, String nombreUsuario) {
         boolean salida = false;
         int opcion;
 
@@ -31,11 +33,11 @@ public class PermisosMedico {
                 if (listaPermisos.contains(opcion)) {
                     System.out.println("\n-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-");
                     System.out.println("   Este permiso ya se encuentra denegado");
-                    System.out.println("-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-");
+                    System.out.println("-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-\n");
                 } else {
                     System.out.println("\n-=-=-=-=-=-=-=-=-=-=-=");
                     System.out.println("   Permiso denegado");
-                    System.out.println("-=-=-=-=-=-=-=-=-=-=-=");
+                    System.out.println("-=-=-=-=-=-=-=-=-=-=-=\n");
                     listaPermisos.add(opcion);
                 }
                 
@@ -46,23 +48,25 @@ public class PermisosMedico {
                 System.out.println("\n=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=");
                 System.out.println("¿Confirmar permisos denegados?");
                 System.out.println("=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=");
-                System.out.println("1. Sí, denegar permisos.");
+                System.out.println("1. Sí, denegar permisos.\n");
                 System.out.println("0. No, salir sin denegar.");
                 System.out.println("-------------------------------");
                 System.out.print(">>> ");
                 confirmacion = CheckInt.check();
                 switch (confirmacion) {
                     case 1:
+                        Controller.getController().controladorUsuarios.get(nombreUsuario).permisosDenegados.clear();
+                        Controller.getController().controladorUsuarios.get(nombreUsuario).permisosDenegados.addAll(listaPermisos);
                         System.out.println("\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-");
                         System.out.println("  Se han denegado permisos al usuario.");
-                        System.out.println("-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-");
+                        System.out.println("-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n");
                         
                         break;
                 
                     default:
                         System.out.println("\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-");
                         System.out.println("  Denegación de permisos CANCELADA.");
-                        System.out.println("-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-");
+                        System.out.println("-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n");
                         listaPermisos.clear();
                         break;
                 }

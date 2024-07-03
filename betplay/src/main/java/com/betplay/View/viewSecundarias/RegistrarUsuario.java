@@ -108,6 +108,7 @@ public class RegistrarUsuario {
         return rol;
 
     }
+    
 
     public static boolean Registrar(String nombreUsuario, Usuario nuevoUsuario) {
         boolean verificacionRegistro = false;

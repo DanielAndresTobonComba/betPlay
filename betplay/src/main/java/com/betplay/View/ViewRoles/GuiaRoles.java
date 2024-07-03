@@ -6,26 +6,26 @@ public class GuiaRoles {
 
     private GuiaRoles() {}
 
-    public static void entrarVista(String rol) {
+    public static void entrarVista(String rol, String nombreUsuario) {
         switch (rol) {
             case "Aficionado":
                 Aficionado.startAficionado();
                 break;
 
             case "Arbitro":
-                Arbitro.startArbitro();
+                Arbitro.startArbitro(nombreUsuario);
                 break;
 
             case "Medico":
-                Medico.startMedico();
+                Medico.startMedico(nombreUsuario);
                 break;
             
             case "Periodista":
-                Periodista.startPeriodista();
+                Periodista.startPeriodista(nombreUsuario);
                 break;
             
             case "Tecnico":
-                Tecnico.startTecnico();
+                Tecnico.startTecnico(nombreUsuario);
                 break;
                 
 

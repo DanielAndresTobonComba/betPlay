@@ -1,17 +1,18 @@
 package com.betplay.View.viewSecundarias;
 
+import java.util.ArrayList;
 import java.util.List;
 
+import com.betplay.Controller;
 import com.betplay.Entity.CheckInt;
 
 public class PermisosArbitro {
 
     private PermisosArbitro() {}
 
-    public static boolean Permisos(List<Integer> listaPermisos) {
+    public static boolean Permisos(List<Integer> listaPermisos, String nombreUsuario) {
         boolean salida = false;
         int opcion;
-
         
         System.out.println("\n====================================");
         System.out.println("             PERMISOS");
@@ -52,13 +53,15 @@ public class PermisosArbitro {
                 System.out.println("\n=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=");
                 System.out.println("¿Confirmar permisos denegados?");
                 System.out.println("=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=");
-                System.out.println("1. Sí, denegar permisos.");
+                System.out.println("1. Sí, denegar permisos.\n");
                 System.out.println("0. No, salir sin denegar.");
                 System.out.println("-------------------------------");
                 System.out.print(">>> ");
                 confirmacion = CheckInt.check();
                 switch (confirmacion) {
                     case 1:
+                        Controller.getController().controladorUsuarios.get(nombreUsuario).permisosDenegados.clear();
+                        Controller.getController().controladorUsuarios.get(nombreUsuario).permisosDenegados.addAll(listaPermisos);
                         System.out.println("\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-");
                         System.out.println("  Se han denegado permisos al usuario.");
                         System.out.println("-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-");

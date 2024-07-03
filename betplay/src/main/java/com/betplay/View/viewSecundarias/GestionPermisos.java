@@ -7,6 +7,7 @@ import com.betplay.Controller;
 import com.betplay.Entity.CheckInt;
 import com.betplay.Entity.Usuario;
 import com.betplay.View.ViewRoles.Administrador;
+import com.betplay.View.ViewRoles.GuiaPermisos;
 
 public class GestionPermisos {
 
@@ -23,9 +24,9 @@ public class GestionPermisos {
         System.out.println("===================");
         System.out.println("       Menú");
         System.out.println("===================");
-        System.out.println("1. Denegar\n");
+        System.out.println("1. Denegar permisos\n");
         System.out.println("2. Permitir todos\n");
-        System.out.println("3. Salir");
+        System.out.println("0. Salir");
         System.out.println("-------------------");
 
         System.out.println("\n\n. . . . . . . . . .");
@@ -38,37 +39,37 @@ public class GestionPermisos {
         switch (opcion) {
             case 1:
                 boolean salida = false;
-                List<Integer> permisosDenegados = new ArrayList<>();
+                List<Integer> permisosDenegadosAgregados = new ArrayList<>();
 
-                /*while (salida) {
-                    
-                }*/
+                while (salida == false) {
+                    salida = GuiaPermisos.menuPermisos(nombreUsuario, permisosDenegadosAgregados);
+                }
 
                 break;
 
             case 2:
                 if (Controller.getController().controladorUsuarios.get(nombreUsuario).permisosDenegados.size() == 0 ) {
-                    System.out.println("\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.");
-                    System.out.println("  Todos los permisospermitidos");
-                    System.out.println("-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.");
+                    System.out.println("\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.");
+                    System.out.println("  Todos los permisos permitidos.");
+                    System.out.println("-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.");
                 } else {
                     Controller.getController().controladorUsuarios.get(nombreUsuario).permisosDenegados.clear();
-                    System.out.println("\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.");
-                    System.out.println("  Todos los permisos permitidos");
-                    System.out.println("-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.");
+                    System.out.println("\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.");
+                    System.out.println("  Todos los permisos permitidos.");
+                    System.out.println("-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.");
                 };
                 
                 break;
         
             default:
             if (Controller.getController().controladorUsuarios.get(nombreUsuario).permisosDenegados.size() == 0) {
-                System.out.println("\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.");
-                System.out.println("  Todos los permisos permitidos");
-                System.out.println("-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.");
+                System.out.println("\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.");
+                System.out.println("  Todos los permisos permitidos.");
+                System.out.println("-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.");
             } else {
                 
                 System.out.println("\n-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.");
-                System.out.println("  No se han realizado cambios");
+                System.out.println("  No se han realizado cambios.");
                 System.out.println("-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.");
             };
                 break;

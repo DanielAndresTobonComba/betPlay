@@ -2,6 +2,7 @@ package com.betplay.View.ViewRoles;
 
 import java.util.Scanner;
 
+import com.betplay.Controller;
 import com.betplay.Entity.CheckInt;
 import com.betplay.View.Intro;
 import com.betplay.View.viewSecundarias.gestionConvocatoria;
@@ -16,9 +17,11 @@ import com.betplay.View.viewSecundarias.visualizarEstadisticas;
 
 public class Tecnico {
 
-    public static void startTecnico (){
+    public static void startTecnico (String nombreUsuario){
 
         int decision ;
+
+        
 
         Scanner scanner = new Scanner(System.in);
 
@@ -50,39 +53,120 @@ public class Tecnico {
  
         switch (decision) {
             case 1:
-                gestionEquipos.startGestioEquipos();
+                if (Controller.getController().controladorUsuarios.get(nombreUsuario).permisosDenegados.contains(decision)) {
+                    System.out.println("\n*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*");
+                    System.out.println("  Estás impedido para realizar esta función");
+                    System.out.println("*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*\n");
+                    Tecnico.startTecnico(nombreUsuario);
+                }
+                else {
+                    gestionEquipos.startGestioEquipos();
+                }
+                
                 break;
 
             case 2:
-                gestionJugadores.startGestionJugadores();
+                if (Controller.getController().controladorUsuarios.get(nombreUsuario).permisosDenegados.contains(decision)) {
+                    System.out.println("\n*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*");
+                    System.out.println("  Estás impedido para realizar esta función");
+                    System.out.println("*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*\n");
+                    Tecnico.startTecnico(nombreUsuario);
+                }
+                else {
+                    gestionJugadores.startGestionJugadores();
+                }
+                
                 break;
 
             case 3:
-                gestionPartidos.startGestionPartidos();
+                if (Controller.getController().controladorUsuarios.get(nombreUsuario).permisosDenegados.contains(decision)) {
+                    System.out.println("\n*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*");
+                    System.out.println("  Estás impedido para realizar esta función");
+                    System.out.println("*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*\n");
+                    Tecnico.startTecnico(nombreUsuario);
+                }
+                else {
+                    gestionPartidos.startGestionPartidos();
+                }
+                
                 break;
 
             case 4:
-                gestionEntrenadores.startGestionEntrenadores();
+                if (Controller.getController().controladorUsuarios.get(nombreUsuario).permisosDenegados.contains(decision)) {
+                    System.out.println("\n*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*");
+                    System.out.println("  Estás impedido para realizar esta función");
+                    System.out.println("*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*\n");
+                    Tecnico.startTecnico(nombreUsuario);
+                }
+                else {
+                    gestionEntrenadores.startGestionEntrenadores();
+                }
+                
                 break;
 
             case 5:
-                visualizarEstadisticas.startVisualizarEstadisticas();
+                if (Controller.getController().controladorUsuarios.get(nombreUsuario).permisosDenegados.contains(decision)) {
+                    System.out.println("\n*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*");
+                    System.out.println("  Estás impedido para realizar esta función");
+                    System.out.println("*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*\n");
+                    Tecnico.startTecnico(nombreUsuario);
+                }
+                else {
+                    visualizarEstadisticas.startVisualizarEstadisticas();
+                }
+                
                 break;
 
             case 6:
-                gestionInformes.startGestionInformes();
+                if (Controller.getController().controladorUsuarios.get(nombreUsuario).permisosDenegados.contains(decision)) {
+                    System.out.println("\n*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*");
+                    System.out.println("  Estás impedido para realizar esta función");
+                    System.out.println("*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*\n");
+                    Tecnico.startTecnico(nombreUsuario);
+                }
+                else {
+                    gestionInformes.startGestionInformes();
+                }
+                
                 break;
 
             case 7:
-                gestionEntrenamiento.startGestionEntrenamiento();
+                if (Controller.getController().controladorUsuarios.get(nombreUsuario).permisosDenegados.contains(decision)) {
+                    System.out.println("\n*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*");
+                    System.out.println("  Estás impedido para realizar esta función");
+                    System.out.println("*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*\n");
+                    Tecnico.startTecnico(nombreUsuario);
+                }
+                else {
+                    gestionEntrenamiento.startGestionEntrenamiento();
+                }
+                
                 break;
 
             case 8:
-                gestionRendimiento.startGestionRendimiento();
+                if (Controller.getController().controladorUsuarios.get(nombreUsuario).permisosDenegados.contains(decision)) {
+                    System.out.println("\n*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*");
+                    System.out.println("  Estás impedido para realizar esta función");
+                    System.out.println("*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*\n");
+                    Tecnico.startTecnico(nombreUsuario);
+                }
+                else {
+                    gestionRendimiento.startGestionRendimiento();
+                }
+                
                 break;
 
             case 9:
-                gestionConvocatoria.startGestionConvocatoria();
+                if (Controller.getController().controladorUsuarios.get(nombreUsuario).permisosDenegados.contains(decision)) {
+                    System.out.println("\n*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*");
+                    System.out.println("  Estás impedido para realizar esta función");
+                    System.out.println("*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*\n");
+                    Tecnico.startTecnico(nombreUsuario);
+                }
+                else {
+                    gestionConvocatoria.startGestionConvocatoria();
+                }
+                
                 break;
             
             default:
