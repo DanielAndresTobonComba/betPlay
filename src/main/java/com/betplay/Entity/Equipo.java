@@ -19,6 +19,8 @@ public class Equipo {
     public Hashtable<Integer, Entrenamiento> lstEntrenamientos;
     
     public Equipo() {
+
+        this.lstEntrenamientos = new Hashtable<>();
     }
 
     
