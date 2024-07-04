@@ -26,7 +26,7 @@ public class gestionArbitros {
             //System.out.println("1. Registrar\n");
             System.out.println("1. Editar\n");
             System.out.println("2. Eliminar\n");
-            System.out.println("4. Volver al menú");
+            System.out.println("3. Volver al menú");
             System.out.println("---------------------");
 
 
@@ -46,8 +46,7 @@ public class gestionArbitros {
                     
                     break;
     
-                case 4:
-    
+                default:
                     System.out.print("Presiona entrer para volver al menu pricipal: ");
                     scanner.nextLine();
                     break ;
@@ -55,7 +54,7 @@ public class gestionArbitros {
             }
     
             
-        } while (decision != 4);
+        } while (decision != 3);
 
        
     }

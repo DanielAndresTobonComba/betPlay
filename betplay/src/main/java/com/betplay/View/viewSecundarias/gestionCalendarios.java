@@ -26,7 +26,7 @@ public class gestionCalendarios {
             System.out.println("2. Filtro por equipos\n");
             System.out.println("3. Filtro por estadio\n");
             System.out.println("4. Volver al menú");
-            System.out.println("---------------------------")
+            System.out.println("---------------------------");
 
             System.out.println("\n\n. . . . . . . . . .");
             System.out.println(" Digite la opción");

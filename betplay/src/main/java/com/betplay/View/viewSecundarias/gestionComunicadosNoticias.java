@@ -31,7 +31,7 @@ public class gestionComunicadosNoticias {
             System.out.println("7. Crear sanción\n");  
             System.out.println("8. Buscar sanción\n");
             System.out.println("9. Volver al menu");
-            System.out.println("------------------------------")
+            System.out.println("------------------------------");
 
             System.out.println("\n\n. . . . . . . . . .");
             System.out.println(" Digite la opción");
