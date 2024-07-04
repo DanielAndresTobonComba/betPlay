@@ -18,16 +18,17 @@ public class gestionArbitros {
         Scanner scanner = new Scanner(System.in);
 
         do {
-            System.out.println("\n-------------------");
-            System.out.println("   A R B I T R O S");
-            System.out.println("===================");
-            System.out.println("       Menú");
-            System.out.println("===================");
-            System.out.println("Menu arbitros");
-            System.out.println("1. Agregar");
-            System.out.println("2. Editar");
-            System.out.println("3. Eliminar");
-            System.out.println("4. Regresar al menu");
+            System.out.println("\n---------------------");
+            System.out.println("   Á R B I T R O S");
+            System.out.println("=====================");
+            System.out.println("        Menú");
+            System.out.println("=====================");
+            //System.out.println("1. Registrar\n");
+            System.out.println("1. Editar\n");
+            System.out.println("2. Eliminar\n");
+            System.out.println("4. Volver al menú");
+            System.out.println("---------------------");
+
 
             System.out.println("\n\n. . . . . . . . . .");
             System.out.println(" Digite la opción");
@@ -45,15 +46,11 @@ public class gestionArbitros {
                     
                     break;
     
-                case 3:
-                    
-                    break;
-    
                 case 4:
     
                     System.out.print("Presiona entrer para volver al menu pricipal: ");
                     scanner.nextLine();
-                    return ;
+                    break ;
     
             }
     

@@ -17,16 +17,16 @@ public class gestionCalendarios {
 
 
         do {
-            System.out.println("\n-------------------");
+            System.out.println("\n---------------------------");
             System.out.println("   C A L E N D A R I O S");
-            System.out.println("===================");
-            System.out.println("       Menú");
-            System.out.println("===================");
-
-            System.out.println("1. Ingresar rango");
-            System.out.println("2. Filtro por equipos");
-            System.out.println("3. Filtro por estadio");
-            System.out.println("4. Regresar al menu");
+            System.out.println("===========================");
+            System.out.println("            Menú");
+            System.out.println("===========================");
+            System.out.println("1. Ingresar rango\n");
+            System.out.println("2. Filtro por equipos\n");
+            System.out.println("3. Filtro por estadio\n");
+            System.out.println("4. Volver al menú");
+            System.out.println("---------------------------")
 
             System.out.println("\n\n. . . . . . . . . .");
             System.out.println(" Digite la opción");
