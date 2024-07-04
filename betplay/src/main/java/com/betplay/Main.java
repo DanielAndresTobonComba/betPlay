@@ -5,13 +5,14 @@ import java.util.List;
 
 import com.betplay.Entity.Usuario;
 import com.betplay.View.Intro;
+import com.betplay.View.viewSecundarias.gestionComunicadosNoticias;
 
 
 
 
 public class Main {
     public static void main(    String[] args) {
-
+        /*
 
         //Registro del Admin
         String usuarioAdmin = "admin123";
@@ -24,6 +25,10 @@ public class Main {
 
         // Iniciazalización del sistema
         Intro.startIntro();
+
+         */
+
+         gestionComunicadosNoticias.startGestionComunicadosNoticias("Daniel");
 
 
 
