@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class gestionResultados {
 
-    public static void startGestionResultados (){
+    public static void startGestionResultados (String nombreUsuario){
 
         Scanner scanner = new Scanner(System.in);
 

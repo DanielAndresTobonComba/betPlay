@@ -2,12 +2,14 @@ package com.betplay.View.viewSecundarias;
 
 import java.util.Scanner;
 
+import com.betplay.Controller;
 import com.betplay.Entity.CheckInt;
+import com.betplay.View.ViewRoles.GuiaRoles;
 
 public class gestionConvocatoria {
 
 
-    public static void startGestionConvocatoria (){
+    public static void startGestionConvocatoria (String nombreUsuario){
 
         int decision ;
 
@@ -25,7 +27,7 @@ public class gestionConvocatoria {
             System.out.println("1. Crear ");
             System.out.println("2. Editar");
             System.out.println("3. Eliminar");
-            System.out.println("4. Regresar al menu");
+            System.out.println("0. Regresar al menu");
 
             System.out.println("\n\n. . . . . . . . . .");
             System.out.println(" Digite la opción");
@@ -47,10 +49,11 @@ public class gestionConvocatoria {
                     
                     break;
     
-                case 4:
-                    
+                default:
                     System.out.print("Presiona entrer para volver al menu pricipal: ");
                     scanner.nextLine();
+                    String rol = Controller.getController().controladorUsuarios.get(nombreUsuario).idRol;
+                    GuiaRoles.entrarVista(rol, nombreUsuario);
                     return ;
     
             }

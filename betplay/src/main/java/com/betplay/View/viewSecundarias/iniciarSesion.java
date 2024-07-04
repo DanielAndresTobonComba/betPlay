@@ -62,7 +62,9 @@ public class iniciarSesion {
                 rol = Controller.getController().roles.get(4);
                 break;
 
-            
+            case 6:
+                rol = Controller.getController().roles.get(5);
+                break;
         
             default:
                 Intro.startIntro();

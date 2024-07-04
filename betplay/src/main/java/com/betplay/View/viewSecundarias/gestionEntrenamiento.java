@@ -7,6 +7,7 @@ import com.betplay.Controller;
 import com.betplay.Entity.Actividad;
 import com.betplay.Entity.CheckInt;
 import com.betplay.Entity.Entrenamiento;
+import com.betplay.View.ViewRoles.GuiaRoles;
 
 import java.util.*;
 
@@ -14,7 +15,7 @@ import java.util.*;
 
 public class gestionEntrenamiento {
 
-    public static void startGestionEntrenamiento (){
+    public static void startGestionEntrenamiento (String nombreUsuario){
 
         Actividad actividad =  new Actividad();
         Entrenamiento entrenamiento = new Entrenamiento();
@@ -183,10 +184,12 @@ public class gestionEntrenamiento {
                     
                     break;
     
-                case 4:
-                System.out.print("Presiona entrer para volver al menu pricipal: ");
-                scanner.nextLine();
-                return ;
+                default:
+                    System.out.print("Presiona entrer para volver al menu pricipal: ");
+                    scanner.nextLine();
+                    String rol = Controller.getController().controladorUsuarios.get(nombreUsuario).idRol;
+                    GuiaRoles.entrarVista(rol, nombreUsuario);
+                    break ;
             }
         } while (decision != 4);
 
