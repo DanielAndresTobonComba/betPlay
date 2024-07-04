@@ -10,7 +10,7 @@ import com.betplay.View.Intro;
 
 
 public class Main {
-    public static void main(String[] args) {
+    public static void main(    String[] args) {
 
 
         //Registro del Admin

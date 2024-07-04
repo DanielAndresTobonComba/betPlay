@@ -73,7 +73,7 @@ public class Tecnico {
                     Tecnico.startTecnico(nombreUsuario);
                 }
                 else {
-                    gestionJugadores.startGestionJugadores();
+                    gestionJugadores.startGestionJugadores(nombreUsuario);
                 }
                 
                 break;
@@ -86,7 +86,7 @@ public class Tecnico {
                     Tecnico.startTecnico(nombreUsuario);
                 }
                 else {
-                    gestionPartidos.startGestionPartidos();
+                    gestionPartidos.startGestionPartidos(nombreUsuario);
                 }
                 
                 break;
@@ -99,7 +99,7 @@ public class Tecnico {
                     Tecnico.startTecnico(nombreUsuario);
                 }
                 else {
-                    gestionEntrenadores.startGestionEntrenadores();
+                    gestionEntrenadores.startGestionEntrenadores(nombreUsuario);
                 }
                 
                 break;
@@ -112,7 +112,7 @@ public class Tecnico {
                     Tecnico.startTecnico(nombreUsuario);
                 }
                 else {
-                    visualizarEstadisticas.startVisualizarEstadisticas();
+                    visualizarEstadisticas.startVisualizarEstadisticas(nombreUsuario);
                 }
                 
                 break;
@@ -125,7 +125,7 @@ public class Tecnico {
                     Tecnico.startTecnico(nombreUsuario);
                 }
                 else {
-                    gestionInformes.startGestionInformes();
+                    gestionInformes.startGestionInformes(nombreUsuario);
                 }
                 
                 break;
@@ -138,7 +138,7 @@ public class Tecnico {
                     Tecnico.startTecnico(nombreUsuario);
                 }
                 else {
-                    gestionEntrenamiento.startGestionEntrenamiento();
+                    gestionEntrenamiento.startGestionEntrenamiento(nombreUsuario);
                 }
                 
                 break;
@@ -151,7 +151,7 @@ public class Tecnico {
                     Tecnico.startTecnico(nombreUsuario);
                 }
                 else {
-                    gestionRendimiento.startGestionRendimiento();
+                    gestionRendimiento.startGestionRendimiento(nombreUsuario);
                 }
                 
                 break;
@@ -164,7 +164,7 @@ public class Tecnico {
                     Tecnico.startTecnico(nombreUsuario);
                 }
                 else {
-                    gestionConvocatoria.startGestionConvocatoria();
+                    gestionConvocatoria.startGestionConvocatoria(nombreUsuario);
                 }
                 
                 break;

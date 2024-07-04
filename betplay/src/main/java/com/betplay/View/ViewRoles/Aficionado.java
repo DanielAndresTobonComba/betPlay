@@ -10,7 +10,7 @@ import com.betplay.View.viewSecundarias.visualizarEstadisticas;
 
 public class Aficionado {
 
-    public static void startAficionado(){
+    public static void startAficionado(String nombreUsuario){
 
 
         int decision = 0;
@@ -40,15 +40,15 @@ public class Aficionado {
             switch (decision) {
 
             case 1:
-                visualizarEstadisticas.startVisualizarEstadisticas();
+                visualizarEstadisticas.startVisualizarEstadisticas(nombreUsuario);
                 break;
 
             case 2:
-                ventaEntradas.startVentaEntradas();
+                ventaEntradas.startVentaEntradas(nombreUsuario);
                 break;
 
             case 3:
-                gestionCalendarios.startconsultarCalendario();
+                gestionCalendarios.startconsultarCalendario(nombreUsuario);
                 break;
 
             

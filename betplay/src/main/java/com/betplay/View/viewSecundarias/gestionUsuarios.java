@@ -12,6 +12,7 @@ public class gestionUsuarios {
 
     public static void startGestionUsuarios (){
 
+        String nombreUsuario = "";
         int decision ;
         boolean verificacion;
 
@@ -41,12 +42,12 @@ public class gestionUsuarios {
 
         switch (decision) {
             case 1:
-                String nombreUsuario = RegistrarUsuario.setNombreUsuario();
+                nombreUsuario = RegistrarUsuario.setNombreUsuario();
                 if ("".equals(nombreUsuario)) {
                     startGestionUsuarios();
                 } else {
                     Usuario nuevoUsuario = new Usuario();
-                    String rol = RegistrarUsuario.setRol();
+                    String rol = RegistrarUsuario.setRol(nombreUsuario);
                     String nombre = RegistrarUsuario.setNombre();
                     String email = RegistrarUsuario.setEmail();
                     String password = CheckPassword.check();
@@ -96,7 +97,7 @@ public class gestionUsuarios {
 
 
             default:
-                Administrador.startAdmin();
+                Administrador.startAdmin(nombreUsuario);
                 break;
 
         }

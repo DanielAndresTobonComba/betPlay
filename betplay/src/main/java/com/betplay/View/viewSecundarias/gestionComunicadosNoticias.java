@@ -2,13 +2,15 @@ package com.betplay.View.viewSecundarias;
 
 import java.util.Scanner;
 
+import com.betplay.Controller;
 import com.betplay.Entity.CheckInt;
+import com.betplay.View.ViewRoles.GuiaRoles;
 
 
 public class gestionComunicadosNoticias {
 
 
-    public static void startGestionComunicadosNoticias () {
+    public static void startGestionComunicadosNoticias (String nombreUsuario) {
 
         int decision ;
 
@@ -74,6 +76,8 @@ public class gestionComunicadosNoticias {
     
                 System.out.print("Presiona entrer para volver al menu pricipal: ");
                 scanner.nextLine();
+                String rol = Controller.getController().controladorUsuarios.get(nombreUsuario).idRol;
+                GuiaRoles.entrarVista(rol, nombreUsuario);
                 return ;
     
                 

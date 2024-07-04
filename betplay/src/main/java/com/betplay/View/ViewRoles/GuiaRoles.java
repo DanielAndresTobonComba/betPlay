@@ -9,7 +9,7 @@ public class GuiaRoles {
     public static void entrarVista(String rol, String nombreUsuario) {
         switch (rol) {
             case "Aficionado":
-                Aficionado.startAficionado();
+                Aficionado.startAficionado(nombreUsuario);
                 break;
 
             case "Arbitro":
@@ -30,7 +30,7 @@ public class GuiaRoles {
                 
 
             default:
-                Administrador.startAdmin();
+                Administrador.startAdmin(nombreUsuario);
                 break;
         }
     }

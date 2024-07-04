@@ -60,7 +60,7 @@ public class RegistrarUsuario {
         return password;
     }*/
 
-    public static String setRol(){
+    public static String setRol(String nombreUsuario){
         int opcion = 0;
         String rol = "";
 
@@ -73,7 +73,7 @@ public class RegistrarUsuario {
         System.out.println("2. Médico\n");
         System.out.println("3. Periodista\n");
         System.out.println("4. Técnico\n");
-        System.out.println("5. Volver");
+        System.out.println("0. Volver");
         System.out.println("-------------------");
 
         System.out.println("\n\n. . . . . . . . . .");
@@ -101,7 +101,7 @@ public class RegistrarUsuario {
                 break;
 
             default:
-                Administrador.startAdmin();
+                Administrador.startAdmin(nombreUsuario);
                 break;
         }
         System.out.println(rol);

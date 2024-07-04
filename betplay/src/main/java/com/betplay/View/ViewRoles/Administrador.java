@@ -21,7 +21,7 @@ import com.betplay.View.viewSecundarias.gestionUsuarios;
 
 public class Administrador {
 
-    public static void startAdmin(){
+    public static void startAdmin(String nombreUsuario){
 
         int decision ;
 
@@ -67,13 +67,13 @@ public class Administrador {
 
             case 2:
 
-                gestionJugadores.startGestionJugadores();
+                gestionJugadores.startGestionJugadores(nombreUsuario);
                 
                 break;
 
             case 3:
 
-                gestionPartidos.startGestionPartidos();
+                gestionPartidos.startGestionPartidos(nombreUsuario);
                 
                 break;
 
@@ -94,17 +94,17 @@ public class Administrador {
                 break;
 
             case 7:
-                gestionComunicadosNoticias.startGestionComunicadosNoticias();
+                gestionComunicadosNoticias.startGestionComunicadosNoticias(nombreUsuario);
                 
                 break;
 
             case 8:
-                gestionInformes.startGestionInformes();
+                gestionInformes.startGestionInformes(nombreUsuario);
                 
                 break;
 
             case 9:
-                gestionMedios.startGestionMedios();
+                gestionMedios.startGestionMedios(nombreUsuario);
                 break;
 
             case 10:

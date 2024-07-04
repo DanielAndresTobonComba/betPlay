@@ -52,7 +52,7 @@ public class Periodista {
                     Periodista.startPeriodista(nombreUsuario);
                 }
                 else {
-                    visualizarEstadisticas.startVisualizarEstadisticas();
+                    visualizarEstadisticas.startVisualizarEstadisticas(nombreUsuario);
                 }
                 
                 break;
@@ -65,7 +65,7 @@ public class Periodista {
                     Periodista.startPeriodista(nombreUsuario);
                 }
                 else {
-                    gestionComunicadosNoticias.startGestionComunicadosNoticias();
+                    gestionComunicadosNoticias.startGestionComunicadosNoticias(nombreUsuario);
                 }
                 
                 break;
@@ -78,7 +78,7 @@ public class Periodista {
                     Periodista.startPeriodista(nombreUsuario);
                 }
                 else {
-                    gestionCalendarios.startconsultarCalendario();
+                    gestionCalendarios.startconsultarCalendario(nombreUsuario);
                 }
                                 
                 break;
@@ -91,7 +91,7 @@ public class Periodista {
                     Periodista.startPeriodista(nombreUsuario);
                 }
                 else {
-                    gestionMedios.startGestionMedios();
+                    gestionMedios.startGestionMedios(nombreUsuario);
                 }
                 
                 break;

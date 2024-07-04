@@ -49,7 +49,7 @@ public class Arbitro {
                     Arbitro.startArbitro(nombreUsuario);
                 }
                 else {
-                    gestionResultados.startGestionResultados();
+                    gestionResultados.startGestionResultados(nombreUsuario);
                 }
                 
                 break;
@@ -62,7 +62,7 @@ public class Arbitro {
                     Arbitro.startArbitro(nombreUsuario);
                 }
                 else {
-                    gestionComunicadosNoticias.startGestionComunicadosNoticias();
+                    gestionComunicadosNoticias.startGestionComunicadosNoticias(nombreUsuario);
                 }
                 
                 break;
