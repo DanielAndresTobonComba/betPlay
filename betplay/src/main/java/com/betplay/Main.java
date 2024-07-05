@@ -1,6 +1,7 @@
 package com.betplay;
 
-import java.util.Set;
+import java.util.ArrayList;
+import java.util.List;
 
 import com.betplay.Entity.Usuario;
 import com.betplay.View.Intro;
@@ -11,7 +12,7 @@ import com.betplay.View.viewSecundarias.gestionEquipos;
 
 
 public class Main {
-    public static void main(String[] args) {
+    public static void main(    String[] args) {
 
         /* 
         //Registro del Admin
@@ -35,7 +36,7 @@ public class Main {
         // Intro.startIntro();
 
         
-        gestionEntrenamiento.startGestionEntrenamiento();
+        gestionEntrenamiento.startGestionEntrenamiento("Daniel");
 
         //Falta la impresion correcta de los datos , equipamientos y tranferencia de jugadores
         //gestionEquipos.startGestioEquipos();

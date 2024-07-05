@@ -1,11 +1,13 @@
 package com.betplay.View.viewSecundarias;
 import java.util.Scanner;
 
+import com.betplay.Controller;
 import com.betplay.Entity.CheckInt;
+import com.betplay.View.ViewRoles.GuiaRoles;
 
 public class gestionPartidos {
 
-    public static void startGestionPartidos (){
+    public static void startGestionPartidos (String nombreUsuario){
 
         int decision ;
 
@@ -43,10 +45,12 @@ public class gestionPartidos {
                     
                     break;
     
-                case 4:
-                System.out.print("Presiona entrer para volver al menu pricipal: ");
-                scanner.nextLine();
-                return;
+                default:
+                    System.out.print("Presiona entrer para volver al menu pricipal: ");
+                    scanner.nextLine();
+                    String rol = Controller.getController().controladorUsuarios.get(nombreUsuario).idRol;
+                    GuiaRoles.entrarVista(rol, nombreUsuario);
+                    break;
     
             }
             

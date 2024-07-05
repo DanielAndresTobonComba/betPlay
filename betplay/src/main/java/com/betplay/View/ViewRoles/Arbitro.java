@@ -2,6 +2,7 @@ package com.betplay.View.ViewRoles;
 
 import java.util.Scanner;
 
+import com.betplay.Controller;
 import com.betplay.Entity.CheckInt;
 import com.betplay.View.Intro;
 import com.betplay.View.viewSecundarias.gestionComunicadosNoticias;
@@ -11,7 +12,7 @@ import com.betplay.View.viewSecundarias.gestionResultados;
 public class Arbitro {
 
     
-    public static void startArbitro(){
+    public static void startArbitro(String nombreUsuario){
 
 
         int decision = 0 ;
@@ -41,11 +42,29 @@ public class Arbitro {
 
         switch (decision) {
             case 1:
-                gestionResultados.startGestionResultados();
+                if (Controller.getController().controladorUsuarios.get(nombreUsuario).permisosDenegados.contains(decision)) {
+                    System.out.println("\n*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*");
+                    System.out.println("  Estás impedido para realizar esta función");
+                    System.out.println("*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*\n");
+                    Arbitro.startArbitro(nombreUsuario);
+                }
+                else {
+                    gestionResultados.startGestionResultados(nombreUsuario);
+                }
+                
                 break;
 
             case 2:
-                gestionComunicadosNoticias.startGestionComunicadosNoticias();
+                if (Controller.getController().controladorUsuarios.get(nombreUsuario).permisosDenegados.contains(decision)) {
+                    System.out.println("\n*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*");
+                    System.out.println("  Estás impedido para realizar esta función");
+                    System.out.println("*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*\n");
+                    Arbitro.startArbitro(nombreUsuario);
+                }
+                else {
+                    gestionComunicadosNoticias.startGestionComunicadosNoticias(nombreUsuario);
+                }
+                
                 break;
 
             default:

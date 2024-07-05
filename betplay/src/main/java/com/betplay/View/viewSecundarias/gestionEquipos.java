@@ -10,6 +10,7 @@ import com.betplay.Entity.CheckInt;
 import com.betplay.Entity.CheckString;
 import com.betplay.Entity.Equipo;
 import com.betplay.Entity.Jugador;
+import com.betplay.View.ViewRoles.GuiaRoles;
 
 public class gestionEquipos {
 
@@ -285,8 +286,8 @@ public class gestionEquipos {
                 default:
                     System.out.print("Presiona entrer para volver al menu pricipal: ");
                     scanner.nextLine();
-                    
-                    break;
+                    //GuiaRoles.entrarVista(nombreEstadio, nombreEntrenador);;
+                    return;
                     
     
             }

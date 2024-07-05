@@ -2,13 +2,14 @@ package com.betplay.View.ViewRoles;
 
 import java.util.Scanner;
 
+import com.betplay.Controller;
 import com.betplay.Entity.CheckInt;
 import com.betplay.View.Intro;
 import com.betplay.View.viewSecundarias.gestionLesiones;
 
 public class Medico {
 
-    public static void startMedico (){
+    public static void startMedico (String nombreUsuario){
 
         int decision ;
         Scanner scanner = new Scanner(System.in);
@@ -36,7 +37,16 @@ public class Medico {
                 
         switch (decision) {
             case 1:
-                gestionLesiones.startGestionLesiones();
+                if (Controller.getController().controladorUsuarios.get(nombreUsuario).permisosDenegados.contains(decision)) {
+                    System.out.println("\n*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*");
+                    System.out.println("  Estás impedido para realizar esta función");
+                    System.out.println("*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*\n");
+                    Medico.startMedico(nombreUsuario);
+                }
+                else {
+                    gestionLesiones.startGestionLesiones();
+                }
+                
                 break;
 
             

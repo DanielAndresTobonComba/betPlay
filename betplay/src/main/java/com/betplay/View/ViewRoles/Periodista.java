@@ -2,6 +2,7 @@ package com.betplay.View.ViewRoles;
 
 import java.util.Scanner;
 
+import com.betplay.Controller;
 import com.betplay.Entity.CheckInt;
 import com.betplay.View.Intro;
 import com.betplay.View.viewSecundarias.gestionCalendarios;
@@ -12,7 +13,7 @@ import com.betplay.View.viewSecundarias.visualizarEstadisticas;
 public class Periodista {
 
 
-    public static void startPeriodista(){
+    public static void startPeriodista( String nombreUsuario){
 
         int decision ;
 
@@ -44,19 +45,55 @@ public class Periodista {
 
         switch (decision) {
             case 1:
-                visualizarEstadisticas.startVisualizarEstadisticas();
+                if (Controller.getController().controladorUsuarios.get(nombreUsuario).permisosDenegados.contains(decision)) {
+                    System.out.println("\n*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*");
+                    System.out.println("  Estás impedido para realizar esta función");
+                    System.out.println("*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*\n");
+                    Periodista.startPeriodista(nombreUsuario);
+                }
+                else {
+                    visualizarEstadisticas.startVisualizarEstadisticas(nombreUsuario);
+                }
+                
                 break;
 
             case 2:
-                gestionComunicadosNoticias.startGestionComunicadosNoticias();
+                if (Controller.getController().controladorUsuarios.get(nombreUsuario).permisosDenegados.contains(decision)) {
+                    System.out.println("\n*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*");
+                    System.out.println("  Estás impedido para realizar esta función");
+                    System.out.println("*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*\n");
+                    Periodista.startPeriodista(nombreUsuario);
+                }
+                else {
+                    gestionComunicadosNoticias.startGestionComunicadosNoticias(nombreUsuario);
+                }
+                
                 break;
 
             case 3:
-                gestionCalendarios.startconsultarCalendario();                
+                if (Controller.getController().controladorUsuarios.get(nombreUsuario).permisosDenegados.contains(decision)) {
+                    System.out.println("\n*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*");
+                    System.out.println("  Estás impedido para realizar esta función");
+                    System.out.println("*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*\n");
+                    Periodista.startPeriodista(nombreUsuario);
+                }
+                else {
+                    gestionCalendarios.startconsultarCalendario(nombreUsuario);
+                }
+                                
                 break;
 
             case 4:
-                gestionMedios.startGestionMedios();
+                if (Controller.getController().controladorUsuarios.get(nombreUsuario).permisosDenegados.contains(decision)) {
+                    System.out.println("\n*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*");
+                    System.out.println("  Estás impedido para realizar esta función");
+                    System.out.println("*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*\n");
+                    Periodista.startPeriodista(nombreUsuario);
+                }
+                else {
+                    gestionMedios.startGestionMedios(nombreUsuario);
+                }
+                
                 break;
 
             default:

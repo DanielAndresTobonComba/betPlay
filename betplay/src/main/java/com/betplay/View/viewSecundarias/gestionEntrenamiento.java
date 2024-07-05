@@ -10,12 +10,15 @@ import com.betplay.Entity.CheckInt;
 import com.betplay.Entity.CheckString;
 import com.betplay.Entity.Entrenamiento;
 import com.betplay.Entity.Equipo;
+import com.betplay.View.ViewRoles.GuiaRoles;
+
+import java.util.*;
+
+
 
 public class gestionEntrenamiento {
 
-    public static void startGestionEntrenamiento() {
-
-        String nombreEntrenador = "Daniel";
+    public static void startGestionEntrenamiento (String nombreUsuario){
 
         Actividad actividad = new Actividad();
         Entrenamiento entrenamiento = new Entrenamiento();
@@ -95,7 +98,7 @@ public class gestionEntrenamiento {
 
 
 
-                    if (equipo != null && equipo.getNombreEntrenador().equals(nombreEntrenador)) {
+                    if (equipo != null && equipo.getNombreEntrenador().equals(nombreUsuario)) {
                         System.out.println("\nDigita la fecha en este formato yyyy-MM-dd ");
                         fechaString = CheckString.check("Ingrese la fecha de nuevo");
                         fecha = null;
@@ -209,7 +212,7 @@ public class gestionEntrenamiento {
                     idEquipo = CheckInt.check();
                     equipo = Controller.getController().controladorEquipos.get(idEquipo);
 
-                    if (equipo != null && equipo.getNombreEntrenador().equals(nombreEntrenador)) {
+                    if (equipo != null && equipo.getNombreEntrenador().equals(nombreUsuario)) {
                         System.out.println("Entrenamientos: " + equipo.getLstEntrenamientos());
                         System.out.println("Digita el codigo del entrenamiento");
                         idEntrenamiento = CheckInt.check();
@@ -288,7 +291,7 @@ public class gestionEntrenamiento {
                     codigoEquipo = CheckInt.check();
                     equipo = Controller.getController().controladorEquipos.get(codigoEquipo);
 
-                    if (equipo != null && equipo.getNombreEntrenador().equals(nombreEntrenador)) {
+                    if (equipo != null && equipo.getNombreEntrenador().equals(nombreUsuario)) {
                         System.out.println("Digita el id del entrenamiento");
                         idEntrenamiento = CheckInt.check();
 
@@ -308,15 +311,13 @@ public class gestionEntrenamiento {
                         System.out.println("Codigo del equipo no existe o usuario no autorizado");
                     }
                     break;
-
-                case 4:
+    
+                default:
                     System.out.print("Presiona entrer para volver al menu pricipal: ");
                     scanner.nextLine();
-                    break;
-
-                default:
-                    System.out.println("Opcion invalida");
-                    break;
+                    String rol = Controller.getController().controladorUsuarios.get(nombreUsuario).idRol;
+                    GuiaRoles.entrarVista(rol, nombreUsuario);
+                    break ;
             }
         } while (decision != 4);
     }

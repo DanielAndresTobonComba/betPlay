@@ -18,7 +18,7 @@ public class Intro {
 
         int decision;
         String rol;
-        String nombreusuario;
+        String nombreUsuario;
         String contraseña;
         boolean validacionUsuario;
         String nuevoNombreUsuario;
@@ -102,15 +102,15 @@ public class Intro {
 
                 }
                 else {
-                    nombreusuario = iniciarSesion.getNombreUsuario();
+                    nombreUsuario = iniciarSesion.getNombreUsuario();
                     contraseña = iniciarSesion.getPassword();
-                    validacionUsuario = ChekUser.verificarUsuario(nombreusuario, rol, contraseña);
+                    validacionUsuario = ChekUser.verificarUsuario(nombreUsuario, rol, contraseña);
                     if (validacionUsuario == true) {
 
                         System.out.println("\n_________________________");
                         System.out.println("\n   B I E N V E N I D O  ");
                         System.out.println("_________________________\n");
-                        GuiaRoles.entrarVista(rol);
+                        GuiaRoles.entrarVista(rol, nombreUsuario);
 
                     } else {
                         System.out.println("\n: : : : : : : : : : : :");
