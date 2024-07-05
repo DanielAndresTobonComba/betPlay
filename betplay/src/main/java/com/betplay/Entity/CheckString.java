@@ -8,6 +8,7 @@ public class CheckString {
     private CheckString() {}
 
     public static String check(String msj) {
+        
         boolean introPermise = true;
         String usuarioEntrada = "";
         Scanner scanner = new Scanner(System.in);
