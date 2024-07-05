@@ -108,7 +108,7 @@ public class Administrador {
                 break;
 
             case 10:
-                gestionReconocimientos.startGestionReconocimiento();
+                gestionReconocimientos.startGestionReconocimiento(nombreUsuario);
                 break;
 
             case 11:
