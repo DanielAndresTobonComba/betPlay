@@ -7,6 +7,7 @@ import com.betplay.Entity.Usuario;
 import com.betplay.View.Intro;
 import com.betplay.View.viewSecundarias.gestionEntrenamiento;
 import com.betplay.View.viewSecundarias.gestionEquipos;
+import com.betplay.View.viewSecundarias.gestionComunicadosNoticias;
 
 
 
