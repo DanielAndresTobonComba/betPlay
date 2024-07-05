@@ -1,8 +1,13 @@
 package com.betplay.View.viewSecundarias;
+
+import java.util.Hashtable;
+
 import java.util.Scanner;
+
 
 import com.betplay.Controller;
 import com.betplay.Entity.CheckInt;
+import com.betplay.Entity.CheckString;
 import com.betplay.Entity.Equipo;
 import com.betplay.Entity.Jugador;
 import com.betplay.View.ViewRoles.GuiaRoles;
@@ -14,7 +19,6 @@ public class gestionEquipos {
 
     
         int decision ;
-
         int codigoEquipo;
         String nombreEquipo; 
         String ciudad;
@@ -67,18 +71,19 @@ public class gestionEquipos {
                     System.out.print("Codigo del equipo: ");
                     codigoEquipo = CheckInt.check();
 
+                    // VERFICAR SI EL CODIGO DEL EQUIPO EXISTE
 
                     System.out.print("Nombre del equipo ");
-                    nombreEquipo = scanner.nextLine();
+                    nombreEquipo = CheckString.check("Digita de nuevo el equipo");
 
                     System.out.print("Nombre del estadio: ");
-                    nombreEstadio = scanner.nextLine();
+                    nombreEstadio = CheckString.check("Digita de nuevo el estadio");
 
                     System.out.print("Nombre de la ciudad: ");
-                    ciudad = scanner.nextLine();
+                    ciudad = CheckString.check("Digita de nuevo la ciudad");
 
                     System.out.print("Nombre del entrenador: ");
-                    nombreEntrenador = scanner.nextLine();
+                    nombreEntrenador = CheckString.check("Digita de nuevo el entrenador");
 
 
                     if(Controller.getController().controladorEquipos.get(codigoEquipo) != null){
@@ -120,7 +125,7 @@ public class gestionEquipos {
                         System.out.println("\nPresione cualquier tecla para salir...");
                         System.out.print(">>> ");
                         scanner.nextLine();
-                        return;
+                        break;
                     } 
 
                     int choice2;
@@ -142,7 +147,6 @@ public class gestionEquipos {
                         
 
                         choice2 = CheckInt.check();
-                        scanner.nextLine(); // Para manejar el salto de línea después de nextInt()
 
                         switch (choice2) {
                             case 1:
@@ -198,10 +202,8 @@ public class gestionEquipos {
 
                     equipo = Controller.getController().controladorEquipos.remove(codigoEquipo) ;
 
-                    
-
                     if (equipo != null) {
-                        equipo.getLstJugadores().add(jugador);
+                        // equipo.getLstJugadores().add(jugador);
                         
                         System.out.println("\n=============================");
                         System.out.println("El equipo ha sido eliminado.");
@@ -217,26 +219,21 @@ public class gestionEquipos {
                          System.out.println("\tLISTA DE TODOS LOS JUGADORES:");
                         System.out.println("------------------------------------------------");
 
-                       
-/*                        Set<Integer> keys = Controller.getController().controladorEquipos.keySet();
-
-                        ArrayList<Integer> lstKeyArrayList = new ArrayList<>(keys);  */
+                        // USAR GPT PARA ARREGLAR LA IMPRESION
 
                         System.out.printf("\n%-20s %-10s %-15s %-10s\n", "Nombre", "Edad", "Nacionalidad", "Estado");
                          System.out.println("-------------------------------------------------------------");
 
-                         for (Jugador j : equipo.getLstJugadores()) {
-                        System.out.printf("%-20s %-10d %-15s %-10s\n",                   
-                                j.getNombre(), 
-                                j.getEdad(), 
-                                j.getNacionalidad(), 
-                                j.getEstado());
-                        
+                        Hashtable<Integer, Jugador> jugadores = equipo.getLstJugadores();
+
+                        for (Integer claveJugador : jugadores.keySet()) {
+                            jugador = jugadores.get(claveJugador);
+                            System.out.println("Clave del jugador: " + claveJugador);
+                            System.out.println("Nombre del jugador: " + jugador.getNombre());
+                            System.out.println("Edad del jugador: " + jugador.getEdad());
+                            System.out.println("Posición del jugador: " + jugador.getPosicion());
+                            
                         }
-                        
-
-
-                       // equipo.getLstPartidos();
 
                         scanner.nextLine();
                         
@@ -292,14 +289,24 @@ public class gestionEquipos {
                        System.out.printf("\n%-20s %-10s %-15s %-10s\n", "Nombre", "Edad", "Nacionalidad", "Estado");
                         System.out.println("-------------------------------------------------------------");
 
-                        for (Jugador j : equipo.getLstJugadores()) {
-                       System.out.printf("%-20s %-10d %-15s %-10s\n", 
-                               j.getNombre(), 
-                               j.getEdad(), 
-                               j.getNacionalidad(), 
-                               j.getEstado());
-                       
-                       }
+
+                        Hashtable<Integer, Jugador> jugadores = equipo.getLstJugadores();
+
+                        if (jugadores != null){
+
+                            for (Integer claveJugador : jugadores.keySet()) {
+                                jugador = jugadores.get(claveJugador);
+                                System.out.println("Clave del jugador: " + claveJugador);
+                                System.out.println("Nombre del jugador: " + jugador.getNombre());
+                                System.out.println("Edad del jugador: " + jugador.getEdad());
+                                System.out.println("Posición del jugador: " + jugador.getPosicion());
+                                
+                            }
+
+                        }
+                
+                        
+                        
                         
                     }
 
@@ -320,7 +327,6 @@ public class gestionEquipos {
             }
             
         } while (decision != 7);
-
       
     }
 
