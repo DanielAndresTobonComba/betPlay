@@ -7,6 +7,7 @@ import com.betplay.Entity.Usuario;
 import com.betplay.View.Intro;
 import com.betplay.View.viewSecundarias.gestionEntrenamiento;
 import com.betplay.View.viewSecundarias.gestionEquipos;
+import com.betplay.View.viewSecundarias.gestionCalendarios;
 import com.betplay.View.viewSecundarias.gestionComunicadosNoticias;
 
 
@@ -37,12 +38,12 @@ public class Main {
         // Intro.startIntro();
 
         
-        gestionEntrenamiento.startGestionEntrenamiento("Daniel");
+        // gestionEntrenamiento.startGestionEntrenamiento("Daniel");
 
         //Falta la impresion correcta de los datos , equipamientos y tranferencia de jugadores
         //gestionEquipos.startGestioEquipos();
 
-
+        gestionCalendarios.startconsultarCalendario("Daniel");
 
     }
 }
