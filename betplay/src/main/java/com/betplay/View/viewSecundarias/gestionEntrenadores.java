@@ -15,16 +15,16 @@ public class gestionEntrenadores {
         Scanner scanner = new Scanner(System.in);
 
         do {
-            System.out.println("\n-------------------");
+            System.out.println("\n-----------------------------");
             System.out.println("   E N T R E N A D O R E S");
-            System.out.println("===================");
-            System.out.println("       Menú");
-            System.out.println("===================");
-
-            System.out.println("1. Agregar");
-            System.out.println("2. Editar");
-            System.out.println("3. Eliminar");
-            System.out.println("4. Regresar al menu");
+            System.out.println("=============================");
+            System.out.println("            Menú");
+            System.out.println("=============================");
+            //System.out.println("1. Agregar\n");
+            System.out.println("1. Editar\n");
+            System.out.println("2. Eliminar");
+            System.out.println("3. Regresar al menu");
+            System.out.println("-----------------------------");
 
             System.out.println("\n\n. . . . . . . . . .");
             System.out.println(" Digite la opción");
@@ -57,7 +57,7 @@ public class gestionEntrenadores {
         }
     
             
-        } while (decision != 4);
+        } while (decision != 3);
 
     }
 
