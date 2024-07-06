@@ -20,13 +20,13 @@ public class Arbitro {
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("\n------------------------------------");
-        System.out.println("          A R B I T R O");
+        System.out.println("           A R B I T R O");
         System.out.println("====================================");
-        System.out.println("              Menú");
+        System.out.println("               Menú");
         System.out.println("====================================");
         System.out.println("1. Gestion de resultados\n");
         System.out.println("2. Gestion de incidentes y sanciones\n");
-        System.out.println("3. Cerrar sesion");
+        System.out.println("0. Cerrar sesión");
         System.out.println("------------------------------------");
 
         System.out.println("\n\n. . . . . . . . . .");

@@ -149,7 +149,7 @@ public class gestionCalendarios {
                     break;
 
                 case 4:
-                    System.out.print("Presiona enter para volver al menu principal: ");
+                    System.out.print("\nPresiona enter para volver al menu principal: ");
                     scanner.nextLine(); // Consumir el salto de línea pendiente
                     String rol = Controller.getController().controladorUsuarios.get(nombreUsuario).idRol;
                     GuiaRoles.entrarVista(rol, nombreUsuario);

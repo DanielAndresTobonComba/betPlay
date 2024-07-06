@@ -47,7 +47,7 @@ public class gestionArbitros {
                     break;
     
                 default:
-                    System.out.print("Presiona entrer para volver al menu pricipal: ");
+                    System.out.print("\nPresiona entrer para volver al menu pricipal: ");
                     scanner.nextLine();
                     break ;
     

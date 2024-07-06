@@ -15,12 +15,12 @@ public class Medico {
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("\n----------------------");
-        System.out.println("    M É D I C O");
+        System.out.println("     M É D I C O");
         System.out.println("======================");
         System.out.println("        Menú");
         System.out.println("======================");
         System.out.println("1. Gestion de lesiones\n");
-        System.out.println("2. Cerrar sesion");
+        System.out.println("0. Cerrar sesión");
         System.out.println("----------------------");
 
         System.out.println("\n\n. . . . . . . . . .");

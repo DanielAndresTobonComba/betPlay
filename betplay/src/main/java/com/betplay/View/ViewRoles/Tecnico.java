@@ -28,7 +28,7 @@ public class Tecnico {
         System.out.println("\n----------------------------");
         System.out.println("       T É C N I C O");
         System.out.println("============================");
-        System.out.println("           Menú");
+        System.out.println("            Menú");
         System.out.println("============================");
         System.out.println("1. Gestión del equipo\n");
         System.out.println("2. Gestión de jugadores\n");

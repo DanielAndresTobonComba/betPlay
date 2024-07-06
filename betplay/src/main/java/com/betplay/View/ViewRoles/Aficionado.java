@@ -25,7 +25,7 @@ public class Aficionado {
         System.out.println("1. Visualizar estadisticas\n");
         System.out.println("2. Compra de entradas\n");
         System.out.println("3. Calendario de partidos\n");
-        System.out.println("4. Cerrar sesion");
+        System.out.println("0. Cerrar sesión");
         System.out.println("--------------------------");
 
         System.out.println("\n\n. . . . . . . . . .");

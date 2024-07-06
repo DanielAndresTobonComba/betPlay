@@ -28,7 +28,7 @@ public class Periodista {
         System.out.println("2. Noticias y comunicados\n");
         System.out.println("3. Calendario de partidos\n");
         System.out.println("4. Medios de comunicación\n");
-        System.out.println("5. Cerrar sesión");
+        System.out.println("0. Cerrar sesión");
         System.out.println("--------------------------");
 
         System.out.println("\n\n. . . . . . . . . .");

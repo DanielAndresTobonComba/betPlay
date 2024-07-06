@@ -24,7 +24,7 @@ public class seleccionRol {
 
         do {
             System.out.println("\n-------------------");
-            System.out.println("   R O L E S");
+            System.out.println("     R O L E S");
             System.out.println("===================");
             System.out.println("       Menú");
             System.out.println("===================");
@@ -33,7 +33,7 @@ public class seleccionRol {
             System.out.println("3. Medico");
             System.out.println("4. Periodista");
             System.out.println("5. Tecnico");
-            System.out.println("6. Regresar al menu principal");
+            System.out.println("6. Volver al menú");
 
             System.out.println("\n\n. . . . . . . . . .");
             System.out.println(" Digite la opción");

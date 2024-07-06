@@ -41,10 +41,10 @@ public class Administrador {
         System.out.println("6. Gestión de estadios\n");
         System.out.println("7. Gestión de patrocinios de la liga\n");
         System.out.println("8. Gestión de comunicados y noticias\n");
-        System.out.println("9. Gestión de informes.\n");
+        System.out.println("9. Gestión de informes\n");
         System.out.println("10. Gestión de medios\n");
         System.out.println("11. Premios y reconocimientos\n");
-        System.out.println("0. Volver al menú principal");  
+        System.out.println("0. Cerrar sesión");  
         System.out.println("------------------------------------");
 
         System.out.println("\n\n. . . . . . . . . .");
