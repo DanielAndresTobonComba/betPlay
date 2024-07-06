@@ -26,7 +26,7 @@ public class gestionCalendarios {
             System.out.println("\n---------------------------");
             System.out.println("   C A L E N D A R I O S");
             System.out.println("===========================");
-            System.out.println("            Menú");
+            System.out.println("           Menú");
             System.out.println("===========================");
             System.out.println("1. Ingresar rango\n");
             System.out.println("2. Filtro por equipos\n");
@@ -47,14 +47,18 @@ public class gestionCalendarios {
                     String fechaInicialString;
                     String fechaFinalString;
 
-                    System.out.println("\n-------------------");
-                    System.out.println("   Buscar por rango");
-                    System.out.println("===================");
+                    System.out.println("\n================================");
+                    System.out.println("   Buscar por rango de fechas");
+                    System.out.println("================================");
 
-                    System.out.println("Fecha inicio (yyyy-MM-dd): ");
+                    System.out.println("\n--> Fecha inicio (yyyy-MM-dd): ");
+                    System.out.println(". . . . . . . . . . . . . . . . . .");
+                    System.out.print(">>> ");
                     fechaInicialString = scanner.next();
 
-                    System.out.println("Fecha fin (yyyy-MM-dd): ");
+                    System.out.println("\n\n--> Fecha fin (yyyy-MM-dd): ");
+                    System.out.println(". . . . . . . . . . . . . . . . . .");
+                    System.out.print(">>> ");
                     fechaFinalString = scanner.next();
 
                     // Parseo de fechas inicial y final
@@ -77,9 +81,9 @@ public class gestionCalendarios {
                         return;
                     }
 
-                    System.out.println("------------------------------------------------");
-                    System.out.println("\tLISTA DE PARTIDOS:");
-                    System.out.println("------------------------------------------------");
+                    System.out.println("\n================================================");
+                    System.out.println("              LISTA DE PARTIDOS");
+                    System.out.println("================================================");
 
                     Set<Integer> setKey = Controller.getController().controladorPartidos.keySet();
 
@@ -101,11 +105,13 @@ public class gestionCalendarios {
                     int idEquipoLocal;
                     int idEquipoVisitante;
                     
-                    System.out.println("\n-------------------");
+                    System.out.println("\n========================");
                     System.out.println("   Buscar por equipos");
-                    System.out.println("===================");
+                    System.out.println("========================");
 
-                    System.out.println("Digite el codigo del equipo");
+                    System.out.println("\n--> Digite el código del equipo");
+                    System.out.println(". . . . . . . . . . . . . . . . . .");
+                    System.out.print(">>> ");
                     idEquipo = CheckInt.check();
 
                     equipo = Controller.getController().controladorEquipos.remove(idEquipo) ;
@@ -137,7 +143,9 @@ public class gestionCalendarios {
                         }
 
                     } else {
-                        System.out.println("El codigo del equipo no existe");
+                        System.out.println("\n******************************");
+                        System.out.println("El código del equipo no existe");
+                        System.out.println("******************************");
                         scanner.nextLine();
                     }
 

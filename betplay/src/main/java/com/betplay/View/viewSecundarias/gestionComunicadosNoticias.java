@@ -41,7 +41,7 @@ public class gestionComunicadosNoticias {
             String titulo;
             String contenido;
 
-            System.out.println("\n-------------------");
+            System.out.println("\n-----------------------------");
             System.out.println("   C O M U N I C A C I Ó N");
             System.out.println("=============================");
             System.out.println("            Menú");
@@ -68,21 +68,25 @@ public class gestionComunicadosNoticias {
 
                 case 1:
 
-                    System.out.println("\n-------------------");
-                    System.out.println("\tCrear noticia");
+                    System.out.println("\n===================");
+                    System.out.println("   Crear noticia");
                     System.out.println("===================");
 
                     boolean existe = true;
 
                     do {
                         
-                        System.out.println("Digita el codigo de la noticia");
+                        System.out.println("\n--> Digita el codigo de la noticia");
+                        System.out.println(". . . . . . . . . . . . . . . . . . . .");
+                        System.out.print(">>> ");
                         idComunicacion = CheckInt.check();
 
                         existe = Controller.getController().controladorComunicaciones.containsKey(idComunicacion);
 
                         if (existe){
-                            System.out.println("El codigo ya esta en uso");
+                            System.out.println("\n*********************");
+                            System.out.println("Este código ya existe");
+                            System.out.println("*********************");
                             
                         }else{
                             existe = false;
@@ -93,29 +97,57 @@ public class gestionComunicadosNoticias {
                     while (existe);
 
                         //TITULO Y CONTENIDO DE LA NOTICIA
+                        System.out.println("\n________________________");
+                        System.out.println("\n  TíTULO DE LA NOTICIA");
+                        System.out.println("________________________");
 
-                        System.out.println("Titulo de la noticia");
-                        titulo = CheckString.check("\nDigite de nuevo el titulo.");
+                        System.out.println("\n--> Escriba el título de la noticia");
+                        System.out.println(". . . . . . . . . . . . . . . . . . . .");
+                        System.out.print(">>> ");
+
+                        titulo = CheckString.check("\nEscriba nuevamente el título.");
+
                         scanner.nextLine();
+                        System.out.println("\n________________________");
+                        System.out.println("\n       CONTENIDO");
+                        System.out.println("________________________");
 
-                        System.out.println("Contenido");
-                        contenido = CheckString.check("\nDigita de nuevo el contenido");
+                        System.out.println("\n--> Escriba el contenido de la noticia");
+                        System.out.println(". . . . . . . . . . . . . . . . . . . .");
+                        System.out.print(">>> ");
+                        contenido = CheckString.check("\nDigite de nuevo el contenido");
                         scanner.nextLine();
 
 
                         // OBTENER LA FECHA DE PUBLICACION
+                        System.out.println("\n________________________");
+                        System.out.println("\n  FECHA DE PUBLICACIÓN");
+                        System.out.println("________________________");
 
-                        System.out.println("Digita la fecha en este formato yyyy-MM-dd ");
-                        fechaString = CheckString.check("Digita de nuevo la fecha");
+                        
+                        System.out.println("\n--> Fecha de publicación (YYYY-MM-DD) ");
+                        System.out.println(". . . . . . . . . . . . . . . . . . . .");
+                        System.out.print(">>> ");
+                        
                         fecha = null;
+                        boolean salida = false;
 
+                        while (salida == false) {
+                            
+                        }
                         try {
+                            fechaString = CheckString.check("Digita de nuevo la fecha");
                             SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
                             java.util.Date utilDate = dateFormat.parse(fechaString);
                             fecha = new java.sql.Date(utilDate.getTime());
+                            salida = true;
                         } catch (Exception e) {
                             e.printStackTrace();
+                            System.out.println("\n**************************");
                             System.out.println("Error al insertar la fecha");
+                            System.out.println("**************************");
+                            //fechaString = CheckString.check("Digita de nuevo la fecha");
+
                             break;
                         }
 
@@ -127,7 +159,9 @@ public class gestionComunicadosNoticias {
                             comunicacion.setFechaPublicacion(fecha);
 
                             Controller.getController().controladorComunicaciones.put(idComunicacion, comunicacion);
-                            System.out.println("Noticia creada y publicada exitosamente ");
+                            System.out.println("\n:: :: :: :: :: :: :: :: :: :: :: :: :: :: ::");
+                            System.out.println(":: Noticia creada y publicada exitosamente ::");
+                            System.out.println(":: :: :: :: :: :: :: :: :: :: :: :: :: :: ::");
                             scanner.nextLine();
                             break;
 

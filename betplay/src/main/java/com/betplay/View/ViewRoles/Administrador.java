@@ -79,7 +79,7 @@ public class Administrador {
 
             case 4:
 
-                gestionArbitros.startGestionArbitros();
+                gestionArbitros.startGestionArbitros(nombreUsuario);
                 
                 break;
 

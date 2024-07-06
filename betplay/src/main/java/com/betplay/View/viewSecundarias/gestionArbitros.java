@@ -7,10 +7,11 @@ import com.betplay.Controller;
 import com.betplay.Entity.CheckInt;
 import com.betplay.View.Intro;
 import com.betplay.View.ViewRoles.Arbitro;
+import com.betplay.View.ViewRoles.GuiaRoles;
 
 public class gestionArbitros {
 
-    public static void startGestionArbitros (){
+    public static void startGestionArbitros (String nombreUsuario){
         int decision ;
 
         // Falta la clase arbitro
@@ -39,16 +40,26 @@ public class gestionArbitros {
 
             switch (decision) {
                 case 1:
-
+                    System.out.println("\n---------------------------------------");
+                    System.out.println("  Aquí vamos a editar info de Árbitro");
+                    System.out.println("---------------------------------------");
+                    String rol = Controller.getController().controladorUsuarios.get(nombreUsuario).idRol;
+                    GuiaRoles.entrarVista(rol, nombreUsuario);
                     break;
     
                 case 2:
-                    
+                    System.out.println("\n------------------------------------");
+                    System.out.println("  Aquí vamos a eliminar un Árbitro");
+                    System.out.println("------------------------------------");
+                    rol = Controller.getController().controladorUsuarios.get(nombreUsuario).idRol;
+                    GuiaRoles.entrarVista(rol, nombreUsuario);
                     break;
     
                 default:
                     System.out.print("\nPresiona entrer para volver al menu pricipal: ");
                     scanner.nextLine();
+                    rol = Controller.getController().controladorUsuarios.get(nombreUsuario).idRol;
+                    GuiaRoles.entrarVista(rol, nombreUsuario);
                     break ;
     
             }
