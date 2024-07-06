@@ -2,5 +2,5 @@
 
 ## INTEGRANTES 
 
--- Carlos Johan Aguilar
+-- Carlos Jhoan Aguilar
 -- Daniel Andrés Tobón Comba
