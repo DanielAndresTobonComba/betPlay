@@ -85,7 +85,7 @@ public class gestionComunicadosNoticias {
 
                         if (existe){
                             System.out.println("\n*********************");
-                            System.out.println("Este código ya existe");
+                            System.out.println("Este código ya existe\n");
                             System.out.println("*********************");
                             
                         }else{

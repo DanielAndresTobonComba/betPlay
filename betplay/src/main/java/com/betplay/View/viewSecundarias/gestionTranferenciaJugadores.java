@@ -15,15 +15,16 @@ public class gestionTranferenciaJugadores {
 
         do {
 
-            System.out.println("\n-------------------");
+            System.out.println("\n----------------------------------");
             System.out.println("    T R A N S F E R E N C I A S");
-            System.out.println("===================");
-            System.out.println("       Menú");
-            System.out.println("===================");
-            System.out.println("1. Crear");
-            System.out.println("2. Editar");
-            System.out.println("3. Eliminar");
-            System.out.println("4. Regresar al menu");
+            System.out.println("==================================");
+            System.out.println("              Menú");
+            System.out.println("==================================");
+            System.out.println("1. Realizar transferencia\n");
+            System.out.println("2. Editar transferencia\n");
+            System.out.println("3. Eliminar\n");
+            System.out.println("4. Regresar al menú");
+            System.out.println("---------------------------------");
 
             System.out.println("\n\n. . . . . . . . . .");
             System.out.println(" Digite la opción");

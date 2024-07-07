@@ -16,15 +16,17 @@ public class ventaEntradas {
         
         do {
 
-            System.out.println("\n-------------------");
+            System.out.println("\n---------------------");
             System.out.println("   E N T R A D A S");
-            System.out.println("===================");
-            System.out.println("       Menú");
-            System.out.println("===================");
-            System.out.println("1. Comprar");
-            System.out.println("2. Visulizar");
-            System.out.println("3. Cancelar");
-            System.out.println("4. Regresar al menu");
+            System.out.println("=====================");
+            System.out.println("        Menú");
+            System.out.println("=====================");
+            System.out.println("1. Comprar\n");
+            System.out.println("2. Visulizar\n");
+            System.out.println("3. Cancelar\n");
+            System.out.println("4. Regresar al menú");
+            System.out.println("---------------------");
+
 
             System.out.println("\n\n. . . . . . . . . .");
             System.out.println(" Digite la opción");

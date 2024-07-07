@@ -15,7 +15,7 @@ public class PermisosPeriodista {
         int opcion;
 
         System.out.println("\n==========================");
-        System.out.println("        PERMISOS");
+        System.out.println("         PERMISOS");
         System.out.println("==========================");
         System.out.println("1. Visualizar estadísticas\n");
         System.out.println("2. Noticias y comunicados\n");

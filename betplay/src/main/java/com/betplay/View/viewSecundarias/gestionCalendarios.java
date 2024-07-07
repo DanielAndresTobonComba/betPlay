@@ -143,9 +143,9 @@ public class gestionCalendarios {
                         }
 
                     } else {
-                        System.out.println("\n******************************");
-                        System.out.println("El código del equipo no existe");
-                        System.out.println("******************************");
+                        System.out.println("\n**********************************");
+                        System.out.println("  El código del equipo no existe\n");
+                        System.out.println("**********************************");
                         scanner.nextLine();
                     }
 
