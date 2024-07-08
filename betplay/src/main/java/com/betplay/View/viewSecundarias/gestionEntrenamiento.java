@@ -154,11 +154,11 @@ public class gestionEntrenamiento {
 
                         int decisionActividad;
                         do {
-                            System.out.println("=============================");
-                            System.out.println("\tActividades del entrenamiento");
-                            System.out.println("=============================\n");
-                            System.out.println("1. Ingresar");
-                            System.out.println("2. Regresar al menu");
+                            System.out.println("\n=================================");
+                            System.out.println("  Actividades del entrenamiento");
+                            System.out.println("=================================");
+                            System.out.println("1. Ingresar actividad");
+                            System.out.println("2. Volver al menu");
 
                             decisionActividad = CheckInt.check();
 
@@ -220,14 +220,16 @@ public class gestionEntrenamiento {
                         if (equipo.getLstEntrenamientos().containsKey(idEntrenamiento)) {
                             do {
                                 System.out.println("\n-------------------");
-                                System.out.println("   E D I T A R ");
+                                System.out.println("    E D I T A R ");
                                 System.out.println("===================");
                                 System.out.println("       Menú");
                                 System.out.println("===================");
-                                System.out.println("1. Fecha");
-                                System.out.println("2. Lugar");
-                                System.out.println("3. Hora");
+                                System.out.println("1. Fecha\n");
+                                System.out.println("2. Lugar\n");
+                                System.out.println("3. Hora\n");
                                 System.out.println("4. Regresar");
+                                System.out.println("\n------------------");
+
                                 System.out.println("\n\n. . . . . . . . . .");
                                 System.out.println(" Digite la opción");
                                 System.out.println(". . . . . . . . . . ");

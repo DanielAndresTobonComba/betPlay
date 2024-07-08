@@ -14,22 +14,23 @@ public class gestionEntrenadores {
 
         Scanner scanner = new Scanner(System.in);
 
-        do {
+        //do {
             System.out.println("\n-----------------------------");
             System.out.println("   E N T R E N A D O R E S");
             System.out.println("=============================");
             System.out.println("            Menú");
             System.out.println("=============================");
             //System.out.println("1. Agregar\n");
-            System.out.println("1. Editar\n");
-            System.out.println("2. Eliminar");
-            System.out.println("3. Regresar al menu");
+            System.out.println("1. Editar entrenador\n");
+            System.out.println("2. Eliminar entrenador");
+            System.out.println("0. Volver al menú");
             System.out.println("-----------------------------");
 
             System.out.println("\n\n. . . . . . . . . .");
             System.out.println(" Digite la opción");
             System.out.println(". . . . . . . . . . ");
             System.out.print(">>> ");
+
             decision = CheckInt.check();
 
             
@@ -42,22 +43,18 @@ public class gestionEntrenadores {
                 
                 break;
 
-            case 3:
-                
-                break;
-
             default:
             
                 System.out.print("Presiona entrer para volver al menu pricipal: ");
                 scanner.nextLine();
                 String rol = Controller.getController().controladorUsuarios.get(nombreUsuario).idRol;
                 GuiaRoles.entrarVista(rol, nombreUsuario);
-            break;
+                break;
 
         }
     
             
-        } while (decision != 3);
+        //} while (decision != 3);
 
     }
 

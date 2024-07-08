@@ -12,9 +12,9 @@ public class ventaEntradas {
 
         Scanner scanner = new Scanner(System.in);
 
-        int decision = 0;
+        int decision;
         
-        do {
+        // do {
 
             System.out.println("\n---------------------");
             System.out.println("   E N T R A D A S");
@@ -22,7 +22,7 @@ public class ventaEntradas {
             System.out.println("        Menú");
             System.out.println("=====================");
             System.out.println("1. Comprar entradas\n");
-            System.out.println("2. Visulizar boletos\n");
+            System.out.println("2. Visualizar boletos\n");
             System.out.println("3. Cancelar compra\n");
             System.out.println("4. Regresar al menú");
             System.out.println("---------------------");
@@ -39,9 +39,9 @@ public class ventaEntradas {
                 case 1:
                     if (Controller.getController().controladorPartidos.size() ==0) {
 
-                        System.out.println("\n-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*");
+                        System.out.println("\n-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-");
                         System.out.println("  No hay partidos programados.");
-                        System.out.println("-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*");
+                        System.out.println("-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-");
                     } else {
                         TaquillaEntradas.Comprar(nombreUsuario);
                     }
@@ -57,6 +57,7 @@ public class ventaEntradas {
     
                 default:
                     System.out.print("Presiona entrer para volver al menu pricipal: ");
+                    System.out.print(">>> ");
                     scanner.nextLine();
                     String rol = Controller.getController().controladorUsuarios.get(nombreUsuario).idRol;
                     GuiaRoles.entrarVista(rol, nombreUsuario);
@@ -64,7 +65,7 @@ public class ventaEntradas {
         
             }
             
-        } while (decision != 4);
+        //} while (decision != 4);
 
 
     }

@@ -22,7 +22,7 @@ public class gestionCalendarios {
 
         Scanner scanner = new Scanner(System.in);
 
-        do {
+        //do {
             System.out.println("\n---------------------------");
             System.out.println("   C A L E N D A R I O S");
             System.out.println("===========================");
@@ -31,7 +31,7 @@ public class gestionCalendarios {
             System.out.println("1. Ingresar rango\n");
             System.out.println("2. Filtro por equipos\n");
             System.out.println("3. Filtro por estadio\n");
-            System.out.println("4. Volver al menú");
+            System.out.println("0. Volver al menú");
             System.out.println("---------------------------");
 
             System.out.println("\n\n. . . . . . . . . .");
@@ -158,15 +158,16 @@ public class gestionCalendarios {
 
                 case 4:
                     System.out.print("\nPresiona enter para volver al menu principal: ");
+                    System.out.print(">>> ");
                     scanner.nextLine(); // Consumir el salto de línea pendiente
                     String rol = Controller.getController().controladorUsuarios.get(nombreUsuario).idRol;
                     GuiaRoles.entrarVista(rol, nombreUsuario);
-                    return;
+                    break;
 
             }
 
-        } while (decision != 4);
+        //} while (decision != 4);
 
-        scanner.close(); // Cerrar el scanner al finalizar el método si no se va a usar más
+        //scanner.close(); // Cerrar el scanner al finalizar el método si no se va a usar más
     }
 }

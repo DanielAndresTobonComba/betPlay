@@ -16,7 +16,7 @@ public class gestionConvocatoria {
         Scanner scanner = new Scanner(System.in);
 
 
-        do {
+        //do {
 
             // aqui el la convocatoria deberia haber una lista de los comvocados?
             System.out.println("\n-------------------------------");
@@ -27,7 +27,7 @@ public class gestionConvocatoria {
             System.out.println("1. Crear\n");
             System.out.println("2. Editar\n");
             System.out.println("3. Eliminar\n");
-            System.out.println("4. Volver al menu");
+            System.out.println("0. Volver al menu");
             System.out.println("-------------------------------");
 
             System.out.println("\n\n. . . . . . . . . .");
@@ -52,14 +52,15 @@ public class gestionConvocatoria {
     
                 default:
                     System.out.print("Presiona entrer para volver al menu pricipal: ");
+                    System.out.print(">>> ");
                     scanner.nextLine();
                     String rol = Controller.getController().controladorUsuarios.get(nombreUsuario).idRol;
                     GuiaRoles.entrarVista(rol, nombreUsuario);
-                    return ;
+                    break;
     
             }
             
-        } while (decision != 4);
+        //} while (decision != 4);
 
         
 

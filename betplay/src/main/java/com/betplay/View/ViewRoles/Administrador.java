@@ -56,8 +56,6 @@ public class Administrador {
         decision = CheckInt.check();
 
         
-
-        
         switch (decision) {
             case 1:
 

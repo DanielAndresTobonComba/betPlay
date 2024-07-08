@@ -318,7 +318,7 @@ public class gestionComunicadosNoticias {
                 scanner.nextLine();
                 /* String rol = Controller.getController().controladorUsuarios.get(nombreUsuario).idRol;
                 GuiaRoles.entrarVista(rol, nombreUsuario); */
-                return ;
+                break ;
     
                 
               

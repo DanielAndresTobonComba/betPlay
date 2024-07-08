@@ -37,7 +37,7 @@ public class gestionEquipos {
         
         
 
-        do {
+        //do {
             System.out.println("\n----------------------------");
             System.out.println("       E Q U I P O S");
             System.out.println("============================");
@@ -287,7 +287,7 @@ public class gestionEquipos {
     
             }
             
-        } while (decision != 7);
+        //} while (decision != 7);
       
     }
 

@@ -18,16 +18,16 @@ public class gestionArbitros {
 
         Scanner scanner = new Scanner(System.in);
 
-        do {
+        //do {
             System.out.println("\n---------------------");
             System.out.println("   Á R B I T R O S");
             System.out.println("=====================");
             System.out.println("        Menú");
             System.out.println("=====================");
             //System.out.println("1. Registrar\n");
-            System.out.println("1. Editar\n");
-            System.out.println("2. Eliminar\n");
-            System.out.println("3. Volver al menú");
+            System.out.println("1. Editar árbitro\n");
+            System.out.println("2. Eliminar árbitro\n");
+            System.out.println("0. Volver al menú");
             System.out.println("---------------------");
 
 
@@ -65,7 +65,7 @@ public class gestionArbitros {
             }
     
             
-        } while (decision != 3);
+        //} while (decision != 3);
 
        
     }
