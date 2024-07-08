@@ -298,7 +298,9 @@ public class gestionEntrenamiento {
                         entrenamiento = Controller.getController().controladorEntrenamientos.get(idEntrenamiento);
 
                         if (entrenamiento != null) {
+                            
                             entrenamiento = Controller.getController().controladorEntrenamientos.remove(idEntrenamiento);
+
                             if (entrenamiento != null) {
                                 System.out.println("Entrenamiento eliminado correctamente");
                             } else {
