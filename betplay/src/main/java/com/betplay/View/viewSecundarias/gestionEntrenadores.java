@@ -46,6 +46,7 @@ public class gestionEntrenadores {
             default:
             
                 System.out.print("Presiona entrer para volver al menu pricipal: ");
+                System.out.println(">>> ");
                 scanner.nextLine();
                 String rol = Controller.getController().controladorUsuarios.get(nombreUsuario).idRol;
                 GuiaRoles.entrarVista(rol, nombreUsuario);
