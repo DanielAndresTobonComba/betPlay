@@ -66,54 +66,55 @@ public class Administrador {
                 break;
 
             case 2:
+                
+                gestionEquipos.startGestioEquipos(nombreUsuario);    
+
+                break;
+
+            case 3:
 
                 gestionJugadores.startGestionJugadores(nombreUsuario);
                 
                 break;
 
-            case 3:
+            case 4:
 
                 gestionPartidos.startGestionPartidos(nombreUsuario);
                 
                 break;
 
-            case 4:
+            case 5:
 
                 gestionArbitros.startGestionArbitros(nombreUsuario);
                 
                 break;
 
-            case 5:
+            case 6:
                 gestionEstadios.startGestionEstadios();
                 
                 break;
 
-            case 6:
+            case 7:
                 gestionPatrocinios.startGestionPatrocinios();
                 
                 break;
 
-            case 7:
+            case 8:
                 gestionComunicadosNoticias.startGestionComunicadosNoticias(nombreUsuario);
                 
                 break;
 
-            case 8:
+            case 9:
                 gestionInformes.startGestionInformes(nombreUsuario);
                 
                 break;
 
-            case 9:
+            case 10:
                 gestionMedios.startGestionMedios(nombreUsuario);
                 break;
 
-            case 10:
-                gestionReconocimientos.startGestionReconocimiento(nombreUsuario);
-                break;
-
             case 11:
-                
-                
+                gestionReconocimientos.startGestionReconocimiento(nombreUsuario);
                 break;
         
             default:

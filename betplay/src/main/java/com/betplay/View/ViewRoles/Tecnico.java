@@ -60,7 +60,7 @@ public class Tecnico {
                     Tecnico.startTecnico(nombreUsuario);
                 }
                 else {
-                    gestionEquipos.startGestioEquipos();
+                    gestionEquipos.startGestioEquipos(nombreUsuario);
                 }
                 
                 break;

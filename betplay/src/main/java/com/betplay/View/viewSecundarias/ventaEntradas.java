@@ -21,9 +21,9 @@ public class ventaEntradas {
             System.out.println("=====================");
             System.out.println("        Menú");
             System.out.println("=====================");
-            System.out.println("1. Comprar\n");
-            System.out.println("2. Visulizar\n");
-            System.out.println("3. Cancelar\n");
+            System.out.println("1. Comprar entradas\n");
+            System.out.println("2. Visulizar boletos\n");
+            System.out.println("3. Cancelar compra\n");
             System.out.println("4. Regresar al menú");
             System.out.println("---------------------");
 
@@ -37,7 +37,14 @@ public class ventaEntradas {
             
             switch (decision) {
                 case 1:
-                    
+                    if (Controller.getController().controladorPartidos.size() ==0) {
+
+                        System.out.println("\n-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*");
+                        System.out.println("  No hay partidos programados.");
+                        System.out.println("-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*");
+                    } else {
+                        TaquillaEntradas.Comprar(nombreUsuario);
+                    }
                     break;
     
                 case 2:

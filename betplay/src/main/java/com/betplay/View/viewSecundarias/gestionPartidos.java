@@ -14,16 +14,17 @@ public class gestionPartidos {
         Scanner scanner = new Scanner(System.in);
 
         do {
-            System.out.println("\n-------------------");
+            System.out.println("\n---------------------");
             System.out.println("   P A R T I D O S");
-            System.out.println("===================");
-            System.out.println("       Menú");
-            System.out.println("===================");
-            System.out.println("1. Programar");
-            System.out.println("2. Modificar");
-            System.out.println("3. Eliminar");
+            System.out.println("=====================");
+            System.out.println("        Menú");
+            System.out.println("=====================");
+            System.out.println("1. Programar partido\n");
+            System.out.println("2. Modificar partido\n");
+            System.out.println("3. Eliminar partido\n");
             // System.out.println("4. Registrar resultados"); // Revizar que datos va a tener como goles tarjetas etc.
             System.out.println("4. Regresar al menu");
+            System.out.println("---------------------");
 
             System.out.println("\n\n. . . . . . . . . .");
             System.out.println(" Digite la opción");
@@ -34,7 +35,7 @@ public class gestionPartidos {
             
             switch (decision) {
                 case 1:
-                    
+                    AgendaPartidos.Agendar(nombreUsuario);
                     break;
     
                 case 2:

@@ -1,7 +1,9 @@
 package com.betplay;
 
 import java.util.ArrayList;
+import java.util.Enumeration;
 import java.util.List;
+import java.util.Map;
 
 import com.betplay.Entity.Usuario;
 import com.betplay.View.Intro;
@@ -25,6 +27,17 @@ public class Main {
         Usuario admin = new Usuario(nombreAdmin, email, contra, rol);
         Controller.getController().controladorUsuarios.put(usuarioAdmin, admin);
 
+        /*for (Map.Entry hash : Controller.getController().controladorUsuarios.entrySet()) {
+           Object key = hash.getKey();
+           System.out.println(key);
+        }*/
+        //Enumeration enu = Controller.getController().controladorUsuarios.;
+        
+        /*while (enu.hasMoreElements()) {
+            System.out.println(enu.nextElement());
+        }*/
+        
+
         Intro.startIntro();
 
         /*Set <String> setKey = Controller.getController().controladorUsuarios.keySet();
@@ -33,17 +46,6 @@ public class Main {
             System.out.println(key);
         }*/
         
-        
-
-        // Iniciazalización del sistema
-        
-
-        
-        //gestionEntrenamiento.startGestionEntrenamiento("Daniel");
-
-        //Falta la impresion correcta de los datos , equipamientos y tranferencia de jugadores
-        //gestionEquipos.startGestioEquipos();
-
 
 
     }
