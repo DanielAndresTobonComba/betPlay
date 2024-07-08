@@ -43,19 +43,19 @@ public class gestionComunicadosNoticias {
 
             System.out.println("\n-------------------");
             System.out.println("   C O M U N I C A C I Ó N");
-            System.out.println("===================");
-            System.out.println("       Menú");
-            System.out.println("===================");
-            System.out.println("Menu Partidos");
-            System.out.println("1. Crear noticia");
-            System.out.println("2. Crear comunicado");
-            System.out.println("3. Eliminar noticia");  
-            System.out.println("4. Eliminar comunicado");
-            System.out.println("5. Editar noticia");
-            System.out.println("6. editar comunicado");
-            //System.out.println("7. Crear sancion");  
-            //System.out.println("8. Buscar sancion");
-            System.out.println("9. Regresar al menu");
+            System.out.println("=============================");
+            System.out.println("            Menú");
+            System.out.println("=============================");
+            System.out.println("1. Crear noticia\n");
+            System.out.println("2. Crear comunicado\n");
+            System.out.println("3. Eliminar noticia\n");  
+            System.out.println("4. Eliminar comunicado\n");
+            System.out.println("5. Editar noticia\n");
+            System.out.println("6. editar comunicado\n");
+            System.out.println("7. Crear sanción\n");  
+            System.out.println("8. Buscar sanción\n");
+            System.out.println("9. Volver al menu");
+            System.out.println("------------------------------");
 
             System.out.println("\n\n. . . . . . . . . .");
             System.out.println(" Digite la opción");
