@@ -42,6 +42,9 @@ public class ventaEntradas {
                         System.out.println("\n-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-");
                         System.out.println("  No hay partidos programados.");
                         System.out.println("-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-");
+                        String rol = Controller.getController().controladorUsuarios.get(nombreUsuario).idRol;
+                        GuiaRoles.entrarVista(rol, nombreUsuario);
+
                     } else {
                         TaquillaEntradas.Comprar(nombreUsuario);
                     }
