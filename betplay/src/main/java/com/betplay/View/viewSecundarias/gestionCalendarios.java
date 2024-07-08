@@ -9,6 +9,7 @@ import java.util.Set;
 import com.betplay.Controller;
 import com.betplay.Entity.CheckInt;
 import com.betplay.Entity.Equipo;
+import com.betplay.Entity.Estadio;
 import com.betplay.Entity.Jugador;
 import com.betplay.Entity.Partidos;
 import com.betplay.View.ViewRoles.GuiaRoles;
@@ -96,10 +97,15 @@ public class gestionCalendarios {
                     break;
 
                 case 2:
+
+
                     int idEquipo;
                     Equipo equipo = new Equipo();
                     int idEquipoLocal;
                     int idEquipoVisitante;
+                    int idEstadio;
+
+                    Estadio estadio = new Estadio();
                     
                     System.out.println("\n-------------------");
                     System.out.println("   Buscar por equipos");
@@ -118,7 +124,13 @@ public class gestionCalendarios {
 
                             partido = lstPartidos.get(key); 
 
-                            System.out.println("Id partido" + key);
+                            idEstadio = partido.getIdEstadio();
+                            estadio = Controller.getController().controladorEstadios.get(idEstadio);
+                            System.out.println("Estadio: " + estadio.getNombre());
+
+                            System.out.println("Fecha: " + partido.getFecha());
+                            System.out.println("Hora: " + partido.getHora());
+
                             idEquipoLocal = partido.getIdEquipoLocal() ;
                             idEquipoVisitante = partido.getIdEquipoVisitante();
 
@@ -129,11 +141,6 @@ public class gestionCalendarios {
                             equipo = Controller.getController().controladorEquipos.get(idEquipoVisitante);
                             System.out.println("Equipo visitante" + equipo.getNombre());
                             System.out.println("Goles visitante: " + partido.getIdEquipoVisitante());
-
-                            
-
-                            
-
                         }
 
                     } else {
@@ -145,8 +152,46 @@ public class gestionCalendarios {
                     break;
 
                 case 3:
-                    // Implementar filtro por estadio
+
+                // VOY ACA ESPERAR revizar
+
+                    System.out.println("\n-------------------");
+                    System.out.println("   Buscar por estadios");
+                    System.out.println("===================");
+
+                    
+
+                    boolean existe = false;
+
+
+                    do {
+                        
+                        System.out.println("Digita el codigo del estadio");
+                        idEstadio = CheckInt.check();
+
+                        existe = Controller.getController().controladorEstadios.containsKey(idEstadio);
+
+                        if (existe){
+                            System.out.println("El estadio no existe");
+                            existe = true;
+                            
+                        }
+
+                    }
+                    while (!existe);
+
+
+
+
+
+
+
+                        
                     break;
+
+
+
+
 
                 case 4:
                     System.out.print("Presiona enter para volver al menu principal: ");
