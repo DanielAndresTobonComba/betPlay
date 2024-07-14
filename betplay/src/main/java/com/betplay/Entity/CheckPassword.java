@@ -10,9 +10,13 @@ public class CheckPassword {
         String pwdString = "";
         Console newConsole = System.console();
         boolean verificacion = true;
+
+        char [] pwd = null;
+
+        String msj = "Escriba la cotraseña";
         
         while (verificacion == true) {
-            char [] pwd = newConsole.readPassword("\n. . . . . . . . . . . . . . . .\nEscriba su contraseña\n. . . . . . . . . . . . . . . .\n>>> ");
+            pwd = newConsole.readPassword(String.format("\n. . . . . . . . . . . . . . . . . .\n%s\n. . . . . . . . . . . . . . . . . .\n>>> ", msj));
             for (char letter : pwd) {
                 pwdString += letter;
             }
@@ -21,6 +25,7 @@ public class CheckPassword {
                 System.out.println("\n********************************");
                 System.out.println("No se permiten entradas vacías ");
                 System.out.println("********************************");
+                msj = "Ingrese de nuevo la contraseña";
             } else  {
                 verificacion = false;
             }
